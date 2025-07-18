@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georges River Creates</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #f7fafc;
+        }
+        /* Custom scrollbar for better aesthetics */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #a0aec0;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #718096;
+        }
+        .hidden-sub-nav {
+            display: none !important;
+        }
+        /* Hanging indent for bullet points: second line aligns with first line's text after bullet */
+        ul.list-disc li {
+            padding-left: 1em;
+            text-indent: -1em;
+        }
+        ul.list-disc li::marker {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-teal-700 text-white p-4 shadow-md flex items-center justify-between">
+        <h1 class="text-3xl font-semibold text-center w-full">Georges River Creates</h1>
+    </header>
+    <!-- Global Search Bar -->
+    <div class="p-4 bg-white shadow-md z-10">
+        <input type="text" id="searchBar" placeholder="Search for items, spaces..." class="w-full p-4 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 shadow-sm">
+    </div>
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col md:flex-row overflow-hidden">
+        <!-- Left Panel (Navigation) -->
+        <div class="md:w-1/3 lg:w-1/4 flex flex-col p-4 bg-white shadow-lg rounded-br-lg overflow-hidden">
+            <nav class="flex flex-col space-y-2 mb-4">
+                <div>
+                    <button id="gettingStartedMainBtn" class="flex-1 py-3 px-4 rounded-lg font-medium text-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-md hover:bg-gray-300 w-full text-center">Getting Started</button>
+                    <div id="gettingStartedSubNav" class="hidden-sub-nav flex flex-col space-y-2 mt-2 pl-4">
+                        <button id="askMeAnythingBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Ask Me Anything</button>
+                        <button id="introBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Introduction</button>
+                        <button id="faqsBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">FAQs</button>
+                        <div id="faqsSubNav" class="hidden-sub-nav flex flex-col space-y-2 mt-2 pl-4">
+                            <button id="faqsDtlBtn" class="flex-1 py-2 px-3 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Digital Tool Library</button>
+                            <button id="faqsMiBtn" class="flex-1 py-2 px-3 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Musical Instrument Collection</button>
+                            <button id="faqsMediaLabBtn" class="flex-1 py-2 px-3 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Media Lab</button>
+                            <button id="faqsSoundBoothBtn" class="flex-1 py-2 px-3 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Sound Booth</button>
+                            <button id="faqsInHousePacksBtn" class="flex-1 py-2 px-3 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">In-House Packs</button>
+                        </div>
+                        <button id="bookingsFeesBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Bookings & Fees</button>
+                        <div>
+                            <button id="termsConditionsMainSubBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Terms & Conditions</button>
+                            <div id="termsConditionsSubSubNav" class="hidden-sub-nav flex flex-col space-y-2 mt-2 pl-4">
+                                <button id="termsDtlBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Digital Tool Library</button>
+                                <button id="termsMiBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Musical Instrument Collection</button>
+                                <button id="termsMediaLabBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Media Lab</button>
+                                <button id="termsSoundBoothBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Sound Booth</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button id="loanableItemsMainBtn" class="flex-1 py-3 px-4 rounded-lg font-medium text-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-md hover:bg-gray-300 w-full text-center">Loanable Items</button>
+                    <div id="loanableItemsSubNav" class="hidden-sub-nav flex flex-col space-y-2 mt-2 pl-4">
+                        <!--<button id="loanableLotBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Library of Things</button>-->
+                        <button id="loanableDtlBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Digital Tool Library</button>
+                        <button id="loanableMiBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Musical Instrument Collection</button>
+                    </div>
+                </div>
+                <div>
+                    <button id="inHouseItemsBtn" class="flex-1 py-3 px-4 rounded-lg font-medium text-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-md hover:bg-gray-300 w-full text-center">In-House Items</button>
+                </div>
+                <div>
+                    <button id="permanentEquipmentBtn" class="flex-1 py-3 px-4 rounded-lg font-medium text-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-md hover:bg-gray-300 w-full text-center">Permanent Equipment</button>
+                </div>
+                <div>
+                    <button id="spacesBtn" class="flex-1 py-3 px-4 rounded-lg font-medium text-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-md hover:bg-gray-300 w-full text-center">Spaces</button>
+                </div>
+                <div>
+                    <button id="eventsBtn" class="flex-1 py-3 px-4 rounded-lg font-medium text-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-md hover:bg-gray-300 w-full text-center">Events</button>
+                </div>
+            </nav>
+            <div id="listView"></div>
+            <div class="mt-auto pt-4">
+                <button id="settingsBtn" class="flex-1 py-3 px-4 rounded-lg font-medium text-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-md hover:bg-gray-300 w-full text-center">Settings</button>
+                <!-- Settings submenu removed; now handled as listings in main panel -->
+            </div>
+        </div>
+        <!-- Right Panel (detailView) -->
+        <div id="detailView" class="flex-1 p-4 bg-gray-50 shadow-inner rounded-tl-lg overflow-y-auto custom-scrollbar">
+            <div class="p-6 bg-white rounded-xl shadow-md h-full flex flex-col items-start text-left">
+                <h2 class="text-2xl font-bold mb-2 text-teal-700">Welcome to Georges River Creates</h2>
+                <p class="mb-2 text-gray-700">This internal tool helps librarians quickly access information about library resources, loanable items, in-house items, and creative spaces.</p>
+                <p class="text-gray-600">Use the navigation on the left or the search bar above to get started.</p>
+            </div>
+        </div>
+    </main>
+    <!-- JavaScript (IIFE) -->
+    <script>
+(function() {
+// --- Mock Data (defined within the IIFE for isolation) ---
+const mockData = {
+    gettingStarted: [
+        {
+            id: 'gs-ask-me-anything',
+            name: 'Ask Me Anything',
+            description: 'Ask our AI Assistant questions about the site and policies.',
+            fullDescription: `
+                <div class="bg-gray-100 p-4 rounded-lg shadow-inner mb-6">
+                    <p class="text-sm text-gray-600 mb-3">Ask questions about this site's features, Georges River Library policies, or general Georges River Council policies. (e.g., "What can I borrow from the Library of Things?", "What are the opening hours?", "Where can I find council meeting minutes?").</p>
+                    <div class="flex flex-col sm:flex-row gap-2 mb-3">
+                        <input type="text" id="aiQuestionInput" placeholder="Type your question here..."
+                               class="flex-1 p-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-teal-500 focus:border-transparent text-sm">
+                        <button id="aiAskBtn"
+                                class="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-200 text-sm shadow-md">
+                            Ask
+                        </button>
+                    </div>
+                    <div id="aiResponse" class="bg-white p-3 rounded-lg border border-gray-200 min-h-[50px] text-gray-700 text-sm overflow-auto max-h-[200px] custom-scrollbar relative">
+                        <div id="aiLoadingIndicator" class="hidden absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center rounded-lg">
+                            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-teal-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            Loading...
+                        </div>
+                    </div>
+                </div>
+            `
+        },
+        {
+            id: 'gs-intro',
+            name: 'Introduction',
+            description: 'Welcome to Georges River Creates',
+            fullDescription: `
+                <p class="mb-4">Welcome to the Georges River Creates internal application for librarians! This tool is designed to provide quick and easy access to information about our diverse collection of loanable items, in-house resources, creative spaces, and upcoming events.</p>
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">Media Lab</h3>
+                <p class="mb-4">The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and also hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</p>
+                <p class="mb-4">The Media Lab is equipped for a range of technology available for in-house use and for loan. The Media Lab has a white screen cyclorama wall, a chroma key background and professional studio lighting. It also has six Microsoft Surface Studio PCs with the Adobe Creative Suite for all your creative project needs.</p>
+                <p class="mb-4">Also available to our customers is an incredible collection of digital content creation tools including items such as DSRL cameras and audio production tools available for loan in the Digital Tool Library and Musical Instrument Collection. We have also assembled a number of packs available for in-house loan. These packs cover a variety of uses including podcasting, professional photography and audio recording.</p>
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">In-House Items</h3>
+                <p class="mb-4">In addition to the items we have available for loan in the Digital Tool Library and Musical Instrument Collection, we have assembled a number of packs available for in-house loan. These packs cover a variety of uses including podcasting, professional photograhy and audio recording.</p>
+                <p class="mb-4">Please note that these packs are strictly for in-house use only, and should only be reserved in conjunction with making a booking for the Media Lab or Sound Booth.</p>
+                <p class="mb-4">Contact the Content and Discovery team for further information about this collection</p>
+            `
+        },
+        {
+            id: 'gs-faqs',
+            name: 'FAQs',
+            description: 'Frequently Asked Questions about our services.',
+            fullDescription: `
+                <p class="text-gray-700 leading-relaxed">
+                    Select a specific FAQ category from the submenu to view detailed frequently asked questions about our services and collections.
+                </p>
+            `
+        },
+        {
+            id: 'gs-bookings-fees',
+            name: 'Bookings and Fees',
+            description: 'Information regarding booking procedures and associated costs.',
+            fullDescription: `
+                <p class="mb-4">Most of our creative spaces and some in-house items require a booking. Bookings for the Media Lab and Sound Booth can be made via their respective booking links in the 'Spaces' section.</p>
+                <p class="mb-4">While many resources are free for library members, some specialised equipment or materials may incur a small fee. Specific fee information will be detailed on the individual item or space's detail page, or provided during the booking process.</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><strong>Media Lab:</strong> Free for up to 2-hour sessions. Extended sessions subject to availability.</li>
+                    <li><strong>Sound Booth:</strong> Free for 1-hour sessions.</li>
+                    <li><strong>3D Printing:</strong> Material fees applies per gram of filament used.</li>
+                    <li><strong>Vinyl Cutting:</strong> Users provide their own materials.</li>
+                </ul>
+                <div class="flex justify-center mt-6">
+                    <a href="https://www.georgesriver.nsw.gov.au/StGeorge/media/Documents/Council/Publications/Fees-Charges-Report-2024-2025-Final.pdf" target="_blank"
+                       class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Schedule of Fees and Charges 2024/25
+                    </a>
+                </div>
+            `
+        },
+        {
+            id: 'gs-terms',
+            name: 'Terms & Conditions',
+            description: 'Access specific terms for collections and spaces.',
+            fullDescription: ''
+        },
+        {
+            id: 'gs-terms-dtl',
+            name: 'Digital Tool Library Terms & Conditions',
+            description: 'Specific terms for Digital Tool Library items.',
+            fullDescription: `
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li>Media Lab users must not damage any Library items. Media Lab users are responsible for fines related to loss or damage of library items they are using or have on loan.</li>
+                    <li>Customers who have booked the Media Lab should check in with staff at the start and end of your booking.</li>
+                    <li>Media Lab facilities and resources must not be used for any illegal purposes.</li>
+                    <li>Media Lab users must comply with the directions of Library staff.</li>
+                    <li>Maximum of twenty (20) people.</li>
+                    <li>Strictly no food or drink inside the Media Lab.</li>
+                    <li>For use up to a maximum of two (2) hours per individual/group daily.</li>
+                    <li>Bookings may be cancelled if more than 15 minutes late.</li>
+                    <li>Please leave the Media Lab tidy.</li>
+                    <li>Please return any equipment to staff.</li>
+                    <li>Children under 10 years of age must be supervised by their parent or guardian.</li>
+                    <li>Only users who have booked the Media Lab are entitled to close the doors and curtains, and have the on air sign switched on. Doors and curtains must remain open at all times.</li>
+                </ul>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Download Digital Tool Library T&Cs
+                    </button>
+                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
+                    </button>
+                </div>
+            `
+        },
+        {
+            id: 'gs-terms-mi',
+            name: 'Musical Instrument Collection Terms & Conditions',
+            description: 'Specific terms for Musical Instrument Collection items.',
+            fullDescription: `
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li>Instruments must be handled with care and returned in their original condition, including cases and accessories.</li>
+                    <li>Minor wear and tear are expected, but significant damage due to negligence will be charged.</li>
+                    <li>Users are encouraged to ensure instruments are tuned and maintained according to general best practices.</li>
+                    <li><a id="q7"></a><strong>Q: What do I do with items that are damaged or have missing pieces?</strong> <br>A: Before returning staff to check that all the listed pieces on the label are included and there is no damage. If pieces are missing or the item is damaged please address this with the customer immediately. If a customer claims that the item was missing or damaged at time of loan, remind the customer that the item was confirmed to be complete at the time of borrowing by a staff member.<br>Add note to the customers account and advise them a staff member will be in touch to discuss further.<br>Staff member attaches problem slip to the item detailing the issue.<br>Change item status to repairs and send item to the Content & Discovery team for further investigation.</li>
+                    <li><a id="q8"></a><strong>Q: How do I shelve items from the Musical Instrument Collection?</strong> <br>A: Items catalogued in the Musical Instrument Collection will have a black label. Items in the Digital Tool Library are colour coded orange and the Library of Things are coded blue, yellow or red depending on the recommended customer age for the item.<br><br>Guitars are to be secured on the display wall or guitar racks. If you are unsure on how to do this please see Team Leader Content and Discovery.<br><br>Keyboards, drum kits and container items can be placed on the angled shelves.<br><br>Bongos and other large percussion items on the flat shelf opposite the guitars.</li>
+                </ul>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Download Musical Instrument Collection T&Cs
+                    </button>
+                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
+                    </button>
+                </div>
+            `
+        },
+        {
+            id: 'gs-terms-media-lab',
+            name: 'Media Lab Terms & Conditions',
+            description: 'Specific terms for Media Lab usage.',
+            fullDescription: `
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li>Access requires prior induction or staff approval for complex equipment.</li>
+                    <li>Usage is for creative, educational, or personal projects. Commercial use policies may vary.</li>
+                    <li>Users must save their work to personal storage devices as library computers are routinely wiped.</li>
+                    <li>Booking limits apply to ensure fair access for all members.</li>
+                </ul>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Download Media Lab T&Cs
+                    </button>
+                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
+                    </button>
+                </div>
+            `
+        },
+        {
+            id: 'gs-terms-sound-booth',
+            name: 'Sound Booth Terms & Conditions',
+            description: 'Specific terms for Sound Booth usage.',
+            fullDescription: `
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li>Users are to check in with staff at the start and end of your booking</li>
+                    <li>Maximum of four (4) people.</li>
+                    <li>Strictly no food or drink inside Sound Booth.</li>
+                    <li>For use up to a maximum of two (2) hours per individual/group daily.</li>
+                    <li>Bookings may be cancelled if more than 15 minutes late.</li>
+                    <li>Please leave Sound Booth tidy.</li>
+                    <li>Please return any equipment to staff.</li>
+                    <li>Please report any damage to staff.</li>
+                    <li>Please follow the directions of staff.</li>
+                    <li>Children under 10 years of age must be supervised by their parent or guardian.</li>
+                </ul>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Download Sound Booth T&Cs
+                    </button>
+                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
+                    </button>
+                </div>
+            `
+        },
+        {
+            id: 'faqs-dtl',
+            name: 'Digital Tool Library FAQs',
+            description: 'Frequently Asked Questions about the Digital Tool Library.',
+            fullDescription: `
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><a id="q1"></a><strong>Q: What is the Digital Tool Library?</strong> <br>A: The Digital Tool Library is a collection of digital content creation tools including Canon DSRL cameras, GoPro cameras and Oral History Kits.</li>
+                    <li><a id="q2"></a><strong>Q: Why have a Digital Tool Library?</strong> <br>A: Georges River Libraries strives to remove digital technology access barriers, fostering community skill development, and facilitating the creation of unique content for potential inclusion in library collections and programs. This new and evolving collection seeks to broaden the scope and appeal of library collections, enhancing community engagement and transitioning the library's role from solely content collectors to active content creators, all while complementing Media Lab facilities and cultivating a vibrant community of users.</li>
+                    <li><a id="q3"></a><strong>Q: How many items from the Digital Tool Library can a customer borrow?</strong> <br>A: A maximum of three (3) items per card can be borrowed at any one time from the Digital Tool Library.</li>
+                    <li><a id="q4"></a><strong>Q: How long can items from the Digital Tool Library be borrowed?</strong> <br>A: The borrowing period for items in the Digital Tool Library is three (3) weeks with a maximum of two (2) renewals.</li>
+                    <li><a id="q5"></a><strong>Q: How do I use this item? Can you show me how?</strong> <br>A: Library staff are not expected to provide training for Digital Tool Library or Musical Instrument Collections items and Media Lab or Sound Booth spaces. Instead direct the customer to use their library membership to gain free access to LinkedIn Learning.</li>
+                    <li><a id="q6"></a><strong>Q: How do I return items from the Digital Tool Library?</strong> <br>A: Digital Tool Library items can be returned to any Georges River Libraries branch during opening hours. Upon return carefully ensure that all items have been returned. If there is something missing from the item or if the item is damaged please follow the procedures outlined in ProMapp. Return all items to the blue cage.</li>
+                    <li><a id="q7"></a><strong>Q: Can customers submit purchase suggestions and feedback?</strong> <br>A: Yes. We welcome suggestions and feedback for all of our collections. Please encourage customers to submit suggestions via the library catalogue or email library@georgesriver.nsw.gov.au.</li>
+                    <li><a id="q8"></a><strong>Q: Can I reserve Digital Tool Library items?</strong> <br>A: Reservations are available for this collection.</li>
+                    <li><a id="q9"></a><strong>Q: Where are Digital Tool Library reservations kept?</strong> <br>A: Any items that are reserved that are normally displayed in the Digital Tool Library cage should be kept in the cage. Please print of the reservation slip and sticky tape it to the label (or somewhere very obvious).</li>
+                    <li><a id="q10"></a><strong>Q: Can I pickup Digital Tool Library reservations from branches other than Hurstville?</strong><br>A: Yes. High value items (i.e. cameras) should be kept in a secure location.</li>
+                    <li><a id="q11"></a><strong>Q: Can customers return Digital Tool Library reservations to branches other than Hurstville?</strong><br>A: Yes, customers are able to return Digital Tool Library items to any branch.</li>
+                    <li><a id="q12"></a><strong>Q: Do we have SD cards available for loan?</strong><br>A: No.</li>
+                    <li><a id="q13"></a><strong>Q: What items are available in Digital Tool Library collection?</strong><br>A: The Digital Tool Library includes over 100 items available for physical loan from Hurstville Library. For a complete list of items search "Digital Tool Library" in Spydus or <a href="#" class="text-teal-600 underline font-medium">CLICK HERE</a> for a QR code.</li>
+                </ul>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <a href="#" onclick="handleDownloadFaqPdfClick(event)"
+                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Download FAQ
+                    </a>
+                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
+                    </button>
+                </div>
+            `
+        },
+        {
+            id: 'faqs-mi',
+            name: 'Musical Instrument Collection FAQs',
+            description: 'Frequently Asked Questions about the Musical Instrument Collection.',
+            fullDescription: `
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><a id="q1"></a><strong>Q: What is the Musical Instrument Collection?</strong> <br>A: The Musical Instrument Collection is a collection of musical instruments that are available for loan to library members. The collection includes guitars, keyboards, drums and percussion instruments.</li>
+                    <li><a id="q2"></a><strong>Q: What items are available in the Musical Instrument Collection?</strong> <br>A: <a href="#" class="text-teal-600 underline font-medium">CLICK HERE</a> to view a complete list in Spydus of all items in the the Musical Instrument Collection.</li>
+                    <li><a id="q3"></a><strong>Q: Why do we have a Musical Instrument Collection?</strong> <br>A: The Musical Instrument Collection was established to facilitate community content creation, increase the appeal of library membership by diversifying the collection offer, and activate the Sound Booth and Media Lab by enhancing the functionality of these spaces. It also aims to provide resources and programming opportunities for the community, while allowing people to try instruments before they buy.</li>
+                    <li><a id="q4"></a><strong>Q: How do reservations work?</strong> <br>A: Larger items reserved from the Musical Instrument Collection should be kept in the Media Lab storeroom. Smaller items may be kept on the reservations shelf.</li>
+                    <li><a id="q5"></a><strong>Q: How do I loan an item from the Musical Instrument Collection?</strong> <br>A: Check if the customers' selected item is available on the shelves or guitar rack to avoid taking a display item off the wall.<br>If there are no other items available, take the key from near the circulation desk key box and unlock the item.<br>If a display item is taken the corresponding bag can be found in the store room near the lift.<br>Combine the item and bag together for loan.<br>Check that all listed parts on the label are with the item.<br>If pieces are missing or the item is damaged, please do not loan the item. Try to find an alternative for the customer.<br>Staff then complete and attach a problem slip detailing the issue.<br>Staff then change the item status to (repairs) and send the item to the Content & Discovery team for further investigation.</li>
+                    <li><a id="q6"></a><strong>Q: What keys do I need to use?</strong> <br>A: The keys to unlock all Musical Instrument items are located next to the staff key cabinet.<br><br>The guitar racks are numbered so staff simply need to find the corresponding number key on the blue key rings.<br><br>Guitars displayed on the wall are all keyed alike and can be opened the key with the yellow Guitars on Display tag.<br><br>Most staff should be able to access storeroom next to the lifts using your staff swipe card. Please use the master key if you swipe doesn't work.<br>Please ensure the door locks when leaving.</li>
+                    <li><a id="q7"></a><strong>Q: What do I do with items that are damaged or have missing pieces?</strong> <br>A: Before returning staff to check that all the listed pieces on the label are included and there is no damage. If pieces are missing or the item is damaged please address this with the customer immediately. If a customer claims that the item was missing or damaged at time of loan, remind the customer that the item was confirmed to be complete at the time of borrowing by a staff member.<br>Add note to the customers account and advise them a staff member will be in touch to discuss further.<br>Staff member attaches problem slip to the item detailing the issue.<br>Change item status to repairs and send item to the Content & Discovery team for further investigation.</li>
+                    <li><a id="q8"></a><strong>Q: How do I shelve items from the Musical Instrument Collection?</strong> <br>A: Items catalogued in the Musical Instrument Collection will have a black label. Items in the Digital Tool Library are colour coded orange and the Library of Things are coded blue, yellow or red depending on the recommended customer age for the item.<br><br>Guitars are to be secured on the display wall or guitar racks. If you are unsure on how to do this please see Team Leader Content and Discovery.<br><br>Keyboards, drum kits and container items can be placed on the angled shelves.<br><br>Bongos and other large percussion items on the flat shelf opposite the guitars.</li>
+                </ul>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <a href="#" onclick="handleDownloadFaqPdfClick(event)"
+                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Download FAQ
+                    </a>
+                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
+                    </button>
+                </div>
+            `
+        },
+        {
+            id: 'faqs-media-lab',
+            name: 'Media Lab FAQs',
+            description: 'Frequently Asked Questions about the Media Lab.',
+            fullDescription: `
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><a id="q1"></a><strong>Q: What is the Media Lab?</strong> <br>A: The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and also hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</li>
+                    <li><a id="q2"></a><strong>Q: When is the Media Lab available?</strong> <br>A: The Media Lab is available during standard operating hours. Customers using the Media Lab are required to bump out 15 minutes prior to the library closing.</li>
+                    <li><a id="q3"></a><strong>Q: Who can use the Media Lab?</strong> <br>A: The Media Lab is available for anyone to use. Priority for this space is given to customers who have booked and are intending to use it for creative purposes.</li>
+                    <li><a id="q4"></a><strong>Q: Can you help me set up the equipment in the Media Lab?</strong> <br>A: Library staff are not expected to provide technical assistance or training for Digital Tool Library or Musical Instrument Collection items or any equipment in the Media Lab or Sound Booth. Instead direct the customer to use their library membership to gain free access to LinkedIn Learning.</li>
+                    <li><a id="q5"></a><strong>Q: Where are the extension cords?</strong> <br>A: There is a box of extension cords in the Media Lab store room. If you take an extension cord please ensure it is returned.</li>
+                    <li><a id="q6"></a><strong>Q: Do users need to be inducted?</strong> <br>A: It is now no longer necessary for users to be inducted into the Media Lab. Please refer any questions regarding equipment setup or creative projects to the Team Leader Content & Discovery.</li>
+                    <li><a id="q7"></a><strong>Q: What happened to the 3D printer?</strong> <br>A: The 3D printer was removed from the Media Lab and is no longer available for individual use. It is intended to support library programming and will be moved around our various sites as required. If you receive enquiries from individuals wanting to use the printer, please refer them to local commercial 3D printing company, WYSIWYG 3D, who are based in Peakhurst.</li>
+                    <li><a id="q8"></a><strong>Q: Do customers who are in the library need to book and pay for the Media Lab?</strong> <br>A: Customers may use the Media Lab at any time as long as there is no booking. Booking and paying for the Media Lab provides guaranteed and exclusive access to the space. Customers who have booked and paid for the Media Lab are allowed to close the doors and curtains, and turn on the "on air" sign. If there is a customer in the Media Lab when there is a booking please ask the customer to vacate.</li>
+                    <li><a id="q9"></a><strong>Q: Do we have SD cards available for loan?</strong> <br>A: We are unable to provide customers with SD cards.</li>
+                    <li><a id="q10"></a><strong>Q: Where is the Media Lab Cabinet?</strong> <br>A: The Media Lab Cabinet is located inside the Media Lab. The key for this cabinet is in the key cabinet behind the front desk.</li>
+                    <li><a id="q11"></a><strong>Q: Is the Media Lab available on the weekend?</strong> <br>A: Yes the Media Lab is available for use on the weekend.</li>
+                    <li><a id="q12"></a><strong>Q: How do I book a Media Lab PC?</strong> <br>A: 1. Go to https://georgesriverapp.mymonitor.cloud/webadministrator<br><br>2. User ID: libstaff Password: GRClibstaff<br><br>3. Navigate to "Reservation" then "Management" then "Create Reservation".<br><br>4. Select "Block Reservation", then "Next".<br><br>5. Insert the customer's library card number, select the customer and press next.<br><br>6. Select Site = "Hurstville Library", Location = "Hurstville", Computer Type = "Media Lab PCs" and then "Select computers from list". Then click next.<br><br>7. Select the PCs from the list. Here we select all four. Click "use selected", then click next.<br><br>8. Then create the reservation by inputting the name of the reservation. This can be the name of an individual or group. For login option select "unauthenticated". Then the date and time, then click finish.<br><br>9. The reservation will be confirmed with a reference number – this is the number to key in to the PCs. As we have selected unauthenticated login option, the system won't ask the user to log in with the library card and pin, which makes the process easier. What you need to do is to provide this reference number (BXXXXXXXX) to the user or facilitator.<br><br>10. To confirm that the booking has been correctly made navigate to Reservation > Management. Then select "site", "location" and "date".</li>
+                </ul>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <a href="#" onclick="handleDownloadFaqPdfClick(event)"
+                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Download FAQ
+                    </a>
+                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
+                    </button>
+                </div>
+            `
+        },
+        {
+            id: 'faqs-sound-booth',
+            name: 'Sound Booth FAQs',
+            description: 'Frequently Asked Questions about the Sound Booth.',
+            fullDescription: `
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><a id="q1"></a><strong>Q: What is the Sound Booth?</strong> <br>A: The Sound Booth is a dedicated noise-proof space intended to be used for recording, practicing or performing with musical instruments and audio equipment.</li>
+                    <li><a id="q2"></a><strong>Q: Who can use the Sound Booth?</strong> <br>A: The Sound Booth is prioritised for customers who have booked and are intending to use it for creative purposes (i.e. recording vocals or podcasts, playing piano).</li>
+                    <li><a id="q3"></a><strong>Q: When is the Sound Booth available?</strong> <br>A: The Sound Booth is available during standard operating hours.</li>
+                    <li><a id="q4"></a><strong>Q: Who do I contact with a question about the Sound Booth?</strong> <br>A: Please refer any questions regarding equipment setup or creative projects to the Team Leader Content & Discovery.</li>
+                    <li><a id="q5"></a><strong>Q: Are customers who are in the library required to book and pay to use the Sound Booth?</strong> <br>A: Customers may use the Sound Booth at any time as long as there is no booking. Booking the Sound Booth provides guaranteed and exclusive access. Customers should close the door to the Sound Booth whether or not they have booked the space in order to reduce noise. If there is a customer in the Sound Booth when there is a booking please ask the customer to vacate.</li>
+                    <li><a id="q6"></a><strong>Q: Am I expected to help customers setup and use equipment in the Sound Booth?</strong> <br>A: In general you are not expected to provide setup or training for any equipment in the Sound Booth. For any other queries refer customers to our online learning platform LinkedIn Learning. Refer any questions regarding equipment setup or creative projects to the Coordinator Library Resources.</li>
+                    <li><a id="q7"></a><strong>Q: Where are the extension cords?</strong> <br>A: There is a box of extension cords in the Media Lab store room.</li>
+                    <li><a id="q8"></a><strong>Q: Is the Sound Booth available on the weekend?</strong> <br>A: Yes the Sound Booth is available for use on the weekend.</li>
+                </ul>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <a href="#" onclick="handleDownloadFaqPdfClick(event)"
+                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Download FAQ
+                    </a>
+                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
+                    </button>
+                </div>
+            `
+        },
+        {
+            id: 'faqs-in-house-packs',
+            name: 'In-House Packs FAQs',
+            description: 'Frequently Asked Questions about In-House Packs.',
+            fullDescription: `
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                    <li><a id="q1"></a><strong>Q: What are In-House Packs?</strong> <br>A: In-House Packs are kits of equipment and resources that can be used within the library for creative projects, such as podcasting, photography, and music recording. They are not for loan outside the library.</li>
+                    <li><a id="q2"></a><strong>Q: Who can use In-House Packs?</strong> <br>A: Any library member who has booked the Media Lab or Sound Booth can use In-House Packs during their session.</li>
+                    <li><a id="q3"></a><strong>Q: How do I book an In-House Pack?</strong> <br>A: In-House Packs are reserved in conjunction with a Media Lab or Sound Booth booking. Please speak to staff at the service desk to request a pack for your session.</li>
+                    <li><a id="q4"></a><strong>Q: What do I do when I finish using an In-House Pack?</strong> <br>A: Please return all items in the pack to staff at the end of your session. Staff will check that all components are present and in good condition.</li>
+                    <li><a id="q5"></a><strong>Q: Am I expected to help customers setup and use equipment in the in-house packs?</strong> <br>A: In general you are not expected to provide setup or training for in-house packs. For any queries on the use of equipment refer customers to our online learning platform LinkedIn Learning.</li>
+                    <li><a id="q6"></a><strong>Q: Where are the in-house packs located?</strong> <br>A: In-house packs are located in the storeroom near the lift. They are clearly labelled.</li>
+                    <li><a id="q7"></a><strong>Q: Who do I contact with a question about in-house packs?</strong> <br>A: If you have any questions please contact the Coordinator Library Resources.</li>
+                    <li><a id="q8"></a><strong>Q: What is included in the Record a Song Pack?</strong> <br>A: The Record a Song Pack includes all the equipment you need to record audio, songs and other vocals, in-house at the library. This pack includes a quick-start guide to get you started.</li>
+                </ul>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
+                    </button>
+                </div>
+            `
+        }
+    ],
+    loanableItems: [
+        {
+            id: 'lt001',
+            name: 'Portable Projector',
+            category: 'Digital Tool Library',
+            description: 'Compact projector for presentations or movie nights.',
+            fullDescription: 'High-definition portable projector with HDMI, USB, and built-in speaker. Ideal for small group presentations, backyard movie nights, or gaming. Comes with a carrying case, remote, and all necessary cables. User manual included. Please return with all accessories.',
+            availabilityStatus: 'Available',
+            borrowingPeriod: '2 weeks',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/lt001',
+            accessionNo: 'ACC-LT-001',
+            callNumber: 'LT.PROJ.001',
+            itemAcquired: '2024-03-10',
+            purchasePrice: 'AUD 350.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/projector-manual',
+            type: 'loanableItem'
+        },
+        {
+            id: 'mi001',
+            name: 'Yamaha Acoustic Guitar',
+            category: 'Musical Instrument Collection',
+            description: 'Classic 6-string acoustic guitar for practice or performance.',
+            fullDescription: 'A high-quality Yamaha acoustic guitar, perfect for beginners and experienced players alike. Comes with a padded gig bag, tuner, and extra set of strings. Please return all accessories with the instrument.',
+            availabilityStatus: 'Available',
+            borrowingPeriod: '2 weeks',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/mi001',
+            accessionNo: 'ACC-MI-001',
+            callNumber: 'MI.GUITAR.001',
+            itemAcquired: '2023-11-20',
+            purchasePrice: 'AUD 450.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/guitar-manual',
+            type: 'loanableItem'
+        }
+        // ... more items as needed ...
+    ],
+    inHouseItems: [
+        {
+            id: 'ih001',
+            name: 'Podcast Kit',
+            category: 'In-House Items',
+            description: 'All-in-one kit for recording podcasts in the library.',
+            fullDescription: 'The Rode Caster Pro is an integrated podcast production studio. The Rode Caster Pro makes professional podcasting easy. It features high-quality XLR microphone inputs and headphone outputs, and with intuitive controls, automatic level setting and one-touch recording to a microSD card or computer, you can literally be making a podcast within minutes of taking it out of the box. Customers must provide their own microSD card or plug the Rode Caster Pro into their computer to save their recordings.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih001',
+            accessionNo: 'ACC-IH-001',
+            callNumber: 'IH.POD.001',
+            itemAcquired: '2024-05-01',
+            purchasePrice: 'AUD 220.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/podcast-kit-manual',
+            type: 'inHouseItem'
+        },
+        {
+            id: 'ih002',
+            name: 'Professional Photography Pack',
+            category: 'In-House Items',
+            description: 'Complete photography kit for professional-quality photos in the library.',
+            fullDescription: 'This in-house pack includes a tripod with fluid head and geared center column compatible with compacts, camcorders, mirrorless and DSLR cameras. Also included in are yellow, red, and blue colour gels, honeycomb grids for focusing light, barndoors and a snoot for focusing light to a small point. For use in conjunction with the studio lighting equipment in the Media Lab at Hurstville Library',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih002',
+            accessionNo: 'ACC-IH-002',
+            callNumber: 'IH.PHOTO.001',
+            itemAcquired: '2024-06-15',
+            purchasePrice: 'AUD 850.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/photography-pack-manual',
+            type: 'inHouseItem'
+        },
+        {
+            id: 'ih003',
+            name: 'PreSonus Studio Monitors',
+            category: 'In-House Items',
+            description: 'Professional studio monitors for high-quality audio monitoring and mixing.',
+            fullDescription: 'PreSonus® Eris Series studio monitors are compact enough to fit almost anywhere. Front-panel 1/8-inch stereo, unbalanced line input for mobile audio devices; and a convenient front-panel volume control. Fine tune speaker response with low and high frequency tuning controls.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih003',
+            accessionNo: 'ACC-IH-003',
+            callNumber: 'IH.AUDIO.001',
+            itemAcquired: '2024-07-01',
+            purchasePrice: 'AUD 450.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/presonus-monitors-manual',
+            type: 'inHouseItem'
+        },
+        {
+            id: 'ih004',
+            name: 'Meta Oculus Quest 2 VR Headset',
+            category: 'In-House Items',
+            description: 'Virtual reality headset for immersive VR experiences and content creation.',
+            fullDescription: 'The Meta Oculus Quest 2 VR Gaming Headset has a blazing-fast processor and next-generation graphics. Create play explore Conquer leaderboards, crush workouts, create with friends and more. Enjoy the incredible resolution of 1832 × 1920 pixels per eye. With enhanced clarity, you can stay focused whether you\'re on the move or standing still.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih004',
+            accessionNo: 'ACC-IH-004',
+            callNumber: 'IH.VR.001',
+            itemAcquired: '2024-07-15',
+            purchasePrice: 'AUD 550.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/oculus-quest2-manual',
+            type: 'inHouseItem'
+        },
+        {
+            id: 'ih005',
+            name: 'Zoom VR Audio Recorder',
+            category: 'In-House Items',
+            description: 'Professional VR audio recorder for capturing spatial audio in virtual reality projects.',
+            fullDescription: 'ZOOM H3-VR Handy Audio Recorder offers great features. It offers 4 built-in mics arranged in an Ambisonic array and Full-sphere surround sound recording. It is the perfect solution for capturing and processing spatial audio for VR, AR, and mixed-reality content.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih005',
+            accessionNo: 'ACC-IH-005',
+            callNumber: 'IH.VR.002',
+            itemAcquired: '2024-08-01',
+            purchasePrice: 'AUD 380.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/zoom-vr-recorder-manual',
+            type: 'inHouseItem'
+        },
+        {
+            id: 'ih006',
+            name: 'Ricoh Theta 4K 360 Camera',
+            category: 'In-House Items',
+            description: '360-degree camera for capturing immersive panoramic photos and videos.',
+            fullDescription: 'The Ricoh Theta 4K captures stunning 360-degree photos and videos in 4K resolution. Perfect for creating virtual tours, immersive content, and panoramic photography. Features include live streaming capability, smartphone app control, and automatic stitching of 360-degree content. Great for real estate, tourism, event documentation, and creative projects.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih006',
+            accessionNo: 'ACC-IH-006',
+            callNumber: 'IH.360.001',
+            itemAcquired: '2024-08-15',
+            purchasePrice: 'AUD 420.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/ricoh-theta-manual',
+            type: 'inHouseItem'
+        },
+        {
+            id: 'ih007',
+            name: 'Zoom Q2N Handy Video Recorder',
+            category: 'In-House Items',
+            description: 'Portable video recorder with high-quality audio for music and event recording.',
+            fullDescription: 'Compact handheld video recorder that combines high-quality video with professional audio recording capabilities. Features include 1080p video recording, built-in stereo microphones with excellent audio quality, and various recording modes. Perfect for recording live music performances, interviews, events, and creating content for social media. Includes tripod mount and external microphone input.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih007',
+            accessionNo: 'ACC-IH-007',
+            callNumber: 'IH.VIDEO.001',
+            itemAcquired: '2024-09-01',
+            purchasePrice: 'AUD 320.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/zoom-q2n-manual',
+            type: 'inHouseItem'
+        },
+        {
+            id: 'ih008',
+            name: 'Record a Song Pack',
+            category: 'In-House Items',
+            description: 'Complete kit for recording original songs in the library.',
+            fullDescription: 'This pack includes all the equipment you need to record audio, songs and other vocals, in-house at the library. This pack includes a quick-start guide to get you started.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih008',
+            accessionNo: 'ACC-IH-008',
+            callNumber: 'IH.MUSIC.001',
+            itemAcquired: '2024-10-01',
+            purchasePrice: 'AUD 280.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/record-song-pack-manual',
+            type: 'inHouseItem'
+        },
+        {
+            id: 'ih009',
+            name: 'Electric Guitar Pack',
+            category: 'In-House Items',
+            description: 'Complete electric guitar setup for recording and practice.',
+            fullDescription: 'The Electric Guitar Pack includes a quality electric guitar, amplifier, cables, tuner, and picks. Perfect for electric guitar recording sessions, practice, or learning electric guitar techniques. The pack is designed for use in conjunction with the Sound Booth or Media Lab for optimal recording conditions. Available for in-library use only.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih009',
+            accessionNo: 'ACC-IH-009',
+            callNumber: 'IH.MUSIC.002',
+            itemAcquired: '2024-10-15',
+            purchasePrice: 'AUD 650.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/electric-guitar-pack-manual',
+            type: 'inHouseItem',
+            contents: [
+                '1 x Fender Squier Starcaster',
+                '1 x NUX MG-300 Guitar Pedal',
+                '1 x Fender Rumble 15 Guitar Amp',
+                '1 x Guitar Tuner',
+                '1 x Capo',
+                '2 x Fender Guitar Leads'
+            ]
+        },
+        {
+            id: 'ih010',
+            name: 'Percussion Pack',
+            category: 'In-House Items',
+            description: 'Collection of percussion instruments for rhythm and music education.',
+            fullDescription: 'The Percussion Pack includes a variety of percussion instruments perfect for rhythm workshops, music education, and group performances. This pack is designed for use in conjunction with the Sound Booth or Media Lab for optimal recording conditions. Available for in-library use only.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih010',
+            accessionNo: 'ACC-IH-010',
+            callNumber: 'IH.MUSIC.003',
+            itemAcquired: '2024-11-01',
+            purchasePrice: 'AUD 180.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/percussion-pack-manual',
+            type: 'inHouseItem',
+            contents: [
+                '2 x Tambourines',
+                '2 x Triangles',
+                '2 x Shakers',
+                '2 x Wooden Blocks'
+            ]
+        },
+        {
+            id: 'ih011',
+            name: 'DJ Pack',
+            category: 'In-House Items',
+            description: 'Complete DJ setup for music mixing and performance.',
+            fullDescription: 'The DJ Pack includes professional DJ equipment for music mixing, beat matching, and performance. Perfect for DJ workshops, music production, and learning DJ techniques. This pack is designed for use in conjunction with the Sound Booth or Media Lab for optimal recording conditions. Available for in-library use only.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih011',
+            accessionNo: 'ACC-IH-011',
+            callNumber: 'IH.MUSIC.004',
+            itemAcquired: '2024-11-15',
+            purchasePrice: 'AUD 420.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/dj-pack-manual',
+            type: 'inHouseItem',
+            contents: [
+                '1 x Pioneer DDJ-SB3 DJ Controller',
+                '1 x Behringer HC 200 Headphones'
+            ]
+        }
+        // ... mock in-house items ...
+    ],
+    permanentEquipment: [
+        {
+            id: 'pe001',
+            name: 'Microsoft Surface Studio PCs',
+            category: 'Permanent Equipment',
+            description: 'Six high-performance Microsoft Surface Studio computers with Adobe Creative Cloud.',
+            fullDescription: 'Six Microsoft Surface Studio PCs are permanently installed in the Media Lab, each equipped with the full Adobe Creative Cloud suite. These powerful all-in-one computers feature 28-inch PixelSense displays with touch and pen support, making them ideal for digital art, photo editing, video production, and graphic design. Each workstation includes a Surface Pen and Dial for precise creative work.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/pe001',
+            accessionNo: 'ACC-PE-001',
+            callNumber: 'PE.COMP.001',
+            itemAcquired: '2023-09-01',
+            purchasePrice: 'AUD 4,200.00 each',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/surface-studio-manual',
+            type: 'permanentEquipment',
+            location: 'Media Lab, Hurstville Library',
+            specifications: [
+                '28-inch PixelSense Display',
+                'Intel Core i7 processor',
+                '32GB RAM',
+                '2TB SSD storage',
+                'NVIDIA GeForce GTX graphics',
+                'Surface Pen and Dial included',
+                'Adobe Creative Cloud suite'
+            ]
+        },
+        {
+            id: 'pe002',
+            name: 'Adobe Creative Cloud',
+            category: 'Permanent Equipment',
+            description: 'Complete Adobe Creative Cloud suite installed on all Media Lab computers.',
+            fullDescription: 'Adobe Creative Cloud provides access to the complete suite of professional creative software including Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, Lightroom, and more. All Media Lab computers have the full Creative Cloud suite installed and ready for use. Users can access their own Adobe accounts or use the library\'s shared account for basic projects.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/pe002',
+            accessionNo: 'ACC-PE-002',
+            callNumber: 'PE.SOFT.001',
+            itemAcquired: '2023-09-01',
+            purchasePrice: 'AUD 1,200.00 annually',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/adobe-creative-cloud-guide',
+            type: 'permanentEquipment',
+            location: 'Media Lab computers',
+            includedSoftware: [
+                'Adobe Photoshop',
+                'Adobe Illustrator',
+                'Adobe InDesign',
+                'Adobe Premiere Pro',
+                'Adobe After Effects',
+                'Adobe Lightroom',
+                'Adobe Audition',
+                'Adobe Dreamweaver',
+                'Adobe XD',
+                'Adobe Acrobat Pro'
+            ]
+        },
+        {
+            id: 'pe003',
+            name: 'Cyclorama Wall',
+            category: 'Permanent Equipment',
+            description: 'White screen cyclorama wall for seamless photography and video backgrounds.',
+            fullDescription: 'The cyclorama wall is a curved white background that creates a seamless, infinite-looking backdrop for photography and video production. This professional studio feature eliminates the need for separate backdrop stands and provides a clean, consistent background for product photography, portrait sessions, and video content creation. The wall is designed to work with the Media Lab\'s professional lighting setup.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/pe003',
+            accessionNo: 'ACC-PE-003',
+            callNumber: 'PE.BACK.001',
+            itemAcquired: '2023-08-15',
+            purchasePrice: 'AUD 2,800.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/cyclorama-wall-guide',
+            type: 'permanentEquipment',
+            location: 'Media Lab, Hurstville Library',
+            specifications: [
+                'Curved white background',
+                'Seamless design',
+                'Professional studio quality',
+                'Compatible with all lighting setups',
+                'Easy to clean and maintain'
+            ]
+        },
+        {
+            id: 'pe004',
+            name: 'Chroma Key Background Screen',
+            category: 'Permanent Equipment',
+            description: 'Green screen background for chroma key video and photo effects.',
+            fullDescription: 'The chroma key background screen provides a bright green backdrop for creating special effects in video and photo editing. This professional green screen allows users to replace the background with any digital image or video, making it perfect for creating virtual backgrounds, special effects, and professional video content. The screen is designed to work seamlessly with video editing software and the Media Lab\'s lighting system.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/pe004',
+            accessionNo: 'ACC-PE-004',
+            callNumber: 'PE.BACK.002',
+            itemAcquired: '2023-08-15',
+            purchasePrice: 'AUD 450.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/chroma-key-guide',
+            type: 'permanentEquipment',
+            location: 'Media Lab, Hurstville Library',
+            specifications: [
+                'Bright green chroma key material',
+                'Wrinkle-resistant fabric',
+                'Professional studio quality',
+                'Compatible with video editing software',
+                'Easy to set up and take down'
+            ]
+        },
+        {
+            id: 'pe005',
+            name: 'LightPro Ultrasoft Round LED Panels',
+            category: 'Permanent Equipment',
+            description: 'Professional LED lighting panels for studio photography and video.',
+            fullDescription: 'The LightPro Ultrasoft Round LED Panels provide professional-quality lighting for photography and video production in the Media Lab. These high-quality LED panels offer adjustable brightness and color temperature, making them perfect for portrait photography, product shots, and video content creation. The soft, diffused light creates flattering illumination and reduces harsh shadows.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/pe005',
+            accessionNo: 'ACC-PE-005',
+            callNumber: 'PE.LIGHT.001',
+            itemAcquired: '2023-08-20',
+            purchasePrice: 'AUD 380.00 each',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/lightpro-led-panels-guide',
+            type: 'permanentEquipment',
+            location: 'Media Lab, Hurstville Library',
+            specifications: [
+                'Round LED panel design',
+                'Adjustable brightness (0-100%)',
+                'Color temperature range: 3200K-5600K',
+                'High CRI (Color Rendering Index)',
+                'Soft, diffused light output',
+                'Lightweight and portable',
+                'Includes mounting brackets'
+            ]
+        },
+        {
+            id: 'pe006',
+            name: 'Tolifo Studio Lights',
+            category: 'Permanent Equipment',
+            description: 'Professional studio lighting system for photography and video production.',
+            fullDescription: 'The Tolifo Studio Lights provide comprehensive lighting solutions for professional photography and video production in the Media Lab. This complete lighting system includes multiple light sources with adjustable intensity, color temperature control, and various mounting options. The system is designed to work with both the cyclorama wall and chroma key background, providing optimal lighting for any creative project.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/pe006',
+            accessionNo: 'ACC-PE-006',
+            callNumber: 'PE.LIGHT.002',
+            itemAcquired: '2023-08-20',
+            purchasePrice: 'AUD 1,200.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/tolifo-studio-lights-guide',
+            type: 'permanentEquipment',
+            location: 'Media Lab, Hurstville Library',
+            specifications: [
+                'Multiple light head system',
+                'Adjustable light intensity',
+                'Color temperature control',
+                'Professional mounting system',
+                'Compatible with various modifiers',
+                'Durable construction',
+                'Easy setup and adjustment'
+            ]
+        },
+        {
+            id: 'pe007',
+            name: 'KRK Studio Monitors',
+            category: 'Permanent Equipment',
+            description: 'Professional reference studio monitors for accurate audio playback.',
+            fullDescription: 'KRK Rokit studio monitors are industry-standard reference speakers, providing clear and accurate sound for mixing and mastering. Ideal for music production, podcasting, and audio editing in the Media Lab.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/pe007',
+            accessionNo: 'ACC-PE-007',
+            callNumber: 'PE.AUDIO.001',
+            itemAcquired: '2024-07-20',
+            purchasePrice: 'AUD 600.00 (pair)',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/krk-monitors-guide',
+            type: 'permanentEquipment',
+            location: 'Media Lab, Hurstville Library',
+            specifications: [
+                'Bi-amped Class A/B amplifier',
+                '5-inch glass aramid composite woofer',
+                '1-inch soft-dome tweeter',
+                'Frequency response: 45Hz–35kHz',
+                'Balanced TRS/XLR and unbalanced RCA inputs',
+                'Front-firing bass port',
+                'Volume and EQ controls'
+            ]
+        },
+        {
+            id: 'pe008',
+            name: 'Behringer 18 Channel Mixer',
+            category: 'Permanent Equipment',
+            description: 'Versatile 18-channel audio mixer for live sound and recording.',
+            fullDescription: 'The Behringer Xenyx 18-channel mixer offers flexible routing, built-in effects, and USB audio interface capabilities. Perfect for multi-microphone recording, live events, and studio sessions in the Media Lab.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/pe008',
+            accessionNo: 'ACC-PE-008',
+            callNumber: 'PE.MIX.001',
+            itemAcquired: '2024-07-25',
+            purchasePrice: 'AUD 850.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/behringer-mixer-guide',
+            type: 'permanentEquipment',
+            location: 'Media Lab, Hurstville Library',
+            specifications: [
+                '18 input channels (12 mic/line, 4 stereo)',
+                'Built-in digital effects processor',
+                'USB audio interface',
+                '3-band EQ per channel',
+                'Phantom power for condenser mics',
+                'Multiple aux sends and returns',
+                'Rugged metal chassis'
+            ]
+        },
+        {
+            id: 'pe009',
+            name: 'Roland Upright Digital Piano',
+            category: 'Permanent Equipment',
+            description: 'Full-size upright digital piano for practice, performance, and recording.',
+            fullDescription: 'The Roland upright digital piano features weighted keys, authentic piano sounds, and MIDI/USB connectivity. Suitable for music practice, performances, and studio recording in the Media Lab and Sound Booth.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/pe009',
+            accessionNo: 'ACC-PE-009',
+            callNumber: 'PE.PIANO.001',
+            itemAcquired: '2024-08-01',
+            purchasePrice: 'AUD 2,200.00',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/roland-piano-guide',
+            type: 'permanentEquipment',
+            location: 'Media Lab, Hurstville Library',
+            specifications: [
+                '88 weighted hammer-action keys',
+                'Multiple grand piano and instrument voices',
+                'Built-in speakers',
+                'MIDI and USB connectivity',
+                'Headphone output',
+                'Adjustable touch sensitivity',
+                'Compact upright cabinet design'
+            ]
+        }
+    ],
+    spaces: [
+        {
+            id: 'space001',
+            name: 'Media Lab',
+            category: 'Spaces',
+            description: 'A creative space for video, audio, and digital projects.',
+            fullDescription: 'The Media Lab is equipped with high-performance computers, video and audio editing software, green screen, and peripherals for creative digital projects. Bookings are required. Staff assistance available for basic troubleshooting.',
+            location: 'Level 2, Main Library',
+            bookingInformation: 'Bookings can be made online or at the service desk. Sessions are limited to 2 hours.',
+            equipmentList: ['iMacs', 'Adobe Creative Cloud', 'Audio Interface', 'Green Screen', 'Microphones'],
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/space001',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/media-lab-manual',
+            type: 'space'
+        },
+        {
+            id: 'space002',
+            name: 'Sound Booth',
+            category: 'Spaces',
+            description: 'A soundproof booth for audio recording and podcasting.',
+            fullDescription: 'The Sound Booth is a dedicated, soundproof space for recording podcasts, voice-overs, and music. Includes microphones, headphones, and a digital audio interface. Bookings are required. Please bring your own storage device for saving recordings.',
+            location: 'Level 2, Main Library',
+            bookingInformation: 'Bookings can be made online or at the service desk. Sessions are limited to 1 hour.',
+            equipmentList: ['Microphones', 'Headphones', 'Audio Interface', 'Soundproofing'],
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/space002',
+            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/sound-booth-manual',
+            type: 'space'
+        }
+        // ... mock spaces ...
+    ],
+    events: []
+};
+
+// Settings items for listings page
+const settingsItems = [
+    {
+        id: 'settings-add-item',
+        name: 'Add an item',
+        description: 'Add a new item to the system.',
+        type: 'settingsItem'
+    },
+    {
+        id: 'settings-report-issue',
+        name: 'Report an issue',
+        description: 'Report a problem or bug with the system.',
+        type: 'settingsItem'
+    }
+];
+
+const today = new Date('2025-06-25');
+let currentSection = localStorage.getItem('georgesRiverCurrentSection') || 'gs-ask-me-anything';
+let isGlobalSearchActive = false;
+let gettingStartedMainBtn, loanableItemsMainBtn, inHouseItemsBtn, permanentEquipmentBtn, spacesBtn, eventsBtn, settingsBtn;
+let gettingStartedSubNav, askMeAnythingBtn, introBtn, faqsBtn, bookingsFeesBtn, termsConditionsMainSubBtn, termsConditionsSubSubNav, termsDtlBtn, termsMiBtn, termsMediaLabBtn, termsSoundBoothBtn;
+let loanableItemsSubNav, loanableDtlBtn, loanableMiBtn;
+let eventsSubNav;
+let searchBar, listView, detailView;
+let aiQuestionInput, aiAskBtn, aiResponse, aiLoadingIndicator;
+let faqsSubNav, faqsDtlBtn, faqsMiBtn, faqsMediaLabBtn, faqsSoundBoothBtn;
+let faqsInHousePacksBtn;
+
+// --- AI Assistant Functions ---
+function initializeAiElements() {
+    aiQuestionInput = document.getElementById('aiQuestionInput');
+    aiAskBtn = document.getElementById('aiAskBtn');
+    aiResponse = document.getElementById('aiResponse');
+    aiLoadingIndicator = document.getElementById('aiLoadingIndicator');
+    if (aiAskBtn && !aiAskBtn.hasAttribute('data-listener-attached')) {
+        aiAskBtn.addEventListener('click', handleAiAsk);
+        aiQuestionInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleAiAsk();
+        });
+        aiAskBtn.setAttribute('data-listener-attached', 'true');
+    }
+}
+async function handleAiAsk() {
+    const question = aiQuestionInput.value.trim();
+    if (!question) {
+        aiResponse.innerHTML = `<p class="text-red-500">Please enter a question.</p>`;
+        return;
+    }
+    aiLoadingIndicator.classList.remove('hidden');
+    aiResponse.innerHTML = '';
+    setTimeout(() => {
+        aiLoadingIndicator.classList.add('hidden');
+        aiResponse.innerHTML = `<p class='text-gray-700'>[Mock AI Response] You asked: <span class='font-semibold'>${question}</span></p>`;
+    }, 1200);
+}
+
+// --- UI State Management Functions ---
+function setActiveMainButton(activeBtnId) {
+    const buttons = [gettingStartedMainBtn, loanableItemsMainBtn, inHouseItemsBtn, permanentEquipmentBtn, spacesBtn, eventsBtn, settingsBtn];
+    buttons.forEach(button => {
+        let shouldHighlight = false;
+        
+        // Check if this button should be highlighted based on currentSection
+        if (button.id === 'gettingStartedMainBtn' && (
+            currentSection === 'gs-ask-me-anything' ||
+            currentSection === 'gs-intro' ||
+            currentSection === 'gs-faqs' ||
+            currentSection === 'gs-bookings-fees' ||
+            currentSection.startsWith('gs-terms')
+        )) {
+            shouldHighlight = true;
+        } else if (button.id === 'loanableItemsMainBtn' && (
+            currentSection === 'loanableItems' ||
+            currentSection === 'loanable-dtl' ||
+            currentSection === 'loanable-mi' ||
+            (currentSection && currentSection.startsWith('lt'))
+        )) {
+            shouldHighlight = true;
+        } else if (button.id === 'inHouseItemsBtn' && currentSection === 'inHouseItems') {
+            shouldHighlight = true;
+        } else if (button.id === 'permanentEquipmentBtn' && currentSection === 'permanentEquipment') {
+            shouldHighlight = true;
+        } else if (button.id === 'spacesBtn' && currentSection === 'spaces') {
+            shouldHighlight = true;
+        } else if (button.id === 'eventsBtn' && currentSection === 'events') {
+            shouldHighlight = true;
+        } else if (button.id === 'settingsBtn' && currentSection === 'settings') {
+            shouldHighlight = true;
+        }
+        
+        // Also check if this button was explicitly set as active
+        if (activeBtnId && button.id === activeBtnId) {
+            shouldHighlight = true;
+        }
+        
+        if (shouldHighlight) {
+            button.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+            button.classList.add('bg-teal-600', 'text-white', 'hover:bg-teal-700');
+        } else {
+            button.classList.remove('bg-teal-600', 'text-white', 'hover:bg-teal-700');
+            button.classList.add('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+        }
+    });
+}
+function setActiveGettingStartedSubButton(activeBtnId) {
+    const subButtons = [askMeAnythingBtn, introBtn, faqsBtn, bookingsFeesBtn, termsConditionsMainSubBtn];
+    subButtons.forEach(button => {
+        if (button.id === activeBtnId && activeBtnId !== '') {
+            button.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+            button.classList.add('bg-teal-500', 'text-white', 'hover:bg-teal-600');
+        } else {
+            button.classList.remove('bg-teal-500', 'text-white', 'hover:bg-teal-600');
+            button.classList.add('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+        }
+    });
+    // FAQs submenu highlight logic
+    if (faqsSubNav) {
+        const subFaqButtons = [faqsDtlBtn, faqsMiBtn, faqsMediaLabBtn, faqsSoundBoothBtn, faqsInHousePacksBtn];
+        subFaqButtons.forEach(btn => {
+            if (!btn) return;
+            if (
+                (btn.id === 'faqsDtlBtn' && currentSection === 'faqs-dtl') ||
+                (btn.id === 'faqsMiBtn' && currentSection === 'faqs-mi') ||
+                (btn.id === 'faqsMediaLabBtn' && currentSection === 'faqs-media-lab') ||
+                (btn.id === 'faqsSoundBoothBtn' && currentSection === 'faqs-sound-booth') ||
+                (btn.id === 'faqsInHousePacksBtn' && currentSection === 'faqs-in-house-packs')
+            ) {
+                btn.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+                btn.classList.add('bg-teal-500', 'text-white', 'hover:bg-teal-600');
+            } else {
+                btn.classList.remove('bg-teal-500', 'text-white', 'hover:bg-teal-600');
+                btn.classList.add('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+            }
+        });
+    }
+}
+function setActiveTermsConditionsSubSubButton(activeBtnId) {
+    const subSubButtons = [termsDtlBtn, termsMiBtn, termsMediaLabBtn, termsSoundBoothBtn];
+    subSubButtons.forEach(button => {
+        if (button.id === activeBtnId && activeBtnId !== '') {
+            button.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+            button.classList.add('bg-teal-500', 'text-white', 'hover:bg-teal-600');
+        } else {
+            button.classList.remove('bg-teal-500', 'text-white', 'hover:bg-teal-600');
+            button.classList.add('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+        }
+    });
+}
+function setActiveLoanableItemsSubButton(activeBtnId) {
+    const subButtons = [loanableDtlBtn, loanableMiBtn];
+    subButtons.forEach(button => {
+        if (button.id === activeBtnId && activeBtnId !== '') {
+            button.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+            button.classList.add('bg-teal-500', 'text-white', 'hover:bg-teal-600');
+        } else {
+            button.classList.remove('bg-teal-500', 'text-white', 'hover:bg-teal-600');
+            button.classList.add('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+        }
+    });
+}
+function hideAllSubNavs() {
+    gettingStartedSubNav.classList.add('hidden-sub-nav');
+    termsConditionsSubSubNav.classList.add('hidden-sub-nav');
+    loanableItemsSubNav.classList.add('hidden-sub-nav');
+    setActiveSettingsSubButton('');
+}
+function mainBtnIdFromItemType(itemType) {
+    switch(itemType) {
+        case 'loanableItem': return 'loanableItemsMainBtn';
+        case 'inHouseItem': return 'inHouseItemsBtn';
+        case 'permanentEquipment': return 'permanentEquipmentBtn';
+        case 'space': return 'spacesBtn';
+        case 'gettingStartedItem': return 'gettingStartedMainBtn';
+        default: return '';
+    }
+}
+
+function getGettingStartedSubButtonId(sectionId) {
+    const mapping = {
+        'gs-ask-me-anything': 'askMeAnythingBtn',
+        'gs-intro': 'introBtn',
+        'gs-faqs': 'faqsBtn',
+        'gs-bookings-fees': 'bookingsFeesBtn',
+        'gs-terms-dtl': 'termsDtlBtn',
+        'gs-terms-mi': 'termsMiBtn',
+        'gs-terms-media-lab': 'termsMediaLabBtn',
+        'gs-terms-sound-booth': 'termsSoundBoothBtn'
+    };
+    return mapping[sectionId] || '';
+}
+
+function getTermsConditionsSubSubButtonId(sectionId) {
+    const mapping = {
+        'gs-terms-dtl': 'termsDtlBtn',
+        'gs-terms-mi': 'termsMiBtn',
+        'gs-terms-media-lab': 'termsMediaLabBtn',
+        'gs-terms-sound-booth': 'termsSoundBoothBtn'
+    };
+    return mapping[sectionId] || '';
+}
+
+function getLoanableItemsSubButtonId(sectionId) {
+    const mapping = {
+        'loanable-dtl': 'loanableDtlBtn',
+        'loanable-mi': 'loanableMiBtn'
+    };
+    return mapping[sectionId] || '';
+}
+
+// --- HTML Content Generation Functions ---
+function generateBreadcrumbHtmlForDetail(entry) {
+    let breadcrumbHtml = `<div class="text-sm text-gray-500 mb-4">`;
+    breadcrumbHtml += `<span class="cursor-pointer hover:text-teal-600" onclick="navigateToSection('gs-ask-me-anything', 'gettingStartedMainBtn')">Home</span>`;
+    let mainSectionText = '';
+    let mainSectionRouteId = '';
+    let categoryText = null;
+    let categoryRouteId = null;
+    if (currentSection.startsWith('gs-')) {
+        mainSectionText = 'Getting Started';
+        mainSectionRouteId = 'gs-ask-me-anything';
+        // Only add category if not the home page (Ask Me Anything)
+        if (entry.id !== 'gs-ask-me-anything') {
+            categoryText = entry.name;
+            categoryRouteId = entry.id;
+        }
+    } else if (entry.category && (entry.category.includes('Library of Things') || entry.category.includes('Digital Tool Library') || entry.category.includes('Musical Instrument Collection'))) {
+        mainSectionText = 'Loanable Items';
+        mainSectionRouteId = 'loanable-dtl';
+        categoryText = entry.category;
+        if (entry.category === 'Library of Things') categoryRouteId = 'loanable-dtl';
+        else if (entry.category === 'Digital Tool Library') categoryRouteId = 'loanable-dtl';
+        else if (entry.category === 'Musical Instrument Collection') categoryRouteId = 'loanable-mi';
+    } else if (entry.category && entry.category === 'In-House Items') {
+        mainSectionText = 'In-House Items';
+        mainSectionRouteId = 'inHouseItems';
+    } else if (entry.category && entry.category === 'Permanent Equipment') {
+        mainSectionText = 'Permanent Equipment';
+        mainSectionRouteId = 'permanentEquipment';
+    } else if (entry.hasOwnProperty('bookingInformation') && entry.hasOwnProperty('equipmentList')) {
+        mainSectionText = 'Spaces';
+        mainSectionRouteId = 'spaces';
+    } else if (isGlobalSearchActive) {
+        mainSectionText = 'Search Results';
+        mainSectionRouteId = '';
+    }
+    if (mainSectionText && mainSectionRouteId !== '') {
+        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="cursor-pointer hover:text-teal-600" onclick="navigateToSection('${mainSectionRouteId}')">${mainSectionText}</span>`;
+    } else if (mainSectionText && mainSectionRouteId === '') {
+        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="text-gray-700 font-medium">${mainSectionText}</span>`;
+    }
+    // Only add category if it is not the current page name
+    if (categoryText && categoryRouteId && entry.name !== categoryText) {
+        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="cursor-pointer hover:text-teal-600" onclick="navigateToSection('${categoryRouteId}')">${categoryText}</span>`;
+    } else if (categoryText && entry.name !== categoryText) {
+         breadcrumbHtml += ` <span class="mx-1">/</span> <span class="text-gray-700 font-medium">${categoryText}</span>`;
+    }
+    breadcrumbHtml += ` <span class="mx-1">/</span> <span class="text-gray-700 font-medium">${entry.name}</span>`;
+    breadcrumbHtml += `</div>`;
+    return breadcrumbHtml;
+}
+function generateBreadcrumbHtmlForList(listTitle, isSearchList) {
+    let breadcrumbHtml = `<div class="text-sm text-gray-500 mb-4">`;
+    breadcrumbHtml += `<span class="cursor-pointer hover:text-teal-600" onclick="navigateToSection('gs-ask-me-anything', 'gettingStartedMainBtn')">Home</span>`;
+    if (isSearchList) {
+        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="text-gray-700 font-medium">${listTitle}</span>`;
+    } else if (listTitle === 'In-House Items' || listTitle === 'Spaces' || listTitle === 'Loanable Items' || listTitle === 'Permanent Equipment') {
+        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="text-gray-700 font-medium">${listTitle}</span>`;
+    } else if (listTitle.includes('Library of Things') || listTitle.includes('Digital Tool Library') || listTitle.includes('Musical Instrument Collection')) {
+        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="cursor-pointer hover:text-teal-600" onclick="navigateToSection('loanable-dtl', 'loanableItemsMainBtn')">Loanable Items</span>`;
+        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="text-gray-700 font-medium">${listTitle}</span>`;
+    }
+    breadcrumbHtml += `</div>`;
+    return breadcrumbHtml;
+}
+function generateItemDetailHtml(entry) {
+    // Always include the breadcrumb at the top
+    const breadcrumbHtml = generateBreadcrumbHtmlForDetail(entry);
+    // Special case for Ask Me Anything page
+    if (entry.id === 'gs-ask-me-anything') {
+        return `
+            ${breadcrumbHtml}
+            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                <header class="mb-6 border-b pb-4 border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                        ${entry.name || '[Item Name Placeholder]'}
+                    </h1>
+                </header>
+                <section class="mb-8">
+                    <div>${entry.fullDescription || ''}</div>
+                </section>
+            </div>
+        `;
+    }
+    // --- ENHANCED PORTABLE PROJECTOR LANDING PAGE ---
+    if (entry.id === 'lt001') {
+        return `
+            ${breadcrumbHtml}
+            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                <header class="mb-6 border-b pb-4 border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                        Portable Projector
+                    </h1>
+                </header>
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        High-definition portable projector with HDMI, USB, and built-in speaker. Ideal for small group presentations, backyard movie nights, or gaming. Comes with a carrying case, remote, and all necessary cables. User manual included. Please return with all accessories.
+                    </p>
+                </section>
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Collection Details</h2>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><strong>Collection:</strong> <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Digital Tool Library</span></li>
+                            <li><strong>Call Number:</strong> <span class="font-medium">LT.PROJ.001</span></li>
+                            <li><strong>Accession No.:</strong> <span class="font-medium">ACC-LT-001</span></li>
+                            <li><strong>Item Acquired:</strong> <span class="font-medium">2024-03-10</span></li>
+                            <li><strong>Purchase Price:</strong> <span class="font-medium">AUD 350.00</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Digital Access</h2>
+                        <p class="text-gray-700 mb-4">
+                            <strong class="block mb-1">Bookmark Link:</strong>
+                            <a href="https://mockcatalogue.georgesriver.nsw.gov.au/lt001" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
+                                https://mockcatalogue.georgesriver.nsw.gov.au/lt001
+                            </a>
+                        </p>
+                        <p class="text-gray-700">
+                            <strong class="block mb-1">Instructions:</strong>
+                            <a href="https://mockinstructions.georgesriver.nsw.gov.au/projector-manual" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
+                                Projector Manual
+                            </a>
+                        </p>
+                    </div>
+                </section>
+                <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
+                    <a href="https://mockcatalogue.georgesriver.nsw.gov.au/lt001" target="_blank" class="w-full sm:w-auto px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg shadow-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
+                        VIEW IN CATALOGUE
+                    </a>
+                </footer>
+            </div>
+        `;
+    }
+    // --- ENHANCED YAMAHA ACOUSTIC GUITAR LANDING PAGE ---
+    if (entry.id === 'mi001') {
+        return `
+            ${breadcrumbHtml}
+            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                <header class="mb-6 border-b pb-4 border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                        Yamaha Acoustic Guitar
+                    </h1>
+                </header>
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        A high-quality Yamaha acoustic guitar, perfect for beginners and experienced players alike. Comes with a padded gig bag, tuner, and extra set of strings. Please return all accessories with the instrument.
+                    </p>
+                </section>
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Collection Details</h2>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><strong>Collection:</strong> <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Musical Instrument Collection</span></li>
+                            <li><strong>Call Number:</strong> <span class="font-medium">MI.GUITAR.001</span></li>
+                            <li><strong>Accession No.:</strong> <span class="font-medium">ACC-MI-001</span></li>
+                            <li><strong>Item Acquired:</strong> <span class="font-medium">2023-11-20</span></li>
+                            <li><strong>Purchase Price:</strong> <span class="font-medium">AUD 450.00</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Digital Access</h2>
+                        <p class="text-gray-700 mb-4">
+                            <strong class="block mb-1">Bookmark Link:</strong>
+                            <a href="https://mockcatalogue.georgesriver.nsw.gov.au/mi001" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
+                                https://mockcatalogue.georgesriver.nsw.gov.au/mi001
+                            </a>
+                        </p>
+                        <p class="text-gray-700">
+                            <strong class="block mb-1">Instructions:</strong>
+                            <a href="https://mockinstructions.georgesriver.nsw.gov.au/guitar-manual" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
+                                Guitar Manual
+                            </a>
+                        </p>
+                    </div>
+                </section>
+                <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
+                    <a href="https://mockcatalogue.georgesriver.nsw.gov.au/mi001" target="_blank" class="w-full sm:w-auto px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg shadow-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
+                        VIEW IN CATALOGUE
+                    </a>
+                </footer>
+            </div>
+        `;
+    }
+    // Remove 'Summary', 'Collection Details', and 'Digital Access' sections for all Getting Started pages
+    if (entry.id && entry.id.startsWith('gs-')) {
+        return `
+            ${breadcrumbHtml}
+            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                <header class="mb-6 border-b pb-4 border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                        ${entry.name || '[Item Name Placeholder]'}
+                    </h1>
+                </header>
+                <section class="mb-8">
+                    <p class="text-gray-700 leading-relaxed">
+                        ${entry.fullDescription || '[Summary Placeholder]'}
+                    </p>
+                </section>
+            </div>
+        `;
+    }
+    // Remove 'Summary', 'Collection Details', and 'Digital Access' sections for faqs-dtl
+    if (entry.id === 'faqs-dtl' || entry.id === 'faqs-mi' || entry.id === 'faqs-media-lab' || entry.id === 'faqs-sound-booth') {
+        // Function to extract questions from FAQ content
+        function extractQuestionsFromFAQ(faqContent) {
+            const questions = [];
+            // Updated regex to allow for zero or more spaces between </strong> and <br>A:
+            const questionRegex = /<li><a id="(q\d+)"><\/a><strong>Q: ([^<]+)<\/strong>\s*<br>A:/g;
+            let match;
+            while ((match = questionRegex.exec(faqContent)) !== null) {
+                questions.push({
+                    q: match[2].trim(),
+                    anchor: match[1]
+                });
+            }
+            return questions;
+        }
+        
+        // Extract questions dynamically from the FAQ content
+        const questions = extractQuestionsFromFAQ(entry.fullDescription);
+        
+        // Add anchors to the FAQ answers and make questions bold
+        let faqHtml = entry.fullDescription;
+        if (questions.length) {
+            questions.forEach((q, idx) => {
+                // Replace the first occurrence of the question with an anchor and bold formatting
+                const regex = new RegExp(`<li>Q: ${q.q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} <br>A:`, 'g');
+                faqHtml = faqHtml.replace(regex, `<li><a id="${q.anchor}"></a><strong>Q: ${q.q}</strong> <br>A:`);
+            });
+        }
+        
+        // Contents section
+        const contentsHtml = `
+            <div class="mb-8 p-6 bg-teal-50 border-l-4 border-teal-500 rounded-lg shadow-sm">
+                <div class="flex items-center mb-3">
+                    <svg class="w-5 h-5 text-teal-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <h2 class="text-xl font-bold text-teal-800">Contents</h2>
+                </div>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    ${questions.map(q => `<li><a href="#${q.anchor}" class="text-teal-700 hover:text-teal-900 hover:underline font-medium transition-colors duration-200">${q.q}</a></li>`).join('')}
+                </ul>
+            </div>
+        `;
+        return `
+            ${breadcrumbHtml}
+            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                <header class="mb-6 border-b pb-4 border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                        ${entry.name || '[Item Name Placeholder]'}
+                    </h1>
+                </header>
+                ${contentsHtml}
+                <section class="mb-8">
+                    <div>${faqHtml || ''}</div>
+                </section>
+            </div>
+        `
+    }
+    // Remove 'Summary', 'Collection Details', and 'Digital Access' sections for faqs-in-house-packs
+    if (entry.id === 'faqs-in-house-packs') {
+        // Function to extract questions from FAQ content
+        function extractQuestionsFromFAQ(faqContent) {
+            const questions = [];
+            // Updated regex to allow for zero or more spaces between </strong> and <br>A:
+            const questionRegex = /<li><a id="(q\d+)"><\/a><strong>Q: ([^<]+)<\/strong>\s*<br>A:/g;
+            let match;
+            while ((match = questionRegex.exec(faqContent)) !== null) {
+                questions.push({
+                    q: match[2].trim(),
+                    anchor: match[1]
+                });
+            }
+            return questions;
+        }
+        
+        // Extract questions dynamically from the FAQ content
+        const questions = extractQuestionsFromFAQ(entry.fullDescription);
+        
+        // Contents section
+        const contentsHtml = `
+            <div class="mb-8 p-6 bg-teal-50 border-l-4 border-teal-500 rounded-lg shadow-sm">
+                <div class="flex items-center mb-3">
+                    <svg class="w-5 h-5 text-teal-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <h2 class="text-xl font-bold text-teal-800">Contents</h2>
+                </div>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    ${questions.map(q => `<li><a href="#${q.anchor}" class="text-teal-700 hover:text-teal-900 hover:underline font-medium transition-colors duration-200">${q.q}</a></li>`).join('')}
+                </ul>
+            </div>
+        `;
+        return `
+            ${breadcrumbHtml}
+            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                <header class="mb-6 border-b pb-4 border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                        ${entry.name || '[Item Name Placeholder]'}
+                    </h1>
+                </header>
+                ${contentsHtml}
+                <section class="mb-8">
+                    <div>${entry.fullDescription || ''}</div>
+                </section>
+            </div>
+        `;
+    }
+    // Special case for In-House Items with contents
+    if (entry.type === 'inHouseItem' && entry.contents && entry.contents.length > 0) {
+        const contentsHtml = `
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Contents</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    ${entry.contents.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            </section>
+        `;
+        return `
+            ${breadcrumbHtml}
+            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                <header class="mb-6 border-b pb-4 border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                        ${entry.name || '[Item Name Placeholder]'}
+                    </h1>
+                </header>
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        ${entry.fullDescription || '[Summary Placeholder]'}
+                    </p>
+                </section>
+                ${contentsHtml}
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Collection Details</h2>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><strong>Collection:</strong> <span class="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">${entry.category || '[Category Placeholder]'}</span></li>
+                            <li><strong>Call Number:</strong> <span class="font-medium">${entry.callNumber || '[Call Number Placeholder]'}</span></li>
+                            <li><strong>Accession No.:</strong> <span class="font-medium">${entry.accessionNo || '[Accession No. Placeholder]'}</span></li>
+                            <li><strong>Item Acquired:</strong> <span class="font-medium">${entry.itemAcquired || '[Item Acquired Placeholder]'}</span></li>
+                            <li><strong>Purchase Price:</strong> <span class="font-medium">${entry.purchasePrice || '[Purchase Price Placeholder]'}</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Digital Access</h2>
+                        <p class="text-gray-700 mb-4">
+                            <strong class="block mb-1">Bookmark Link:</strong>
+                            <a href="${entry.catalogueLink || '#'}" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
+                                ${entry.catalogueLink || '[Catalogue Link Placeholder]'}
+                            </a>
+                        </p>
+                        <p class="text-gray-700">
+                            <strong class="block mb-1">Instructions:</strong>
+                            <a href="${entry.instructionLink || '#'}" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
+                                ${entry.instructionLink ? 'Instruction Manual' : '[Instruction Link Placeholder]'}
+                            </a>
+                        </p>
+                    </div>
+                </section>
+                <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
+                    <a href="${entry.catalogueLink || '#'}" target="_blank" class="w-full sm:w-auto px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg shadow-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
+                        VIEW IN CATALOGUE
+                    </a>
+                </footer>
+            </div>
+        `;
+    }
+    // Default item detail template
+    return `
+        ${breadcrumbHtml}
+        <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+            <header class="mb-6 border-b pb-4 border-gray-200">
+                <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                    ${entry.name || '[Item Name Placeholder]'}
+                </h1>
+            </header>
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    ${entry.fullDescription || '[Summary Placeholder]'}
+                </p>
+            </section>
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Collection Details</h2>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>Collection:</strong> <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">${entry.category || '[Category Placeholder]'}</span></li>
+                        <li><strong>Call Number:</strong> <span class="font-medium">${entry.callNumber || '[Call Number Placeholder]'}</span></li>
+                        <li><strong>Accession No.:</strong> <span class="font-medium">${entry.accessionNo || '[Accession No. Placeholder]'}</span></li>
+                        <li><strong>Item Acquired:</strong> <span class="font-medium">${entry.itemAcquired || '[Item Acquired Placeholder]'}</span></li>
+                        <li><strong>Purchase Price:</strong> <span class="font-medium">${entry.purchasePrice || '[Purchase Price Placeholder]'}</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Digital Access</h2>
+                    <p class="text-gray-700 mb-4">
+                        <strong class="block mb-1">Bookmark Link:</strong>
+                        <a href="${entry.catalogueLink || '#'}" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
+                            ${entry.catalogueLink || '[Catalogue Link Placeholder]'}
+                        </a>
+                    </p>
+                    <p class="text-gray-700">
+                        <strong class="block mb-1">Instructions:</strong>
+                        <a href="${entry.instructionLink || '#'}" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
+                            ${entry.instructionLink ? 'Instruction Manual' : '[Instruction Link Placeholder]'}
+                        </a>
+                    </p>
+                </div>
+            </section>
+            <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
+                <a href="${entry.catalogueLink || '#'}" target="_blank" class="w-full sm:w-auto px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg shadow-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
+                    VIEW IN CATALOGUE
+                </a>
+            </footer>
+        </div>
+    `;
+}
+
+// --- Navigation Functions ---
+window.navigateToSection = function(sectionId, activeBtnId = '') {
+    currentSection = sectionId;
+    localStorage.setItem('georgesRiverCurrentSection', sectionId);
+    
+    // Find the entry for this section
+    let entry = null;
+    
+    // Check gettingStarted first
+    entry = mockData.gettingStarted.find(item => item.id === sectionId);
+    
+    if (!entry) {
+        // Check loanableItems
+        entry = mockData.loanableItems.find(item => item.id === sectionId);
+    }
+    
+    if (!entry) {
+        // Check inHouseItems
+        entry = mockData.inHouseItems.find(item => item.id === sectionId);
+    }
+    
+    if (!entry) {
+        // Check permanentEquipment
+        entry = mockData.permanentEquipment.find(item => item.id === sectionId);
+    }
+    
+    if (!entry) {
+        // Check spaces
+        entry = mockData.spaces.find(item => item.id === sectionId);
+    }
+    
+    if (!entry) {
+        // Check events
+        entry = mockData.events.find(item => item.id === sectionId);
+    }
+    
+    if (!entry) {
+        // Check settings items
+        entry = settingsItems.find(item => item.id === sectionId);
+    }
+    
+    if (entry) {
+        // Show detail view
+        detailView.innerHTML = generateItemDetailHtml(entry);
+        listView.innerHTML = '';
+        
+        // Update button states
+        setActiveMainButton(activeBtnId);
+        
+        // Handle sub-navigation highlighting
+        if (sectionId.startsWith('gs-')) {
+            setActiveGettingStartedSubButton(getGettingStartedSubButtonId(sectionId));
+            setActiveTermsConditionsSubSubButton(getTermsConditionsSubSubButtonId(sectionId));
+        } else if (sectionId.startsWith('loanable-') || (entry.type && entry.type === 'loanableItem')) {
+            setActiveLoanableItemsSubButton(getLoanableItemsSubButtonId(sectionId));
+        }
+        
+        // Initialize AI elements if on Ask Me Anything page
+        if (sectionId === 'gs-ask-me-anything') {
+            setTimeout(initializeAiElements, 100);
+        }
+    } else {
+        // Show list view for main sections
+        showListForSection(sectionId, activeBtnId);
+    }
+}
+
+function showListForSection(sectionId, activeBtnId = '') {
+    let items = [];
+    let listTitle = '';
+    
+    if (sectionId === 'loanable-dtl') {
+        items = mockData.loanableItems.filter(item => item.category === 'Digital Tool Library');
+        listTitle = 'Digital Tool Library';
+    } else if (sectionId === 'loanable-mi') {
+        items = mockData.loanableItems.filter(item => item.category === 'Musical Instrument Collection');
+        listTitle = 'Musical Instrument Collection';
+    } else if (sectionId === 'inHouseItems') {
+        items = mockData.inHouseItems;
+        listTitle = 'In-House Items';
+    } else if (sectionId === 'permanentEquipment') {
+        items = mockData.permanentEquipment;
+        listTitle = 'Permanent Equipment';
+    } else if (sectionId === 'spaces') {
+        items = mockData.spaces;
+        listTitle = 'Spaces';
+    } else if (sectionId === 'events') {
+        items = mockData.events;
+        listTitle = 'Events';
+    } else if (sectionId === 'settings') {
+        items = settingsItems;
+        listTitle = 'Settings';
+    }
+    
+    if (items.length > 0) {
+        const breadcrumbHtml = generateBreadcrumbHtmlForList(listTitle, false);
+        const listHtml = generateListHtml(items, listTitle);
+        detailView.innerHTML = breadcrumbHtml + listHtml;
+        listView.innerHTML = '';
+        
+        // Update button states
+        setActiveMainButton(activeBtnId);
+        
+        // Handle sub-navigation highlighting
+        if (sectionId.startsWith('loanable-')) {
+            setActiveLoanableItemsSubButton(getLoanableItemsSubButtonId(sectionId));
+        }
+    }
+}
+
+function generateListHtml(items, title) {
+    let html = `
+        <div class="max-w-6xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+            <header class="mb-6 border-b pb-4 border-gray-200">
+                <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">${title}</h1>
+            </header>
+            <div class="flex flex-col space-y-4">
+    `;
+    
+    items.forEach(item => {
+        const tags = [];
+        
+        // Add collection tag
+        if (item.category) {
+            if (item.category === 'Digital Tool Library') {
+                tags.push('<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Digital Tool Library</span>');
+            } else if (item.category === 'Musical Instrument Collection') {
+                tags.push('<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Musical Instrument Collection</span>');
+            } else if (item.category === 'In-House Items') {
+                tags.push('<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">In-House Items</span>');
+                tags.push('<span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Not for loan</span>');
+            } else if (item.category === 'Permanent Equipment') {
+                tags.push('<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Permanent Equipment</span>');
+            }
+        }
+        
+        // Add Media Lab tag for Permanent Equipment (except specific Sound Booth items)
+        if (item.category === 'Permanent Equipment' && !['pe007', 'pe008', 'pe009'].includes(item.id)) {
+            tags.push('<span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Media Lab</span>');
+        }
+        
+        // Add Sound Booth tag for specific items
+        if (item.id === 'pe007' || item.id === 'pe008' || item.id === 'pe009') {
+            tags.push('<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Sound Booth</span>');
+        }
+        
+        html += `
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer w-full" onclick="navigateToSection('${item.id}')">
+                <div class="p-6 flex justify-between items-start">
+                    <div class="flex-1">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">${item.name}</h3>
+                        <p class="text-gray-600 text-sm mb-3">${item.description}</p>
+                        <div class="text-xs text-gray-500">
+                            <span class="font-medium">Call Number:</span> ${item.callNumber || 'N/A'}
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1 ml-4">
+                        ${tags.join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+            </div>
+        </div>
+    `;
+    
+    return html;
+}
+
+// --- Search Functions ---
+function performSearch(query) {
+    if (!query.trim()) {
+        isGlobalSearchActive = false;
+        navigateToSection(currentSection);
+        return;
+    }
+    
+    isGlobalSearchActive = true;
+    const searchResults = [];
+    const searchTerm = query.toLowerCase();
+    
+    // Search through all data sources
+    const allItems = [
+        ...mockData.gettingStarted,
+        ...mockData.loanableItems,
+        ...mockData.inHouseItems,
+        ...mockData.permanentEquipment,
+        ...mockData.spaces,
+        ...mockData.events,
+        ...settingsItems
+    ];
+    
+    allItems.forEach(item => {
+        const searchableText = `${item.name} ${item.description} ${item.fullDescription || ''}`.toLowerCase();
+        if (searchableText.includes(searchTerm)) {
+            searchResults.push(item);
+        }
+    });
+    
+    if (searchResults.length > 0) {
+        const breadcrumbHtml = generateBreadcrumbHtmlForList(`Search Results for "${query}"`, true);
+        const listHtml = generateListHtml(searchResults, `Search Results for "${query}"`);
+        detailView.innerHTML = breadcrumbHtml + listHtml;
+        listView.innerHTML = '';
+    } else {
+        detailView.innerHTML = `
+            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                <header class="mb-6 border-b pb-4 border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">No Results Found</h1>
+                </header>
+                <section class="mb-8">
+                    <p class="text-gray-700 leading-relaxed">
+                        No items found matching "${query}". Try searching with different keywords or browse the categories using the navigation menu.
+                    </p>
+                </section>
+            </div>
+        `;
+        listView.innerHTML = '';
+    }
+}
+
+// --- Event Listeners ---
+function initializeEventListeners() {
+    // Main navigation buttons
+    gettingStartedMainBtn.addEventListener('click', () => {
+        hideAllSubNavs();
+        gettingStartedSubNav.classList.remove('hidden-sub-nav');
+        navigateToSection('gs-ask-me-anything', 'gettingStartedMainBtn');
+    });
+    
+    loanableItemsMainBtn.addEventListener('click', () => {
+        hideAllSubNavs();
+        loanableItemsSubNav.classList.remove('hidden-sub-nav');
+        navigateToSection('loanable-dtl', 'loanableItemsMainBtn');
+    });
+    
+    inHouseItemsBtn.addEventListener('click', () => {
+        hideAllSubNavs();
+        navigateToSection('inHouseItems', 'inHouseItemsBtn');
+    });
+    
+    permanentEquipmentBtn.addEventListener('click', () => {
+        hideAllSubNavs();
+        navigateToSection('permanentEquipment', 'permanentEquipmentBtn');
+    });
+    
+    spacesBtn.addEventListener('click', () => {
+        hideAllSubNavs();
+        navigateToSection('spaces', 'spacesBtn');
+    });
+    
+    eventsBtn.addEventListener('click', () => {
+        hideAllSubNavs();
+        navigateToSection('events', 'eventsBtn');
+    });
+    
+    settingsBtn.addEventListener('click', () => {
+        hideAllSubNavs();
+        navigateToSection('settings', 'settingsBtn');
+    });
+    
+    // Getting Started sub-navigation
+    askMeAnythingBtn.addEventListener('click', () => {
+        navigateToSection('gs-ask-me-anything', 'askMeAnythingBtn');
+    });
+    
+    introBtn.addEventListener('click', () => {
+        navigateToSection('gs-intro', 'introBtn');
+    });
+    
+    faqsBtn.addEventListener('click', () => {
+        faqsSubNav.classList.toggle('hidden-sub-nav');
+    });
+    
+    faqsDtlBtn.addEventListener('click', () => {
+        navigateToSection('faqs-dtl', 'faqsDtlBtn');
+    });
+    
+    faqsMiBtn.addEventListener('click', () => {
+        navigateToSection('faqs-mi', 'faqsMiBtn');
+    });
+    
+    faqsMediaLabBtn.addEventListener('click', () => {
+        navigateToSection('faqs-media-lab', 'faqsMediaLabBtn');
+    });
+    
+    faqsSoundBoothBtn.addEventListener('click', () => {
+        navigateToSection('faqs-sound-booth', 'faqsSoundBoothBtn');
+    });
+    
+    faqsInHousePacksBtn.addEventListener('click', () => {
+        navigateToSection('faqs-in-house-packs', 'faqsInHousePacksBtn');
+    });
+    
+    bookingsFeesBtn.addEventListener('click', () => {
+        navigateToSection('gs-bookings-fees', 'bookingsFeesBtn');
+    });
+    
+    termsConditionsMainSubBtn.addEventListener('click', () => {
+        termsConditionsSubSubNav.classList.toggle('hidden-sub-nav');
+    });
+    
+    termsDtlBtn.addEventListener('click', () => {
+        navigateToSection('gs-terms-dtl', 'termsDtlBtn');
+    });
+    
+    termsMiBtn.addEventListener('click', () => {
+        navigateToSection('gs-terms-mi', 'termsMiBtn');
+    });
+    
+    termsMediaLabBtn.addEventListener('click', () => {
+        navigateToSection('gs-terms-media-lab', 'termsMediaLabBtn');
+    });
+    
+    termsSoundBoothBtn.addEventListener('click', () => {
+        navigateToSection('gs-terms-sound-booth', 'termsSoundBoothBtn');
+    });
+    
+    // Loanable Items sub-navigation
+    loanableDtlBtn.addEventListener('click', () => {
+        navigateToSection('loanable-dtl', 'loanableDtlBtn');
+    });
+    
+    loanableMiBtn.addEventListener('click', () => {
+        navigateToSection('loanable-mi', 'loanableMiBtn');
+    });
+    
+    // Search functionality
+    searchBar.addEventListener('input', (e) => {
+        const query = e.target.value.trim();
+        if (query.length >= 2) {
+            performSearch(query);
+        } else if (query.length === 0) {
+            isGlobalSearchActive = false;
+            navigateToSection(currentSection);
+        }
+    });
+}
+
+// --- Settings Functions ---
+function setActiveSettingsSubButton(activeBtnId) {
+    // This function is called but not implemented since settings are now handled as listings
+}
+
+// --- Initialization ---
+function initialize() {
+    // Get DOM elements
+    gettingStartedMainBtn = document.getElementById('gettingStartedMainBtn');
+    loanableItemsMainBtn = document.getElementById('loanableItemsMainBtn');
+    inHouseItemsBtn = document.getElementById('inHouseItemsBtn');
+    permanentEquipmentBtn = document.getElementById('permanentEquipmentBtn');
+    spacesBtn = document.getElementById('spacesBtn');
+    eventsBtn = document.getElementById('eventsBtn');
+    settingsBtn = document.getElementById('settingsBtn');
+    
+    gettingStartedSubNav = document.getElementById('gettingStartedSubNav');
+    askMeAnythingBtn = document.getElementById('askMeAnythingBtn');
+    introBtn = document.getElementById('introBtn');
+    faqsBtn = document.getElementById('faqsBtn');
+    bookingsFeesBtn = document.getElementById('bookingsFeesBtn');
+    termsConditionsMainSubBtn = document.getElementById('termsConditionsMainSubBtn');
+    termsConditionsSubSubNav = document.getElementById('termsConditionsSubSubNav');
+    termsDtlBtn = document.getElementById('termsDtlBtn');
+    termsMiBtn = document.getElementById('termsMiBtn');
+    termsMediaLabBtn = document.getElementById('termsMediaLabBtn');
+    termsSoundBoothBtn = document.getElementById('termsSoundBoothBtn');
+    
+    loanableItemsSubNav = document.getElementById('loanableItemsSubNav');
+    loanableDtlBtn = document.getElementById('loanableDtlBtn');
+    loanableMiBtn = document.getElementById('loanableMiBtn');
+    
+    searchBar = document.getElementById('searchBar');
+    listView = document.getElementById('listView');
+    detailView = document.getElementById('detailView');
+    
+    faqsSubNav = document.getElementById('faqsSubNav');
+    faqsDtlBtn = document.getElementById('faqsDtlBtn');
+    faqsMiBtn = document.getElementById('faqsMiBtn');
+    faqsMediaLabBtn = document.getElementById('faqsMediaLabBtn');
+    faqsSoundBoothBtn = document.getElementById('faqsSoundBoothBtn');
+    faqsInHousePacksBtn = document.getElementById('faqsInHousePacksBtn');
+    
+    // Initialize event listeners
+    initializeEventListeners();
+    
+    // Navigate to the current section or default to Ask Me Anything
+    navigateToSection(currentSection);
+}
+
+// --- Global Functions for HTML onclick handlers ---
+window.handleDownloadFaqPdfClick = function(event) {
+    event.preventDefault();
+    console.log('Download FAQ PDF clicked');
+    // Placeholder for PDF download functionality
+    alert('PDF download functionality will be implemented here.');
+};
+
+// --- Start the application ---
+document.addEventListener('DOMContentLoaded', initialize);
+
+})();
+    </script>
+</body>
+</html>
