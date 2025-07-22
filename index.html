@@ -71,8 +71,6 @@
                         <div>
                             <button id="termsConditionsMainSubBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Terms & Conditions</button>
                             <div id="termsConditionsSubSubNav" class="hidden-sub-nav flex flex-col space-y-2 mt-2 pl-4">
-                                <button id="termsDtlBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Digital Tool Library</button>
-                                <button id="termsMiBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Musical Instrument Collection</button>
                                 <button id="termsMediaLabBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Media Lab</button>
                                 <button id="termsSoundBoothBtn" class="flex-1 py-2 px-3 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200 bg-gray-200 text-gray-800 shadow-sm hover:bg-gray-300 w-full text-left">Sound Booth</button>
                             </div>
@@ -127,7 +125,7 @@ const mockData = {
             description: 'Ask our AI Assistant questions about the site and policies.',
             fullDescription: `
                 <div class="bg-gray-100 p-4 rounded-lg shadow-inner mb-6">
-                    <p class="text-sm text-gray-600 mb-3">Ask questions about this site's features, Georges River Library policies, or general Georges River Council policies. (e.g., "What can I borrow from the Library of Things?", "What are the opening hours?", "Where can I find council meeting minutes?").</p>
+                    <p class="text-sm text-gray-600 mb-3">Ask me anything about the Digital Tool Library, Musical Instrument Collection, In-House Packs, Media Lab, Sound Booth, booking procedures or related policies. Just type your question below and (fingers crossed) get a helpful response right away.</p>
                     <div class="flex flex-col sm:flex-row gap-2 mb-3">
                         <input type="text" id="aiQuestionInput" placeholder="Type your question here..."
                                class="flex-1 p-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-teal-500 focus:border-transparent text-sm">
@@ -155,13 +153,17 @@ const mockData = {
             fullDescription: `
                 <p class="mb-4">Welcome to the Georges River Creates internal application for librarians! This tool is designed to provide quick and easy access to information about our diverse collection of loanable items, in-house resources, creative spaces, and upcoming events.</p>
                 <h3 class="text-xl font-semibold mb-3 text-gray-800">Media Lab</h3>
-                <p class="mb-4">The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and also hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</p>
-                <p class="mb-4">The Media Lab is equipped for a range of technology available for in-house use and for loan. The Media Lab has a white screen cyclorama wall, a chroma key background and professional studio lighting. It also has six Microsoft Surface Studio PCs with the Adobe Creative Suite for all your creative project needs.</p>
-                <p class="mb-4">Also available to our customers is an incredible collection of digital content creation tools including items such as DSRL cameras and audio production tools available for loan in the Digital Tool Library and Musical Instrument Collection. We have also assembled a number of packs available for in-house loan. These packs cover a variety of uses including podcasting, professional photography and audio recording.</p>
+                <p class="mb-4">The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</p>
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">Sound Booth</h3>
+                <p class="mb-4">The Sound Booth is a dedicated, soundproof space perfect for recording, practicing or performing with musical instruments and audio equipment. We prioritise bookings for creative uses like vocal recording, podcast production and piano practice.</p>
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">Digital Tool Library</h3>
+                <p class="mb-4">The Digital Tool Library provides a range of digital content creation tools, including Canon DSLR cameras, GoPro cameras, and Oral History Kits.</p>
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">Musical Instrument Collection</h3>
+                <p class="mb-4">Georges River Libraries boasts one of Australia's largest musical instrument collections available for loan. With over 100 items, including acoustic and electric guitars, percussion, amplifiers, keyboards and recording equipment, you'll find everything you need to inspire learning and creativity.</p>
                 <h3 class="text-xl font-semibold mb-3 text-gray-800">In-House Items</h3>
-                <p class="mb-4">In addition to the items we have available for loan in the Digital Tool Library and Musical Instrument Collection, we have assembled a number of packs available for in-house loan. These packs cover a variety of uses including podcasting, professional photograhy and audio recording.</p>
-                <p class="mb-4">Please note that these packs are strictly for in-house use only, and should only be reserved in conjunction with making a booking for the Media Lab or Sound Booth.</p>
-                <p class="mb-4">Contact the Content and Discovery team for further information about this collection</p>
+                <p class="mb-4">Beyond our Digital Tool Library and Musical Instrument Collection, we offer a range of specialised in-house packs. These packs cover diverse uses, including podcasting, professional photography, and advanced audio recording.</p>
+                <p class="mb-4">Please note, these packs are for in-house use only and must be reserved in conjunction with a booking for the Media Lab or Sound Booth.</p>
+                <p class="mb-4">For more details on this collection, please contact the Content and Discovery team.</p>
             `
         },
         {
@@ -179,19 +181,21 @@ const mockData = {
             name: 'Bookings and Fees',
             description: 'Information regarding booking procedures and associated costs.',
             fullDescription: `
-                <p class="mb-4">Most of our creative spaces and some in-house items require a booking. Bookings for the Media Lab and Sound Booth can be made via their respective booking links in the 'Spaces' section.</p>
-                <p class="mb-4">While many resources are free for library members, some specialised equipment or materials may incur a small fee. Specific fee information will be detailed on the individual item or space's detail page, or provided during the booking process.</p>
-                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li><strong>Media Lab:</strong> Free for up to 2-hour sessions. Extended sessions subject to availability.</li>
-                    <li><strong>Sound Booth:</strong> Free for 1-hour sessions.</li>
-                    <li><strong>3D Printing:</strong> Material fees applies per gram of filament used.</li>
-                    <li><strong>Vinyl Cutting:</strong> Users provide their own materials.</li>
-                </ul>
-                <div class="flex justify-center mt-6">
-                    <a href="https://www.georgesriver.nsw.gov.au/StGeorge/media/Documents/Council/Publications/Fees-Charges-Report-2024-2025-Final.pdf" target="_blank"
-                       class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
-                        Schedule of Fees and Charges 2024/25
+                <p class="mb-4">In order to gain guaranteed and exclusive access to the Media Lab and Sound Booth customers are required to make a booking.</p>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/MEDIALAB" target="_blank"
+                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Media Lab Bookings
                     </a>
+                    <a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/ROOMSOUNDBOOTH" target="_blank"
+                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Sound Booth Bookings
+                    </a>
+                </div>
+                <div class="mt-6 space-y-4">
+                    <p class="text-gray-700">All room hire is subject to the <a href="https://docs.google.com/gview?url=https://stspydusproduction.blob.core.windows.net/georgesriverlive-nhur-pub/filemanager/root/47037d19-924a-4c87-a6ff-a10cce0bb551.pdf&embedded=true" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Terms and Conditions</a> and <a href="https://www.georgesriver.nsw.gov.au/StGeorge/media/Documents/Council/Governance/Codes%20and%20Policies/Pol-033-03-Library-Use-and-Membership-Policy.pdf" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Library Use and Membership Policy</a>.</p>
+                    <p class="text-gray-700">Information on how to book is available in the <a href="https://docs.google.com/gview?url=https://stspydusproduction.blob.core.windows.net/georgesriverlive-nhur-pub/filemanager/root/63100ed1-1272-4a25-a487-4015db0e59cc.pdf&embedded=true" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Meeting, Study and Creative Room Booking Guide</a>.</p>
+                    <p class="text-gray-700">Please note that customers may use the Media Lab or Sound Booth at any time as long as there is no booking. If customers are playing or recording audio in the Sound Booth please close the door whether or not they have booked the space in order to reduce noise. If there is a customer in the Sound Booth when there is a booking please ask the customer to vacate.</p>
                 </div>
             `
         },
@@ -201,72 +205,35 @@ const mockData = {
             description: 'Access specific terms for collections and spaces.',
             fullDescription: ''
         },
-        {
-            id: 'gs-terms-dtl',
-            name: 'Digital Tool Library Terms & Conditions',
-            description: 'Specific terms for Digital Tool Library items.',
-            fullDescription: `
-                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li>Media Lab users must not damage any Library items. Media Lab users are responsible for fines related to loss or damage of library items they are using or have on loan.</li>
-                    <li>Customers who have booked the Media Lab should check in with staff at the start and end of your booking.</li>
-                    <li>Media Lab facilities and resources must not be used for any illegal purposes.</li>
-                    <li>Media Lab users must comply with the directions of Library staff.</li>
-                    <li>Maximum of twenty (20) people.</li>
-                    <li>Strictly no food or drink inside the Media Lab.</li>
-                    <li>For use up to a maximum of two (2) hours per individual/group daily.</li>
-                    <li>Bookings may be cancelled if more than 15 minutes late.</li>
-                    <li>Please leave the Media Lab tidy.</li>
-                    <li>Please return any equipment to staff.</li>
-                    <li>Children under 10 years of age must be supervised by their parent or guardian.</li>
-                    <li>Only users who have booked the Media Lab are entitled to close the doors and curtains, and have the on air sign switched on. Doors and curtains must remain open at all times.</li>
-                </ul>
-                
-                <div class="flex flex-col sm:flex-row gap-4 mt-6">
-                    <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
-                        Download Digital Tool Library T&Cs
-                    </button>
-                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
-                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
-                        Report an issue
-                    </button>
-                </div>
-            `
-        },
-        {
-            id: 'gs-terms-mi',
-            name: 'Musical Instrument Collection Terms & Conditions',
-            description: 'Specific terms for Musical Instrument Collection items.',
-            fullDescription: `
-                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li>Instruments must be handled with care and returned in their original condition, including cases and accessories.</li>
-                    <li>Minor wear and tear are expected, but significant damage due to negligence will be charged.</li>
-                    <li>Users are encouraged to ensure instruments are tuned and maintained according to general best practices.</li>
-                    <li><a id="q7"></a><strong>Q: What do I do with items that are damaged or have missing pieces?</strong> <br>A: Before returning staff to check that all the listed pieces on the label are included and there is no damage. If pieces are missing or the item is damaged please address this with the customer immediately. If a customer claims that the item was missing or damaged at time of loan, remind the customer that the item was confirmed to be complete at the time of borrowing by a staff member.<br>Add note to the customers account and advise them a staff member will be in touch to discuss further.<br>Staff member attaches problem slip to the item detailing the issue.<br>Change item status to repairs and send item to the Content & Discovery team for further investigation.</li>
-                    <li><a id="q8"></a><strong>Q: How do I shelve items from the Musical Instrument Collection?</strong> <br>A: Items catalogued in the Musical Instrument Collection will have a black label. Items in the Digital Tool Library are colour coded orange and the Library of Things are coded blue, yellow or red depending on the recommended customer age for the item.<br><br>Guitars are to be secured on the display wall or guitar racks. If you are unsure on how to do this please see Team Leader Content and Discovery.<br><br>Keyboards, drum kits and container items can be placed on the angled shelves.<br><br>Bongos and other large percussion items on the flat shelf opposite the guitars.</li>
-                </ul>
-                <div class="flex flex-col sm:flex-row gap-4 mt-6">
-                    <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
-                        Download Musical Instrument Collection T&Cs
-                    </button>
-                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
-                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
-                        Report an issue
-                    </button>
-                </div>
-            `
-        },
+
+
         {
             id: 'gs-terms-media-lab',
             name: 'Media Lab Terms & Conditions',
             description: 'Specific terms for Media Lab usage.',
             fullDescription: `
                 <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li>Access requires prior induction or staff approval for complex equipment.</li>
-                    <li>Usage is for creative, educational, or personal projects. Commercial use policies may vary.</li>
-                    <li>Users must save their work to personal storage devices as library computers are routinely wiped.</li>
-                    <li>Booking limits apply to ensure fair access for all members.</li>
+                    <li>The hire of spaces for events, activities, exhibitions, talks or commercial use requires prior approval by the Manager Cultural Engagement and Library Services.</li>
+                    <li>Customers with paid rooms bookings must check in with staff before accessing the room.</li>
+                    <li>Bookings for paid rooms must be paid online at the time of booking to confirm your booking.</li>
+                    <li>Cancellations made 24 hours or more prior to the booking start time are eligible for a refund. Cancellations made less than 24 hours prior to the booking start time will not be refunded.</li>
+                    <li>The booking time includes setting up and returning the room to its original state.</li>
+                    <li>A booked room may be made available to other customers if it is still vacant 15 minutes after start time.</li>
+                    <li>When the capacity of a room is exceeded, a booking may be moved to a higher capacity room, at cost to the hirer, or cancelled without refund.</li>
+                    <li>No storage of items in rooms is permitted</li>
+                    <li>The use of the equipment is the responsibility of the hirer.</li>
+                    <li>The hirer is liable for any damage, and associated costs, to the room, furniture or equipment caused during their booking</li>
+                    <li>Hirer is to report any existing damage at the start of their booking to library staff.</li>
+                    <li>The use of posters, banners and other advertising requires prior approval from the Manager Cultural Engagement and Library Services</li>
+                    <li>No food or drink are allowed at any time</li>
+                    <li>All In-House Packs require a Georges River Libraries card to borrow and must be returned at the end of your booking.</li>
+                    <li>No equipment or furniture is to be removed from the Media Lab and Sound Booth</li>
                 </ul>
                 <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/MEDIALAB" target="_blank"
+                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Media Lab Bookings
+                    </a>
                     <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                         Download Media Lab T&Cs
                     </button>
@@ -283,16 +250,21 @@ const mockData = {
             description: 'Specific terms for Sound Booth usage.',
             fullDescription: `
                 <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li>Users are to check in with staff at the start and end of your booking</li>
-                    <li>Maximum of four (4) people.</li>
-                    <li>Strictly no food or drink inside Sound Booth.</li>
-                    <li>For use up to a maximum of two (2) hours per individual/group daily.</li>
-                    <li>Bookings may be cancelled if more than 15 minutes late.</li>
-                    <li>Please leave Sound Booth tidy.</li>
-                    <li>Please return any equipment to staff.</li>
-                    <li>Please report any damage to staff.</li>
-                    <li>Please follow the directions of staff.</li>
-                    <li>Children under 10 years of age must be supervised by their parent or guardian.</li>
+                    <li>The hire of spaces for events, activities, exhibitions, talks or commercial use requires prior approval by the Manager Cultural Engagement and Library Services.</li>
+                    <li>Customers with paid rooms bookings must check in with staff before accessing the room.</li>
+                    <li>Bookings for paid rooms must be paid online at the time of booking to confirm your booking.</li>
+                    <li>Cancellations made 24 hours or more prior to the booking start time are eligible for a refund. Cancellations made less than 24 hours prior to the booking start time will not be refunded.</li>
+                    <li>The booking time includes setting up and returning the room to its original state.</li>
+                    <li>A booked room may be made available to other customers if it is still vacant 15 minutes after start time.</li>
+                    <li>When the capacity of a room is exceeded, a booking may be moved to a higher capacity room, at cost to the hirer, or cancelled without refund.</li>
+                    <li>No storage of items in rooms is permitted</li>
+                    <li>The use of the equipment is the responsibility of the hirer.</li>
+                    <li>The hirer is liable for any damage, and associated costs, to the room, furniture or equipment caused during their booking</li>
+                    <li>Hirer is to report any existing damage at the start of their booking to library staff.</li>
+                    <li>The use of posters, banners and other advertising requires prior approval from the Manager Cultural Engagement and Library Services</li>
+                    <li>No food or drink are allowed at any time</li>
+                    <li>All In-House Packs require a Georges River Libraries card to borrow and must be returned at the end of your booking.</li>
+                    <li>No equipment or furniture is to be removed from the Media Lab and Sound Booth</li>
                 </ul>
                 <div class="flex flex-col sm:flex-row gap-4 mt-6">
                     <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
@@ -323,7 +295,7 @@ const mockData = {
                     <li><a id="q10"></a><strong>Q: Can I pickup Digital Tool Library reservations from branches other than Hurstville?</strong><br>A: Yes. High value items (i.e. cameras) should be kept in a secure location.</li>
                     <li><a id="q11"></a><strong>Q: Can customers return Digital Tool Library reservations to branches other than Hurstville?</strong><br>A: Yes, customers are able to return Digital Tool Library items to any branch.</li>
                     <li><a id="q12"></a><strong>Q: Do we have SD cards available for loan?</strong><br>A: No.</li>
-                    <li><a id="q13"></a><strong>Q: What items are available in Digital Tool Library collection?</strong><br>A: The Digital Tool Library includes over 100 items available for physical loan from Hurstville Library. For a complete list of items search "Digital Tool Library" in Spydus or <a href="#" class="text-teal-600 underline font-medium">CLICK HERE</a> for a QR code.</li>
+                    <li><a id="q13"></a><strong>Q: What items are available in Digital Tool Library collection?</strong><br>A: The Digital Tool Library includes over 100 items available for physical loan from the Georges River Libraries. For a complete list of items type "Digital Tool Library" into the search bar at the top of this page or search for "Digital Tool Library" in Spydus</li>
                 </ul>
                 <div class="flex flex-col sm:flex-row gap-4 mt-6">
                     <a href="#" onclick="handleDownloadFaqPdfClick(event)"
@@ -370,7 +342,7 @@ const mockData = {
             description: 'Frequently Asked Questions about the Media Lab.',
             fullDescription: `
                 <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li><a id="q1"></a><strong>Q: What is the Media Lab?</strong> <br>A: The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and also hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</li>
+                    <li><a id="q1"></a><strong>Q: What is the Media Lab?</strong> <br>A: The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</li>
                     <li><a id="q2"></a><strong>Q: When is the Media Lab available?</strong> <br>A: The Media Lab is available during standard operating hours. Customers using the Media Lab are required to bump out 15 minutes prior to the library closing.</li>
                     <li><a id="q3"></a><strong>Q: Who can use the Media Lab?</strong> <br>A: The Media Lab is available for anyone to use. Priority for this space is given to customers who have booked and are intending to use it for creative purposes.</li>
                     <li><a id="q4"></a><strong>Q: Can you help me set up the equipment in the Media Lab?</strong> <br>A: Library staff are not expected to provide technical assistance or training for Digital Tool Library or Musical Instrument Collection items or any equipment in the Media Lab or Sound Booth. Instead direct the customer to use their library membership to gain free access to LinkedIn Learning.</li>
@@ -2407,7 +2379,7 @@ const mockData = {
             name: 'Media Lab',
             category: 'Spaces',
             description: 'A creative space for video, audio, and digital projects.',
-            fullDescription: 'The Media Lab is equipped with high-performance computers, video and audio editing software, green screen, and peripherals for creative digital projects. Bookings are required. Staff assistance available for basic troubleshooting.',
+            fullDescription: '<p>The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</p><br><p>In order to gain guaranteed and exclusive access to the Media Lab and Sound Booth customers are required to make a booking.</p><div class="mt-6"><a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/MEDIALAB" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">Media Lab Bookings</a></div>',
             location: 'Level 2, Main Library',
             bookingInformation: 'Bookings can be made online or at the service desk. Sessions are limited to 2 hours.',
             equipmentList: ['iMacs', 'Adobe Creative Cloud', 'Audio Interface', 'Green Screen', 'Microphones'],
@@ -2453,7 +2425,7 @@ const today = new Date('2025-06-25');
 let currentSection = localStorage.getItem('georgesRiverCurrentSection') || 'gs-ask-me-anything';
 let isGlobalSearchActive = false;
 let gettingStartedMainBtn, loanableItemsMainBtn, inHouseItemsBtn, permanentEquipmentBtn, spacesBtn, eventsBtn, settingsBtn;
-let gettingStartedSubNav, askMeAnythingBtn, introBtn, faqsBtn, bookingsFeesBtn, termsConditionsMainSubBtn, termsConditionsSubSubNav, termsDtlBtn, termsMiBtn, termsMediaLabBtn, termsSoundBoothBtn;
+        let gettingStartedSubNav, askMeAnythingBtn, introBtn, faqsBtn, bookingsFeesBtn, termsConditionsMainSubBtn, termsConditionsSubSubNav, termsMediaLabBtn, termsSoundBoothBtn;
 let loanableItemsSubNav, loanableDtlBtn, loanableMiBtn;
 let eventsSubNav;
 let searchBar, listView, detailView;
@@ -2570,7 +2542,7 @@ function setActiveGettingStartedSubButton(activeBtnId) {
     }
 }
 function setActiveTermsConditionsSubSubButton(activeBtnId) {
-    const subSubButtons = [termsDtlBtn, termsMiBtn, termsMediaLabBtn, termsSoundBoothBtn];
+            const subSubButtons = [termsMediaLabBtn, termsSoundBoothBtn];
     subSubButtons.forEach(button => {
         if (button.id === activeBtnId && activeBtnId !== '') {
             button.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
@@ -2616,8 +2588,6 @@ function getGettingStartedSubButtonId(sectionId) {
         'gs-intro': 'introBtn',
         'gs-faqs': 'faqsBtn',
         'gs-bookings-fees': 'bookingsFeesBtn',
-        'gs-terms-dtl': 'termsDtlBtn',
-        'gs-terms-mi': 'termsMiBtn',
         'gs-terms-media-lab': 'termsMediaLabBtn',
         'gs-terms-sound-booth': 'termsSoundBoothBtn'
     };
@@ -2626,8 +2596,6 @@ function getGettingStartedSubButtonId(sectionId) {
 
 function getTermsConditionsSubSubButtonId(sectionId) {
     const mapping = {
-        'gs-terms-dtl': 'termsDtlBtn',
-        'gs-terms-mi': 'termsMiBtn',
         'gs-terms-media-lab': 'termsMediaLabBtn',
         'gs-terms-sound-booth': 'termsSoundBoothBtn'
     };
@@ -2744,41 +2712,7 @@ function generateItemDetailHtml(entry) {
                         ${entry.fullDescription || entry.description || '[Description not available]'}
                     </p>
                 </section>
-                <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    <div>
-                        <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Collection Details</h2>
-                        <ul class="space-y-2 text-gray-700">
-                            <li><strong>Collection:</strong> <span class="bg-orange-100 text-orange-800 text-sm font-medium px-2.5 py-0.5 rounded-full">${entry.category || 'Digital Tool Library'}</span></li>
-                            <li><strong>Location:</strong> <span class="font-medium">${entry.location || 'Hurstville Library'}</span></li>
-                            <li><strong>Return to:</strong> <span class="font-medium">${entry.returnTo || 'Blue Cage'}</span></li>
-                            <li><strong>Call Number:</strong> <span class="font-medium">${entry.callNumber || 'EQUIP'}</span></li>
-                            <li><strong>Accession No.:</strong> <span class="font-medium">${entry.accessionNo || 'Not available'}</span></li>
-                            ${entry.firstAvailable ? `<li><strong>First Available:</strong> <span class="font-medium">${entry.firstAvailable}</span></li>` : ''}
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Digital Access</h2>
-                        ${entry.bookmarkLink ? `
-                        <p class="text-gray-700 mb-4">
-                            <strong class="block mb-1">Bookmark Link:</strong>
-                            <a href="${entry.bookmarkLink}" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
-                                View in Spydus Catalogue
-                            </a>
-                        </p>` : ''}
-                        ${entry.instructionLink ? `
-                        <p class="text-gray-700 mb-4">
-                            <strong class="block mb-1">Instructions:</strong>
-                            <a href="${entry.instructionLink}" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
-                                User Manual
-                            </a>
-                        </p>` : ''}
-                        ${!entry.bookmarkLink && !entry.instructionLink ? '<p class="text-gray-500 italic">No digital resources available</p>' : ''}
-                        <p class="text-gray-700">
-                            <strong class="block mb-1">Item Tag:</strong>
-                            <a href="#" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50">View in Canva</a>
-                        </p>
-                    </div>
-                </section>
+
                 <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
                     ${entry.bookmarkLink ? `
                     <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
@@ -2939,37 +2873,7 @@ function generateItemDetailHtml(entry) {
                     </p>
                 </section>
                 ${contentsHtml}
-                <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    <div>
-                        <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Collection Details</h2>
-                        <ul class="space-y-2 text-gray-700">
-                            <li><strong>Collection:</strong> <span class="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">${entry.category || '[Category Placeholder]'}</span></li>
-                            <li><strong>Call Number:</strong> <span class="font-medium">${entry.callNumber || '[Call Number Placeholder]'}</span></li>
-                            <li><strong>Accession No.:</strong> <span class="font-medium">${entry.accessionNo || '[Accession No. Placeholder]'}</span></li>
-                            <li><strong>Item Acquired:</strong> <span class="font-medium">${entry.itemAcquired || '[Item Acquired Placeholder]'}</span></li>
-                            <li><strong>Purchase Price:</strong> <span class="font-medium">${entry.purchasePrice || '[Purchase Price Placeholder]'}</span></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Digital Access</h2>
-                        <p class="text-gray-700 mb-4">
-                            <strong class="block mb-1">Bookmark Link:</strong>
-                            <a href="${entry.catalogueLink || '#'}" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
-                                ${entry.catalogueLink || '[Catalogue Link Placeholder]'}
-                            </a>
-                        </p>
-                        <p class="text-gray-700 mb-4">
-                            <strong class="block mb-1">Instructions:</strong>
-                            <a href="${entry.instructionLink || '#'}" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
-                                ${entry.instructionLink ? 'Instruction Manual' : '[Instruction Link Placeholder]'}
-                            </a>
-                        </p>
-                        <p class="text-gray-700">
-                            <strong class="block mb-1">Item Tag:</strong>
-                            <a href="#" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50">View in Canva</a>
-                        </p>
-                    </div>
-                </section>
+
                 <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
                     <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
                         REPORT AN ISSUE
@@ -2978,6 +2882,7 @@ function generateItemDetailHtml(entry) {
             </div>
         `;
     }
+
     // Default item detail template
     return `
         ${breadcrumbHtml}
@@ -2988,46 +2893,17 @@ function generateItemDetailHtml(entry) {
                 </h1>
             </header>
             <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
                 <p class="text-gray-700 leading-relaxed">
                     ${entry.fullDescription || '[Summary Placeholder]'}
                 </p>
             </section>
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div>
-                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Collection Details</h2>
-                    <ul class="space-y-2 text-gray-700">
-                        <li><strong>Collection:</strong> <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">${entry.category || '[Category Placeholder]'}</span></li>
-                        <li><strong>Call Number:</strong> <span class="font-medium">${entry.callNumber || '[Call Number Placeholder]'}</span></li>
-                        <li><strong>Accession No.:</strong> <span class="font-medium">${entry.accessionNo || '[Accession No. Placeholder]'}</span></li>
-                        <li><strong>Item Acquired:</strong> <span class="font-medium">${entry.itemAcquired || '[Item Acquired Placeholder]'}</span></li>
-                        <li><strong>Purchase Price:</strong> <span class="font-medium">${entry.purchasePrice || '[Purchase Price Placeholder]'}</span></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Digital Access</h2>
-                    <p class="text-gray-700 mb-4">
-                        <strong class="block mb-1">Bookmark Link:</strong>
-                        <a href="${entry.catalogueLink || '#'}" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
-                            ${entry.catalogueLink || '[Catalogue Link Placeholder]'}
-                        </a>
-                    </p>
-                    <p class="text-gray-700 mb-4">
-                        <strong class="block mb-1">Instructions:</strong>
-                        <a href="${entry.instructionLink || '#'}" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50" target="_blank">
-                            ${entry.instructionLink ? 'Instruction Manual' : '[Instruction Link Placeholder]'}
-                        </a>
-                    </p>
-                    <p class="text-gray-700">
-                        <strong class="block mb-1">Item Tag:</strong>
-                        <a href="#" class="text-teal-600 hover:underline font-medium break-all rounded-md px-2 py-1 bg-teal-50">View in Canva</a>
-                    </p>
-                </div>
-            </section>
+
             <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
+                ${entry.name === 'Media Lab' ? '' : `
                 <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
                     REPORT AN ISSUE
                 </button>
+                `}
             </footer>
         </div>
     `;
@@ -3163,7 +3039,6 @@ function generateListHtml(items, title) {
                 tags.push('<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Musical Instrument Collection</span>');
             } else if (item.category === 'In-House Items') {
                 tags.push('<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">In-House Items</span>');
-                tags.push('<span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Not for loan</span>');
             } else if (item.category === 'Permanent Equipment') {
                 tags.push('<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Permanent Equipment</span>');
             }
@@ -3171,12 +3046,12 @@ function generateListHtml(items, title) {
         
         // Add Media Lab tag for Permanent Equipment (except specific Sound Booth items)
         if (item.category === 'Permanent Equipment' && !['pe007', 'pe008', 'pe009'].includes(item.id)) {
-            tags.push('<span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Media Lab</span>');
+            tags.push('<span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full text-center">Media Lab</span>');
         }
         
         // Add Sound Booth tag for specific items
         if (item.id === 'pe007' || item.id === 'pe008' || item.id === 'pe009') {
-            tags.push('<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Sound Booth</span>');
+            tags.push('<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full text-center">Sound Booth</span>');
         }
         
         html += `
@@ -3185,9 +3060,6 @@ function generateListHtml(items, title) {
                     <div class="flex-1">
                         <h3 class="text-lg font-semibold text-gray-800 mb-2">${item.name}</h3>
                         <p class="text-gray-600 text-sm mb-3">${item.description}</p>
-                        <div class="text-xs text-gray-500">
-                            <span class="font-medium">Call Number:</span> ${item.callNumber || 'N/A'}
-                        </div>
                     </div>
                     <div class="flex flex-col gap-1 ml-4">
                         ${tags.join('')}
@@ -3338,13 +3210,7 @@ function initializeEventListeners() {
         termsConditionsSubSubNav.classList.toggle('hidden-sub-nav');
     });
     
-    termsDtlBtn.addEventListener('click', () => {
-        navigateToSection('gs-terms-dtl', 'termsDtlBtn');
-    });
-    
-    termsMiBtn.addEventListener('click', () => {
-        navigateToSection('gs-terms-mi', 'termsMiBtn');
-    });
+
     
     termsMediaLabBtn.addEventListener('click', () => {
         navigateToSection('gs-terms-media-lab', 'termsMediaLabBtn');
@@ -3398,8 +3264,7 @@ function initialize() {
     bookingsFeesBtn = document.getElementById('bookingsFeesBtn');
     termsConditionsMainSubBtn = document.getElementById('termsConditionsMainSubBtn');
     termsConditionsSubSubNav = document.getElementById('termsConditionsSubSubNav');
-    termsDtlBtn = document.getElementById('termsDtlBtn');
-    termsMiBtn = document.getElementById('termsMiBtn');
+
     termsMediaLabBtn = document.getElementById('termsMediaLabBtn');
     termsSoundBoothBtn = document.getElementById('termsSoundBoothBtn');
     
