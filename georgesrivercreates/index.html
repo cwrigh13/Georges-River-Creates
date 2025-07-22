@@ -47,7 +47,7 @@
     </header>
     <!-- Global Search Bar -->
     <div class="p-4 bg-white shadow-md z-10">
-        <input type="text" id="searchBar" placeholder="Search for items, spaces..." class="w-full p-4 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 shadow-sm">
+        <input type="text" id="searchBar" placeholder="Search for items, spaces, accession numbers..." class="w-full p-4 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 shadow-sm">
     </div>
     <!-- Main Content Area -->
     <main class="flex-1 flex flex-col md:flex-row overflow-hidden">
@@ -2812,7 +2812,7 @@ function performSearch(query) {
     ];
     
     allItems.forEach(item => {
-        const searchableText = `${item.name} ${item.description} ${item.fullDescription || ''}`.toLowerCase();
+        const searchableText = `${item.name} ${item.description} ${item.fullDescription || ''} ${item.accessionNo || ''}`.toLowerCase();
         if (searchableText.includes(searchTerm)) {
             searchResults.push(item);
         }

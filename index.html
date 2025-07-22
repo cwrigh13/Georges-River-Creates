@@ -47,7 +47,7 @@
     </header>
     <!-- Global Search Bar -->
     <div class="p-4 bg-white shadow-md z-10">
-        <input type="text" id="searchBar" placeholder="Search for items, spaces..." class="w-full p-4 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 shadow-sm">
+        <input type="text" id="searchBar" placeholder="Search for items, spaces, accession numbers..." class="w-full p-4 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 shadow-sm">
     </div>
     <!-- Main Content Area -->
     <main class="flex-1 flex flex-col md:flex-row overflow-hidden">
@@ -430,6 +430,11 @@ const mockData = {
             collection: 'Digital Tool Library',
             callNumber: 'EQUIP',
             accessionNo: '154277586',
+            itemAcquired: '2024-01-15',
+            purchasePrice: 'AUD 650.00',
+            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160863',
+            canva: 'https://canva.com/templates/camera-photography',
+            instructionLink: 'https://instructions.georgesriver.nsw.gov.au/canon-eos-1500d-manual',
             firstAvailable: '2-Aug-24',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160863',
             type: 'loanableItem'
@@ -445,6 +450,11 @@ const mockData = {
             collection: 'Digital Tool Library',
             callNumber: 'EQUIP',
             accessionNo: '154436174',
+            itemAcquired: '2024-03-20',
+            purchasePrice: 'AUD 180.00',
+            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28163883',
+            canva: 'https://canva.com/templates/energy-efficiency',
+            instructionLink: 'https://instructions.georgesriver.nsw.gov.au/save-power-kit-manual',
             firstAvailable: '10-Sep-24',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28163883',
             type: 'loanableItem'
@@ -460,6 +470,11 @@ const mockData = {
             collection: 'Digital Tool Library',
             callNumber: 'EQUIP',
             accessionNo: '154277487',
+            itemAcquired: '2024-02-10',
+            purchasePrice: 'AUD 450.00',
+            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160121',
+            canva: 'https://canva.com/templates/action-camera',
+            instructionLink: 'https://instructions.georgesriver.nsw.gov.au/gopro-hero11-manual',
             firstAvailable: '1-Aug-24',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160121',
             type: 'loanableItem'
@@ -475,6 +490,11 @@ const mockData = {
             collection: 'Digital Tool Library',
             callNumber: 'EQUIP',
             accessionNo: '154417422',
+            itemAcquired: '2024-01-20',
+            purchasePrice: 'AUD 850.00',
+            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27725258',
+            canva: 'https://canva.com/templates/energy-assessment',
+            instructionLink: 'https://instructions.georgesriver.nsw.gov.au/energy-efficiency-kit-manual',
             firstAvailable: '13-Feb-24',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27725258',
             type: 'loanableItem'
@@ -775,6 +795,11 @@ const mockData = {
             collection: 'Musical Instrument Collection',
             callNumber: 'INSTRUMENT',
             accessionNo: '154449573',
+            itemAcquired: '2024-06-15',
+            purchasePrice: 'AUD 280.00',
+            spydus: '',
+            canva: 'https://canva.com/templates/guitar-learning',
+            instructionLink: 'https://instructions.georgesriver.nsw.gov.au/fender-esc80-manual',
             firstAvailable: '10-Feb-25',
             bookmarkLink: '',
             type: 'loanableItem'
@@ -790,6 +815,11 @@ const mockData = {
             collection: 'Musical Instrument Collection',
             callNumber: 'INSTRUMENT',
             accessionNo: '154436760',
+            itemAcquired: '2024-07-10',
+            purchasePrice: 'AUD 320.00',
+            spydus: '',
+            canva: 'https://canva.com/templates/classical-guitar',
+            instructionLink: 'https://instructions.georgesriver.nsw.gov.au/katoh-mcg20-manual',
             firstAvailable: '5-Feb-25',
             bookmarkLink: '',
             type: 'loanableItem'
@@ -1993,6 +2023,8 @@ const mockData = {
             callNumber: 'IH.POD.001',
             itemAcquired: '2024-05-01',
             purchasePrice: 'AUD 220.00',
+            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160863',
+            canva: 'https://canva.com/templates/podcast-production',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/podcast-kit-manual',
             type: 'inHouseItem'
         },
@@ -2007,6 +2039,8 @@ const mockData = {
             callNumber: 'IH.PHOTO.001',
             itemAcquired: '2024-06-15',
             purchasePrice: 'AUD 850.00',
+            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160863',
+            canva: 'https://canva.com/templates/professional-photography',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/photography-pack-manual',
             type: 'inHouseItem'
         },
@@ -2473,25 +2507,42 @@ function setActiveMainButton(activeBtnId) {
             currentSection === 'gs-intro' ||
             currentSection === 'gs-faqs' ||
             currentSection === 'gs-bookings-fees' ||
-            currentSection.startsWith('gs-terms')
+            currentSection.startsWith('gs-terms') ||
+            currentSection.startsWith('faqs-')
         )) {
             shouldHighlight = true;
         } else if (button.id === 'loanableItemsMainBtn' && (
             currentSection === 'loanableItems' ||
             currentSection === 'loanable-dtl' ||
             currentSection === 'loanable-mi' ||
-            (currentSection && currentSection.startsWith('lt'))
+            (currentSection && currentSection.startsWith('dtl')) ||
+            (currentSection && currentSection.startsWith('mi'))
         )) {
             shouldHighlight = true;
-        } else if (button.id === 'inHouseItemsBtn' && currentSection === 'inHouseItems') {
+        } else if (button.id === 'inHouseItemsBtn' && (
+            currentSection === 'inHouseItems' ||
+            (currentSection && currentSection.startsWith('ih'))
+        )) {
             shouldHighlight = true;
-        } else if (button.id === 'permanentEquipmentBtn' && currentSection === 'permanentEquipment') {
+        } else if (button.id === 'permanentEquipmentBtn' && (
+            currentSection === 'permanentEquipment' ||
+            (currentSection && currentSection.startsWith('pe'))
+        )) {
             shouldHighlight = true;
-        } else if (button.id === 'spacesBtn' && currentSection === 'spaces') {
+        } else if (button.id === 'spacesBtn' && (
+            currentSection === 'spaces' ||
+            (currentSection && currentSection.startsWith('space'))
+        )) {
             shouldHighlight = true;
-        } else if (button.id === 'eventsBtn' && currentSection === 'events') {
+        } else if (button.id === 'eventsBtn' && (
+            currentSection === 'events' ||
+            (currentSection && currentSection.startsWith('event'))
+        )) {
             shouldHighlight = true;
-        } else if (button.id === 'settingsBtn' && currentSection === 'settings') {
+        } else if (button.id === 'settingsBtn' && (
+            currentSection === 'settings' ||
+            (currentSection && currentSection.startsWith('settings-'))
+        )) {
             shouldHighlight = true;
         }
         
@@ -2509,10 +2560,34 @@ function setActiveMainButton(activeBtnId) {
         }
     });
 }
+
 function setActiveGettingStartedSubButton(activeBtnId) {
     const subButtons = [askMeAnythingBtn, introBtn, faqsBtn, bookingsFeesBtn, termsConditionsMainSubBtn];
     subButtons.forEach(button => {
-        if (button.id === activeBtnId && activeBtnId !== '') {
+        let shouldHighlight = false;
+        
+        // Check if this button should be highlighted based on currentSection
+        if (button.id === 'askMeAnythingBtn' && currentSection === 'gs-ask-me-anything') {
+            shouldHighlight = true;
+        } else if (button.id === 'introBtn' && currentSection === 'gs-intro') {
+            shouldHighlight = true;
+        } else if (button.id === 'faqsBtn' && (
+            currentSection === 'gs-faqs' ||
+            currentSection.startsWith('faqs-')
+        )) {
+            shouldHighlight = true;
+        } else if (button.id === 'bookingsFeesBtn' && currentSection === 'gs-bookings-fees') {
+            shouldHighlight = true;
+        } else if (button.id === 'termsConditionsMainSubBtn' && currentSection.startsWith('gs-terms')) {
+            shouldHighlight = true;
+        }
+        
+        // Also check if this button was explicitly set as active
+        if (activeBtnId && button.id === activeBtnId) {
+            shouldHighlight = true;
+        }
+        
+        if (shouldHighlight) {
             button.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
             button.classList.add('bg-teal-500', 'text-white', 'hover:bg-teal-600');
         } else {
@@ -2520,18 +2595,57 @@ function setActiveGettingStartedSubButton(activeBtnId) {
             button.classList.add('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
         }
     });
-    // FAQs submenu highlight logic
+    
+    // Handle FAQs submenu buttons
     if (faqsSubNav) {
         const subFaqButtons = [faqsDtlBtn, faqsMiBtn, faqsMediaLabBtn, faqsSoundBoothBtn, faqsInHousePacksBtn];
         subFaqButtons.forEach(btn => {
             if (!btn) return;
-            if (
-                (btn.id === 'faqsDtlBtn' && currentSection === 'faqs-dtl') ||
-                (btn.id === 'faqsMiBtn' && currentSection === 'faqs-mi') ||
-                (btn.id === 'faqsMediaLabBtn' && currentSection === 'faqs-media-lab') ||
-                (btn.id === 'faqsSoundBoothBtn' && currentSection === 'faqs-sound-booth') ||
-                (btn.id === 'faqsInHousePacksBtn' && currentSection === 'faqs-in-house-packs')
-            ) {
+            
+            let shouldHighlight = false;
+            
+            if (btn.id === 'faqsDtlBtn' && currentSection === 'faqs-dtl') {
+                shouldHighlight = true;
+            } else if (btn.id === 'faqsMiBtn' && currentSection === 'faqs-mi') {
+                shouldHighlight = true;
+            } else if (btn.id === 'faqsMediaLabBtn' && currentSection === 'faqs-media-lab') {
+                shouldHighlight = true;
+            } else if (btn.id === 'faqsSoundBoothBtn' && currentSection === 'faqs-sound-booth') {
+                shouldHighlight = true;
+            } else if (btn.id === 'faqsInHousePacksBtn' && currentSection === 'faqs-in-house-packs') {
+                shouldHighlight = true;
+            }
+            
+            if (shouldHighlight) {
+                btn.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+                btn.classList.add('bg-teal-500', 'text-white', 'hover:bg-teal-600');
+            } else {
+                btn.classList.remove('bg-teal-500', 'text-white', 'hover:bg-teal-600');
+                btn.classList.add('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+            }
+        });
+    }
+    
+    // Handle Terms & Conditions submenu buttons
+    if (termsConditionsSubSubNav) {
+        const subTermsButtons = [termsMediaLabBtn, termsSoundBoothBtn];
+        subTermsButtons.forEach(btn => {
+            if (!btn) return;
+            
+            let shouldHighlight = false;
+            
+            if (btn.id === 'termsMediaLabBtn' && currentSection === 'gs-terms-media-lab') {
+                shouldHighlight = true;
+            } else if (btn.id === 'termsSoundBoothBtn' && currentSection === 'gs-terms-sound-booth') {
+                shouldHighlight = true;
+            }
+            
+            // Also check if this button was explicitly set as active
+            if (activeBtnId && btn.id === activeBtnId) {
+                shouldHighlight = true;
+            }
+            
+            if (shouldHighlight) {
                 btn.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
                 btn.classList.add('bg-teal-500', 'text-white', 'hover:bg-teal-600');
             } else {
@@ -2541,22 +2655,33 @@ function setActiveGettingStartedSubButton(activeBtnId) {
         });
     }
 }
-function setActiveTermsConditionsSubSubButton(activeBtnId) {
-            const subSubButtons = [termsMediaLabBtn, termsSoundBoothBtn];
-    subSubButtons.forEach(button => {
-        if (button.id === activeBtnId && activeBtnId !== '') {
-            button.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
-            button.classList.add('bg-teal-500', 'text-white', 'hover:bg-teal-600');
-        } else {
-            button.classList.remove('bg-teal-500', 'text-white', 'hover:bg-teal-600');
-            button.classList.add('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
-        }
-    });
-}
+
+
+
 function setActiveLoanableItemsSubButton(activeBtnId) {
     const subButtons = [loanableDtlBtn, loanableMiBtn];
     subButtons.forEach(button => {
-        if (button.id === activeBtnId && activeBtnId !== '') {
+        let shouldHighlight = false;
+        
+        // Check if this button should be highlighted based on currentSection
+        if (button.id === 'loanableDtlBtn' && (
+            currentSection === 'loanable-dtl' ||
+            (currentSection && currentSection.startsWith('dtl'))
+        )) {
+            shouldHighlight = true;
+        } else if (button.id === 'loanableMiBtn' && (
+            currentSection === 'loanable-mi' ||
+            (currentSection && currentSection.startsWith('mi'))
+        )) {
+            shouldHighlight = true;
+        }
+        
+        // Also check if this button was explicitly set as active
+        if (activeBtnId && button.id === activeBtnId) {
+            shouldHighlight = true;
+        }
+        
+        if (shouldHighlight) {
             button.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
             button.classList.add('bg-teal-500', 'text-white', 'hover:bg-teal-600');
         } else {
@@ -2565,12 +2690,14 @@ function setActiveLoanableItemsSubButton(activeBtnId) {
         }
     });
 }
+
 function hideAllSubNavs() {
     gettingStartedSubNav.classList.add('hidden-sub-nav');
     termsConditionsSubSubNav.classList.add('hidden-sub-nav');
     loanableItemsSubNav.classList.add('hidden-sub-nav');
     setActiveSettingsSubButton('');
 }
+
 function mainBtnIdFromItemType(itemType) {
     switch(itemType) {
         case 'loanableItem': return 'loanableItemsMainBtn';
@@ -2588,19 +2715,19 @@ function getGettingStartedSubButtonId(sectionId) {
         'gs-intro': 'introBtn',
         'gs-faqs': 'faqsBtn',
         'gs-bookings-fees': 'bookingsFeesBtn',
+        'gs-terms': 'termsConditionsMainSubBtn',
         'gs-terms-media-lab': 'termsMediaLabBtn',
-        'gs-terms-sound-booth': 'termsSoundBoothBtn'
+        'gs-terms-sound-booth': 'termsSoundBoothBtn',
+        'faqs-dtl': 'faqsDtlBtn',
+        'faqs-mi': 'faqsMiBtn',
+        'faqs-media-lab': 'faqsMediaLabBtn',
+        'faqs-sound-booth': 'faqsSoundBoothBtn',
+        'faqs-in-house-packs': 'faqsInHousePacksBtn'
     };
     return mapping[sectionId] || '';
 }
 
-function getTermsConditionsSubSubButtonId(sectionId) {
-    const mapping = {
-        'gs-terms-media-lab': 'termsMediaLabBtn',
-        'gs-terms-sound-booth': 'termsSoundBoothBtn'
-    };
-    return mapping[sectionId] || '';
-}
+
 
 function getLoanableItemsSubButtonId(sectionId) {
     const mapping = {
@@ -2713,15 +2840,160 @@ function generateItemDetailHtml(entry) {
                     </p>
                 </section>
 
-                <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
+                <section class="mb-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Left Column: Item Details -->
+                        <div>
+                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Item Details</h2>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Collection</h3>
+                                    <p class="text-gray-700">${entry.collection || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Accession No</h3>
+                                    <p class="text-gray-700 font-mono">${entry.accessionNo || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Call No</h3>
+                                    <p class="text-gray-700 font-mono">${entry.callNumber || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Item Acquired</h3>
+                                    <p class="text-gray-700">${entry.itemAcquired || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Purchase Price</h3>
+                                    <p class="text-gray-700">${entry.purchasePrice || 'N/A'}</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column -->
+                        <div>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Spydus</h3>
+                                    <p class="text-gray-700">${entry.bookmarkLink ? 'Available' : 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">View Availability</h3>
+                                    <p class="text-gray-700">${entry.firstAvailable ? entry.firstAvailable : 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Instructions PDF</h3>
+                                    <p class="text-gray-700">${entry.instructionLink ? 'Available' : 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Item Tag</h3>
+                                    <p class="text-gray-700">${entry.category || 'N/A'}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     ${entry.bookmarkLink ? `
+                    <div class="mt-4">
+                        <a href="${entry.bookmarkLink}" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                            View in Library Catalogue
+                        </a>
+                    </div>` : ''}
+                </section>
+
+                <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
                     <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
                         REPORT AN ISSUE
-                    </button>` : ''}
+                    </button>
                 </footer>
             </div>
         `;
     }
+    
+    // Handle Musical Instrument Collection items with new data structure
+    if (entry.id && entry.id.startsWith('mi')) {
+        return `
+            ${breadcrumbHtml}
+            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                <header class="mb-6 border-b pb-4 border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                        ${entry.name || '[Item Name Placeholder]'}
+                    </h1>
+                </header>
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        ${entry.fullDescription || entry.description || '[Description not available]'}
+                    </p>
+                </section>
+
+                <section class="mb-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Left Column: Item Details -->
+                        <div>
+                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Item Details</h2>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Collection</h3>
+                                    <p class="text-gray-700">${entry.collection || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Accession No</h3>
+                                    <p class="text-gray-700 font-mono">${entry.accessionNo || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Call No</h3>
+                                    <p class="text-gray-700 font-mono">${entry.callNumber || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Item Acquired</h3>
+                                    <p class="text-gray-700">${entry.itemAcquired || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Purchase Price</h3>
+                                    <p class="text-gray-700">${entry.purchasePrice || 'N/A'}</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column -->
+                        <div>
+                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Links</h2>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Spydus</h3>
+                                    <p class="text-gray-700">${entry.bookmarkLink ? 'Available' : 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">View Availability</h3>
+                                    <p class="text-gray-700">${entry.firstAvailable ? entry.firstAvailable : 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Instructions PDF</h3>
+                                    <p class="text-gray-700">${entry.instructionLink ? 'Available' : 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Item Tag</h3>
+                                    <p class="text-gray-700">${entry.category || 'N/A'}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    ${entry.bookmarkLink ? `
+                    <div class="mt-4">
+                        <a href="${entry.bookmarkLink}" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                            View in Library Catalogue
+                        </a>
+                    </div>` : ''}
+                </section>
+
+                <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
+                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
+                        REPORT AN ISSUE
+                    </button>
+                </footer>
+            </div>
+        `;
+    }
+    
     // Remove 'Summary', 'Collection Details', and 'Digital Access' sections for all Getting Started pages
     if (entry.id && entry.id.startsWith('gs-')) {
         return `
@@ -2872,6 +3144,60 @@ function generateItemDetailHtml(entry) {
                         ${entry.fullDescription || '[Summary Placeholder]'}
                     </p>
                 </section>
+
+                <section class="mb-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Left Column: Item Details -->
+                        <div>
+                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Item Details</h2>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Collection</h3>
+                                    <p class="text-gray-700">${entry.collection || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Accession No</h3>
+                                    <p class="text-gray-700 font-mono">${entry.accessionNo || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Call No</h3>
+                                    <p class="text-gray-700 font-mono">${entry.callNumber || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Item Acquired</h3>
+                                    <p class="text-gray-700">${entry.itemAcquired || 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Purchase Price</h3>
+                                    <p class="text-gray-700">${entry.purchasePrice || 'N/A'}</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column -->
+                        <div>
+                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Links</h2>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Spydus</h3>
+                                    <p class="text-gray-700">${entry.catalogueLink ? 'Available' : 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">View Availability</h3>
+                                    <p class="text-gray-700">In-House Only</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Instructions PDF</h3>
+                                    <p class="text-gray-700">${entry.instructionLink ? 'Available' : 'N/A'}</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">Item Tag</h3>
+                                    <p class="text-gray-700">${entry.category || 'N/A'}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 ${contentsHtml}
 
                 <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
@@ -2961,7 +3287,6 @@ window.navigateToSection = function(sectionId, activeBtnId = '') {
         // Handle sub-navigation highlighting
         if (sectionId.startsWith('gs-')) {
             setActiveGettingStartedSubButton(getGettingStartedSubButtonId(sectionId));
-            setActiveTermsConditionsSubSubButton(getTermsConditionsSubSubButtonId(sectionId));
         } else if (sectionId.startsWith('loanable-') || (entry.type && entry.type === 'loanableItem')) {
             setActiveLoanableItemsSubButton(getLoanableItemsSubButtonId(sectionId));
         }
@@ -3101,7 +3426,7 @@ function performSearch(query) {
     ];
     
     allItems.forEach(item => {
-        const searchableText = `${item.name} ${item.description} ${item.fullDescription || ''}`.toLowerCase();
+        const searchableText = `${item.name} ${item.description} ${item.fullDescription || ''} ${item.accessionNo || ''}`.toLowerCase();
         if (searchableText.includes(searchTerm)) {
             searchResults.push(item);
         }
@@ -3180,6 +3505,8 @@ function initializeEventListeners() {
     
     faqsBtn.addEventListener('click', () => {
         faqsSubNav.classList.toggle('hidden-sub-nav');
+        // Navigate to the general FAQs section and set the FAQs button as active
+        navigateToSection('gs-faqs', 'faqsBtn');
     });
     
     faqsDtlBtn.addEventListener('click', () => {
@@ -3208,6 +3535,8 @@ function initializeEventListeners() {
     
     termsConditionsMainSubBtn.addEventListener('click', () => {
         termsConditionsSubSubNav.classList.toggle('hidden-sub-nav');
+        // Navigate to the general Terms & Conditions section and set the button as active
+        navigateToSection('gs-terms', 'termsConditionsMainSubBtn');
     });
     
 
