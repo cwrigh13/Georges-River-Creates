@@ -175,7 +175,7 @@ const mockData = {
             name: 'Bookings and Fees',
             description: 'Information regarding booking procedures and associated costs.',
             fullDescription: `
-                <p class="mb-4">In order to gain guaranteed and exclusive access to the Media Lab and Sound Booth customers are required to make a booking.</p>
+                <p class="mb-4">In order to gain guaranteed and exclusive access to the Media Lab customers are required to make a booking.</p>
                 <div class="flex flex-col sm:flex-row gap-4 mt-6">
                     <a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/MEDIALAB" target="_blank"
                        class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
@@ -2039,7 +2039,8 @@ const mockData = {
             name: 'Media Lab',
             category: 'Spaces',
             description: 'A creative space for video, audio, and digital projects.',
-            fullDescription: '<p>The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</p><br><p>In order to gain guaranteed and exclusive access to the Media Lab and Sound Booth customers are required to make a booking.</p><div class="mt-6"><a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/MEDIALAB" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">Media Lab Bookings</a></div>',
+            bannerImage: 'images/media-lab-banner.jpg',
+            fullDescription: '<p>The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</p><br><p>In order to gain guaranteed and exclusive access to the Media Lab customers are required to make a booking.</p><div class="mt-6"><a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/MEDIALAB" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">Media Lab Bookings</a></div>',
             location: 'Level 2, Main Library',
             bookingInformation: 'Bookings can be made online or at the service desk. Sessions are limited to 2 hours.',
             equipmentList: ['iMacs', 'Adobe Creative Cloud', 'Audio Interface', 'Green Screen', 'Microphones'],
@@ -2052,7 +2053,13 @@ const mockData = {
             name: 'Sound Booth',
             category: 'Spaces',
             description: 'A soundproof booth for audio recording and podcasting.',
-            fullDescription: 'The Sound Booth is a dedicated, soundproof space for recording podcasts, voice-overs, and music. Includes microphones, headphones, and a digital audio interface. Bookings are required. Please bring your own storage device for saving recordings.',
+            fullDescription: `The Sound Booth is a dedicated noise-proof space intended to be used for recording, practicing or performing with musical instruments and audio equipment.<br><br>The Sound Booth is prioritised for customers who have booked and are intending to use it for creative purposes (i.e. recording vocals or podcasts, playing piano). Customers may use the Sound Booth at any time as long as there is no booking. Booking the Sound Booth provides guaranteed and exclusive access.<br><br>Customers should close the door to the Sound Booth whether or not they have booked the space in order to reduce noise. If there is a customer in the Sound Booth when there is a booking please ask the customer to vacate.<br><br>
+                <a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/ROOMSOUNDBOOTH" target="_blank"
+                   class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200 mt-4 mb-2">
+                    Sound Booth Bookings
+                </a>
+            `,
+            bannerImage: 'images/media-lab-banner.jpg',
             location: 'Level 2, Main Library',
             bookingInformation: 'Bookings can be made online or at the service desk. Sessions are limited to 1 hour.',
             equipmentList: ['Microphones', 'Headphones', 'Audio Interface', 'Soundproofing'],
@@ -2545,6 +2552,7 @@ function generateItemDetailHtml(entry) {
         return `
             ${breadcrumbHtml}
             <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                ${entry.bannerImage ? `<div class="mb-6"><img src="${entry.bannerImage}" alt="Media Lab interior showing professional studio equipment, lighting, and creative workspace" class="w-full rounded-lg shadow-lg"></div>` : ''}
                 <header class="mb-6 border-b pb-4 border-gray-200">
                     <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
                         ${entry.name || '[Item Name Placeholder]'}
@@ -2598,6 +2606,7 @@ function generateItemDetailHtml(entry) {
     return `
         ${breadcrumbHtml}
         <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+            ${entry.bannerImage ? `<div class="mb-6"><img src="${entry.bannerImage}" alt="Media Lab interior showing professional studio equipment, lighting, and creative workspace" class="w-full rounded-lg shadow-lg"></div>` : ''}
             <header class="mb-6 border-b pb-4 border-gray-200">
                 <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
                     ${entry.name || '[Item Name Placeholder]'}
