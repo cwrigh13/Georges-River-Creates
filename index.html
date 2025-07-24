@@ -343,10 +343,6 @@ const mockData = {
                     <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                         Download Media Lab T&Cs
                     </button>
-                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
-                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
-                        Report an issue
-                    </button>
                 </div>
             `
         },
@@ -1692,21 +1688,6 @@ const mockData = {
             type: 'loanableItem'
         },
         {
-            id: 'mi054',
-            name: 'Artist PB2 Black Electric Bass Guitar',
-            category: 'Musical Instrument Collection',
-            description: 'Quality electric bass guitar with sleek black finish.',
-            fullDescription: 'The Artist PB2 Electric Bass Guitar provides quality bass playing with comfortable neck and reliable electronics. Features sleek black finish and versatile sound.',
-            location: 'Hurstville Library',
-            returnTo: 'Shelves near Sound Booth',
-            collection: 'Musical Instrument Collection',
-            callNumber: 'INSTRUMENT',
-            accessionNo: '154271233',
-            firstAvailable: '20-Jul-22',
-            bookmarkLink: '',
-            type: 'loanableItem'
-        },
-        {
             id: 'mi055',
             name: 'Artist STHL Black Left Handed Electric Guitar',
             category: 'Musical Instrument Collection',
@@ -2037,36 +2018,6 @@ const mockData = {
             type: 'loanableItem'
         },
         {
-            id: 'mi077',
-            name: 'Bongos (21.5cm)',
-            category: 'Musical Instrument Collection',
-            description: '21.5cm bongo drums for Latin and world percussion.',
-            fullDescription: 'These 21.5cm bongo drums provide authentic Latin percussion sounds with quality construction. Perfect for salsa, Latin jazz, and world music applications.',
-            location: 'Hurstville Library',
-            returnTo: 'Shelves near Sound Booth',
-            collection: 'Musical Instrument Collection',
-            callNumber: 'INSTRUMENT',
-            accessionNo: '154279772',
-            firstAvailable: '8-Feb-19',
-            bookmarkLink: '',
-            type: 'loanableItem'
-        },
-        {
-            id: 'mi078',
-            name: 'Artist MSL110 6 String Lap Steel',
-            category: 'Musical Instrument Collection',
-            description: '6-string lap steel guitar for slide and Hawaiian-style playing.',
-            fullDescription: 'The Artist MSL110 6 String Lap Steel provides authentic lap steel and Hawaiian guitar sounds. Perfect for country, Hawaiian, and slide guitar styles.',
-            location: 'Hurstville Library',
-            returnTo: 'Guitar Rack',
-            collection: 'Musical Instrument Collection',
-            callNumber: 'INSTRUMENT',
-            accessionNo: '154279566',
-            firstAvailable: '20-Jul-22',
-            bookmarkLink: '',
-            type: 'loanableItem'
-        },
-        {
             id: 'mi079',
             name: 'Artist CL34AML 3/4 Size Left Hand Classical Guitar',
             category: 'Musical Instrument Collection',
@@ -2129,7 +2080,15 @@ const mockData = {
             spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27718282',
             canva: 'https://canva.com/templates/podcast-production',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/podcast-kit-manual',
-            type: 'inHouseItem'
+            type: 'inHouseItem',
+            contents: [
+                '1 x Rode Caster Pro Integrated Podcast Studio',
+                '1 x Professional XLR Microphone',
+                '1 x Headphone Set',
+                '1 x USB Cable for Computer Connection',
+                '1 x Power Adapter',
+                '1 x Quick Start Guide'
+            ]
         },
         {
             id: 'ih002',
@@ -2145,7 +2104,17 @@ const mockData = {
             spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160863',
             canva: 'https://canva.com/templates/professional-photography',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/photography-pack-manual',
-            type: 'inHouseItem'
+            type: 'inHouseItem',
+            contents: [
+                '1 x Professional Tripod with Fluid Head',
+                '1 x Geared Center Column',
+                '3 x Color Gels (Yellow, Red, Blue)',
+                '1 x Honeycomb Grid for Light Focusing',
+                '1 x Barndoors for Light Control',
+                '1 x Snoot for Focused Lighting',
+                '1 x Camera Mount Adapter',
+                '1 x Equipment Case'
+            ]
         },
         {
             id: 'ih003',
@@ -2159,7 +2128,15 @@ const mockData = {
             itemAcquired: '2024-07-01',
             purchasePrice: 'AUD 450.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/presonus-monitors-manual',
-            type: 'inHouseItem'
+            type: 'inHouseItem',
+            contents: [
+                '2 x PreSonus Eris Studio Monitors',
+                '2 x Monitor Stands',
+                '2 x Power Cables',
+                '2 x Audio Cables',
+                '1 x Setup Guide',
+                '1 x Frequency Tuning Manual'
+            ]
         },
         {
             id: 'ih004',
@@ -2173,7 +2150,17 @@ const mockData = {
             itemAcquired: '2024-07-15',
             purchasePrice: 'AUD 550.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/oculus-quest2-manual',
-            type: 'inHouseItem'
+            type: 'inHouseItem',
+            contents: [
+                '1 x Meta Oculus Quest 2 VR Headset',
+                '2 x Touch Controllers',
+                '1 x Charging Cable',
+                '1 x Power Adapter',
+                '1 x Lens Cleaning Cloth',
+                '1 x Safety Strap',
+                '1 x Quick Start Guide',
+                '1 x VR Safety Instructions'
+            ]
         },
         {
             id: 'ih005',
@@ -2187,7 +2174,16 @@ const mockData = {
             itemAcquired: '2024-08-01',
             purchasePrice: 'AUD 380.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/zoom-vr-recorder-manual',
-            type: 'inHouseItem'
+            type: 'inHouseItem',
+            contents: [
+                '1 x Zoom H3-VR Handy Audio Recorder',
+                '1 x 32GB SD Card',
+                '1 x USB Cable',
+                '1 x Windscreen',
+                '1 x Carrying Case',
+                '1 x Quick Start Guide',
+                '1 x Spatial Audio Manual'
+            ]
         },
         {
             id: 'ih006',
@@ -2201,7 +2197,16 @@ const mockData = {
             itemAcquired: '2024-08-15',
             purchasePrice: 'AUD 420.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/ricoh-theta-manual',
-            type: 'inHouseItem'
+            type: 'inHouseItem',
+            contents: [
+                '1 x Ricoh Theta 4K 360 Camera',
+                '1 x USB Charging Cable',
+                '1 x Protective Case',
+                '1 x Tripod Mount',
+                '1 x 64GB SD Card',
+                '1 x Quick Start Guide',
+                '1 x 360° Photography Manual'
+            ]
         },
         {
             id: 'ih007',
@@ -2215,7 +2220,17 @@ const mockData = {
             itemAcquired: '2024-09-01',
             purchasePrice: 'AUD 320.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/zoom-q2n-manual',
-            type: 'inHouseItem'
+            type: 'inHouseItem',
+            contents: [
+                '1 x Zoom Q2N Handy Video Recorder',
+                '1 x 32GB SD Card',
+                '1 x USB Cable',
+                '1 x Tripod Mount',
+                '1 x Carrying Case',
+                '1 x Windscreen',
+                '1 x Quick Start Guide',
+                '1 x Video Recording Manual'
+            ]
         },
         {
             id: 'ih008',
@@ -2229,7 +2244,17 @@ const mockData = {
             itemAcquired: '2024-10-01',
             purchasePrice: 'AUD 280.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/record-song-pack-manual',
-            type: 'inHouseItem'
+            type: 'inHouseItem',
+            contents: [
+                '1 x Professional USB Microphone',
+                '1 x Microphone Stand',
+                '1 x Pop Filter',
+                '1 x Headphone Set',
+                '1 x USB Cable',
+                '1 x Quick Start Guide',
+                '1 x Recording Tips Sheet',
+                '1 x Equipment Case'
+            ]
         },
         {
             id: 'ih009',
@@ -2308,7 +2333,6 @@ const mockData = {
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/surface-studio-manual',
             type: 'permanentEquipment',
             location: 'Media Lab, Hurstville Library',
-            bannerImage: 'images/media-lab-banner.jpg',
             specifications: [
                 '28-inch PixelSense Display',
                 'Intel Core i7 processor',
@@ -2651,7 +2675,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/sounds-inside-1-6.jpg"
                                         alt="Two men in foreground of indoor public space"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/sounds-inside-1-6.jpg', 'Two men in foreground of indoor public space')"
                                     >
                                 </div>
@@ -2752,7 +2778,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-1.jpg"
                                         alt="Sounds Inside #2 - Image 1"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-1.jpg', 'Sounds Inside #2 - Image 1')"
                                     >
                                 </div>
@@ -2764,7 +2792,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-2.jpg"
                                         alt="Sounds Inside #2 - Image 2"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-2.jpg', 'Sounds Inside #2 - Image 2')"
                                     >
                                 </div>
@@ -2776,7 +2806,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-3.jpg"
                                         alt="Sounds Inside #2 - Image 3"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-3.jpg', 'Sounds Inside #2 - Image 3')"
                                     >
                                 </div>
@@ -2788,7 +2820,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-4.jpg"
                                         alt="Sounds Inside #2 - Image 4"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-4.jpg', 'Sounds Inside #2 - Image 4')"
                                     >
                                 </div>
@@ -2800,7 +2834,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-5.jpg"
                                         alt="Sounds Inside #2 - Image 5"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-5.jpg', 'Sounds Inside #2 - Image 5')"
                                     >
                                 </div>
@@ -2812,7 +2848,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-6.jpg"
                                         alt="Sounds Inside #2 - Image 6"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-6.jpg', 'Sounds Inside #2 - Image 6')"
                                     >
                                 </div>
@@ -2824,7 +2862,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-7.jpg"
                                         alt="Sounds Inside #2 - Image 7"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-7.jpg', 'Sounds Inside #2 - Image 7')"
                                     >
                                 </div>
@@ -2836,7 +2876,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-8.jpg"
                                         alt="Sounds Inside #2 - Image 8"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-8.jpg', 'Sounds Inside #2 - Image 8')"
                                     >
                                 </div>
@@ -2848,7 +2890,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-9.jpg"
                                         alt="Sounds Inside #2 - Image 9"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-9.jpg', 'Sounds Inside #2 - Image 9')"
                                     >
                                 </div>
@@ -2860,7 +2904,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-10.jpg"
                                         alt="Sounds Inside #2 - Image 10"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-10.jpg', 'Sounds Inside #2 - Image 10')"
                                     >
                                 </div>
@@ -2872,7 +2918,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-11.jpg"
                                         alt="Sounds Inside #2 - Image 11"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-11.jpg', 'Sounds Inside #2 - Image 11')"
                                     >
                                 </div>
@@ -2884,7 +2932,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-12.jpg"
                                         alt="Sounds Inside #2 - Image 12"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-12.jpg', 'Sounds Inside #2 - Image 12')"
                                     >
                                 </div>
@@ -2896,7 +2946,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-13.jpg"
                                         alt="Sounds Inside #2 - Image 13"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-13.jpg', 'Sounds Inside #2 - Image 13')"
                                     >
                                 </div>
@@ -2908,7 +2960,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-14.jpg"
                                         alt="Sounds Inside #2 - Image 14"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-14.jpg', 'Sounds Inside #2 - Image 14')"
                                     >
                                 </div>
@@ -2920,7 +2974,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-15.jpg"
                                         alt="Sounds Inside #2 - Image 15"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-15.jpg', 'Sounds Inside #2 - Image 15')"
                                     >
                                 </div>
@@ -2932,7 +2988,9 @@ This will be the first opportunity to view and borrow items from the collection,
                                     <img 
                                         src="images/imagessounds-inside-2-16.jpg"
                                         alt="Sounds Inside #2 - Image 16"
-                                        class="w-full h-48 object-cover clickable-image"
+                                        class="rounded-lg shadow-lg"
+                                        style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;"
+                                        loading="lazy"
                                         onclick="openImageModal('images/imagessounds-inside-2-16.jpg', 'Sounds Inside #2 - Image 16')"
                                     >
                                 </div>
@@ -2971,7 +3029,7 @@ const today = new Date('2025-06-25');
 let currentSection = localStorage.getItem('georgesRiverCurrentSection') || 'gs-ask-me-anything';
 let isGlobalSearchActive = false;
 let gettingStartedMainBtn, loanableItemsMainBtn, inHouseItemsBtn, permanentEquipmentBtn, spacesBtn, eventsBtn, settingsBtn;
-        let gettingStartedSubNav, askMeAnythingBtn, introBtn, faqsBtn, bookingsFeesBtn, termsConditionsMainSubBtn, termsConditionsSubSubNav, termsMediaLabBtn, termsSoundBoothBtn;
+let gettingStartedSubNav, askMeAnythingBtn, introBtn, faqsBtn, bookingsFeesBtn, termsConditionsMainSubBtn, termsConditionsSubSubNav, termsMediaLabBtn, termsSoundBoothBtn;
 let loanableItemsSubNav, loanableDtlBtn, loanableMiBtn;
 let eventsSubNav;
 let searchBar, listView, detailView;
@@ -3204,9 +3262,16 @@ function setActiveLoanableItemsSubButton(activeBtnId) {
 }
 
 function hideAllSubNavs() {
-    gettingStartedSubNav.classList.add('hidden-sub-nav');
-    termsConditionsSubSubNav.classList.add('hidden-sub-nav');
-    loanableItemsSubNav.classList.add('hidden-sub-nav');
+    console.log('hideAllSubNavs called');
+    console.log('gettingStartedSubNav:', gettingStartedSubNav);
+    console.log('faqsSubNav:', faqsSubNav);
+    console.log('termsConditionsSubSubNav:', termsConditionsSubSubNav);
+    console.log('loanableItemsSubNav:', loanableItemsSubNav);
+    
+    if (gettingStartedSubNav) gettingStartedSubNav.classList.add('hidden-sub-nav');
+    if (faqsSubNav) faqsSubNav.classList.add('hidden-sub-nav');
+    if (termsConditionsSubSubNav) termsConditionsSubSubNav.classList.add('hidden-sub-nav');
+    if (loanableItemsSubNav) loanableItemsSubNav.classList.add('hidden-sub-nav');
     setActiveSettingsSubButton('');
 }
 
@@ -3303,456 +3368,29 @@ function generateBreadcrumbHtmlForDetail(entry) {
     breadcrumbHtml += `</div>`;
     return breadcrumbHtml;
 }
-function generateBreadcrumbHtmlForList(listTitle, isSearchList) {
+
+function generateBreadcrumbHtmlForList(listTitle, isSearch = false) {
     let breadcrumbHtml = `<div class="text-sm text-gray-500 mb-4">`;
     breadcrumbHtml += `<span class="cursor-pointer hover:text-teal-600" onclick="navigateToSection('gs-ask-me-anything', 'gettingStartedMainBtn')">Home</span>`;
-    if (isSearchList) {
-        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="text-gray-700 font-medium">${listTitle}</span>`;
-    } else if (listTitle === 'In-House Items' || listTitle === 'Spaces' || listTitle === 'Loanable Items' || listTitle === 'Permanent Equipment') {
-        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="text-gray-700 font-medium">${listTitle}</span>`;
-    } else if (listTitle.includes('Library of Things') || listTitle.includes('Digital Tool Library') || listTitle.includes('Musical Instrument Collection')) {
-        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="cursor-pointer hover:text-teal-600" onclick="navigateToSection('loanable-dtl', 'loanableItemsMainBtn')">Loanable Items</span>`;
+    
+    if (isSearch) {
+        breadcrumbHtml += ` <span class="mx-1">/</span> <span class="text-gray-700 font-medium">Search Results</span>`;
+    } else {
         breadcrumbHtml += ` <span class="mx-1">/</span> <span class="text-gray-700 font-medium">${listTitle}</span>`;
     }
+    
     breadcrumbHtml += `</div>`;
     return breadcrumbHtml;
 }
+
 function generateItemDetailHtml(entry) {
-    // Always include the breadcrumb at the top
     const breadcrumbHtml = generateBreadcrumbHtmlForDetail(entry);
     
-    // Special case for Ask Me Anything page
-    if (entry.id === 'gs-ask-me-anything') {
-        return `
-            ${breadcrumbHtml}
-            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-                <header class="mb-6 border-b pb-4 border-gray-200">
-                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
-                        ${entry.name || '[Item Name Placeholder]'}
-                    </h1>
-                </header>
-                <section class="mb-8">
-                    <div>${entry.fullDescription || ''}</div>
-                </section>
-            </div>
-        `;
-    }
-    
-    // Handle Digital Tool Library items with new data structure
-    if (entry.id && entry.id.startsWith('dtl')) {
-        return `
-            ${breadcrumbHtml}
-            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-                <header class="mb-6 border-b pb-4 border-gray-200">
-                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
-                        ${entry.name || '[Item Name Placeholder]'}
-                    </h1>
-                </header>
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
-                    <p class="text-gray-700 leading-relaxed">
-                        ${entry.fullDescription || entry.description || '[Description not available]'}
-                    </p>
-                </section>
-
-                <section class="mb-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <!-- Left Column: Item Details -->
-                        <div>
-                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Item Details</h2>
-                            <div class="space-y-3">
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Collection:</span> <span class="text-gray-700">${entry.collection || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Accession No:</span> <span class="text-gray-700 font-mono">${entry.accessionNo || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Call No:</span> <span class="text-gray-700 font-mono">${entry.callNumber || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Item Acquired:</span> <span class="text-gray-700">${entry.itemAcquired || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Purchase Price:</span> <span class="text-gray-700">${entry.purchasePrice || 'N/A'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Right Column -->
-                        <div>
-                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Links</h2>
-                            <div class="space-y-3">
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Spydus:</span> <span class="text-gray-700">${entry.bookmarkLink ? 'Available' : 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">View Availability:</span> <span class="text-gray-700">${entry.firstAvailable ? entry.firstAvailable : 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Instructions PDF:</span> <span class="text-gray-700">${entry.instructionLink ? 'Available' : 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Item Tag:</span> <span class="text-gray-700">${entry.category || 'N/A'}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
-                    ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event') ? '' : `
-                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-white text-gray-700 font-semibold rounded-lg shadow-lg border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
-                        REPORT AN ISSUE
-                    </button>
-                    `}
-                </footer>
-            </div>
-        `;
-    }
-    
-    // Handle Musical Instrument Collection items with new data structure
-    if (entry.id && entry.id.startsWith('mi')) {
-        return `
-            ${breadcrumbHtml}
-            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-                <header class="mb-6 border-b pb-4 border-gray-200">
-                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
-                        ${entry.name || '[Item Name Placeholder]'}
-                    </h1>
-                </header>
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
-                    <p class="text-gray-700 leading-relaxed">
-                        ${entry.fullDescription || entry.description || '[Description not available]'}
-                    </p>
-                </section>
-
-                <section class="mb-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <!-- Left Column: Item Details -->
-                        <div>
-                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Item Details</h2>
-                            <div class="space-y-3">
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Collection:</span> <span class="text-gray-700">${entry.collection || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Accession No:</span> <span class="text-gray-700 font-mono">${entry.accessionNo || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Call No:</span> <span class="text-gray-700 font-mono">${entry.callNumber || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Item Acquired:</span> <span class="text-gray-700">${entry.itemAcquired || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Purchase Price:</span> <span class="text-gray-700">${entry.purchasePrice || 'N/A'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Right Column -->
-                        <div>
-                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Links</h2>
-                            <div class="space-y-3">
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Spydus:</span> <span class="text-gray-700">${entry.bookmarkLink ? 'Available' : 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">View Availability:</span> <span class="text-gray-700">${entry.firstAvailable ? entry.firstAvailable : 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Instructions PDF:</span> <span class="text-gray-700">${entry.instructionLink ? 'Available' : 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Item Tag:</span> <span class="text-gray-700">${entry.category || 'N/A'}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
-                    ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event') ? '' : `
-                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-white text-gray-700 font-semibold rounded-lg shadow-lg border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
-                        REPORT AN ISSUE
-                    </button>
-                    `}
-                </footer>
-            </div>
-        `;
-    }
-    
-    // Remove 'Summary', 'Collection Details', and 'Digital Access' sections for all Getting Started pages
-    if (entry.id && entry.id.startsWith('gs-')) {
-        return `
-            ${breadcrumbHtml}
-            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-                <header class="mb-6 border-b pb-4 border-gray-200">
-                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
-                        ${entry.name || '[Item Name Placeholder]'}
-                    </h1>
-                </header>
-                <section class="mb-8">
-                    <p class="text-gray-700 leading-relaxed">
-                        ${entry.fullDescription || '[Summary Placeholder]'}
-                    </p>
-                </section>
-            </div>
-        `;
-    }
-    // Remove 'Summary', 'Collection Details', and 'Digital Access' sections for faqs-dtl
-    if (entry.id === 'faqs-dtl' || entry.id === 'faqs-mi' || entry.id === 'faqs-media-lab' || entry.id === 'faqs-sound-booth') {
-        // Function to extract questions from FAQ content
-        function extractQuestionsFromFAQ(faqContent) {
-            const questions = [];
-            // Updated regex to allow for zero or more spaces between </strong> and <br>A:
-            const questionRegex = /<li><a id="(q\d+)"><\/a><strong>Q: ([^<]+)<\/strong>\s*<br>A:/g;
-            let match;
-            while ((match = questionRegex.exec(faqContent)) !== null) {
-                questions.push({
-                    q: match[2].trim(),
-                    anchor: match[1]
-                });
-            }
-            return questions;
-        }
-        
-        // Extract questions dynamically from the FAQ content
-        const questions = extractQuestionsFromFAQ(entry.fullDescription);
-        
-        // Add anchors to the FAQ answers and make questions bold
-        let faqHtml = entry.fullDescription;
-        if (questions.length) {
-            questions.forEach((q, idx) => {
-                // Replace the first occurrence of the question with an anchor and bold formatting
-                const regex = new RegExp(`<li>Q: ${q.q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} <br>A:`, 'g');
-                faqHtml = faqHtml.replace(regex, `<li><a id="${q.anchor}"></a><strong>Q: ${q.q}</strong> <br>A:`);
-            });
-        }
-        
-        // Contents section
-        const contentsHtml = `
-            <div class="mb-8 p-6 bg-teal-50 border-l-4 border-teal-500 rounded-lg shadow-sm">
-                <div class="flex items-center mb-3">
-                    <svg class="w-5 h-5 text-teal-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                    </svg>
-                    <h2 class="text-xl font-bold text-teal-800">Contents</h2>
-                </div>
-                <ul class="list-disc list-inside ml-4 space-y-1">
-                    ${questions.map(q => `<li><a href="#${q.anchor}" class="text-teal-700 hover:text-teal-900 hover:underline font-medium transition-colors duration-200">${q.q}</a></li>`).join('')}
-                </ul>
-            </div>
-        `;
-        return `
-            ${breadcrumbHtml}
-            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-                <header class="mb-6 border-b pb-4 border-gray-200">
-                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
-                        ${entry.name || '[Item Name Placeholder]'}
-                    </h1>
-                </header>
-                ${contentsHtml}
-                <section class="mb-8">
-                    <div>${faqHtml || ''}</div>
-                </section>
-            </div>
-        `
-    }
-    // Remove 'Summary', 'Collection Details', and 'Digital Access' sections for faqs-in-house-packs
-    if (entry.id === 'faqs-in-house-packs') {
-        // Function to extract questions from FAQ content
-        function extractQuestionsFromFAQ(faqContent) {
-            const questions = [];
-            // Updated regex to allow for zero or more spaces between </strong> and <br>A:
-            const questionRegex = /<li><a id="(q\d+)"><\/a><strong>Q: ([^<]+)<\/strong>\s*<br>A:/g;
-            let match;
-            while ((match = questionRegex.exec(faqContent)) !== null) {
-                questions.push({
-                    q: match[2].trim(),
-                    anchor: match[1]
-                });
-            }
-            return questions;
-        }
-        
-        // Extract questions dynamically from the FAQ content
-        const questions = extractQuestionsFromFAQ(entry.fullDescription);
-        
-        // Contents section
-        const contentsHtml = `
-            <div class="mb-8 p-6 bg-teal-50 border-l-4 border-teal-500 rounded-lg shadow-sm">
-                <div class="flex items-center mb-3">
-                    <svg class="w-5 h-5 text-teal-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                    </svg>
-                    <h2 class="text-xl font-bold text-teal-800">Contents</h2>
-                </div>
-                <ul class="list-disc list-inside ml-4 space-y-1">
-                    ${questions.map(q => `<li><a href="#${q.anchor}" class="text-teal-700 hover:text-teal-900 hover:underline font-medium transition-colors duration-200">${q.q}</a></li>`).join('')}
-                </ul>
-            </div>
-        `;
-        return `
-            ${breadcrumbHtml}
-            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-                <header class="mb-6 border-b pb-4 border-gray-200">
-                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
-                        ${entry.name || '[Item Name Placeholder]'}
-                    </h1>
-                </header>
-                ${contentsHtml}
-                <section class="mb-8">
-                    <div>${entry.fullDescription || ''}</div>
-                </section>
-            </div>
-        `;
-    }
-    // Special case for In-House Items with contents
-    if (entry.type === 'inHouseItem' && entry.contents && entry.contents.length > 0) {
-        const contentsHtml = `
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Contents</h2>
-                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                    ${entry.contents.map(item => `<li>${item}</li>`).join('')}
-                </ul>
-            </section>
-        `;
-        return `
-            ${breadcrumbHtml}
-            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-                <header class="mb-6 border-b pb-4 border-gray-200">
-                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
-                        ${entry.name || '[Item Name Placeholder]'}
-                    </h1>
-                </header>
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
-                    <p class="text-gray-700 leading-relaxed">
-                        ${entry.fullDescription || '[Summary Placeholder]'}
-                    </p>
-                </section>
-
-                <section class="mb-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <!-- Left Column: Item Details -->
-                        <div>
-                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Item Details</h2>
-                            <div class="space-y-3">
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h3 class="font-semibold text-gray-800 mb-2">Collection</h3>
-                                    <p class="text-gray-700">${entry.collection || 'N/A'}</p>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h3 class="font-semibold text-gray-800 mb-2">Accession No</h3>
-                                    <p class="text-gray-700 font-mono">${entry.accessionNo || 'N/A'}</p>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h3 class="font-semibold text-gray-800 mb-2">Call No</h3>
-                                    <p class="text-gray-700 font-mono">${entry.callNumber || 'N/A'}</p>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h3 class="font-semibold text-gray-800 mb-2">Item Acquired</h3>
-                                    <p class="text-gray-700">${entry.itemAcquired || 'N/A'}</p>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h3 class="font-semibold text-gray-800 mb-2">Purchase Price</h3>
-                                    <p class="text-gray-700">${entry.purchasePrice || 'N/A'}</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Right Column -->
-                        <div>
-                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Links</h2>
-                            <div class="space-y-3">
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h3 class="font-semibold text-gray-800 mb-2">Spydus</h3>
-                                    <p class="text-gray-700">${entry.catalogueLink ? 'Available' : 'N/A'}</p>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h3 class="font-semibold text-gray-800 mb-2">View Availability</h3>
-                                    <p class="text-gray-700">In-House Only</p>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h3 class="font-semibold text-gray-800 mb-2">Instructions PDF</h3>
-                                    <p class="text-gray-700">${entry.instructionLink ? 'Available' : 'N/A'}</p>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <h3 class="font-semibold text-gray-800 mb-2">Item Tag</h3>
-                                    <p class="text-gray-700">${entry.category || 'N/A'}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                ${contentsHtml}
-
-                <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
-                    ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event') ? '' : `
-                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-white text-gray-700 font-semibold rounded-lg shadow-lg border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
-                        REPORT AN ISSUE
-                    </button>
-                    `}
-                </footer>
-            </div>
-        `;
-    }
-
-    // Handle settings items
-    if (entry.type === 'settingsItem') {
-        if (entry.id === 'settings-report-issue') {
-            return `
-                ${breadcrumbHtml}
-                <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-                    <header class="mb-6 border-b pb-4 border-gray-200">
-                        <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
-                            ${entry.name || 'Report an Issue'}
-                        </h1>
-                    </header>
-                    <section class="mb-8">
-                        <p class="text-gray-700 leading-relaxed mb-6">
-                            Use this form to report any problems, bugs, or issues you encounter while using the Georges River Creates system. Your feedback helps us improve the service for everyone.
-                        </p>
-                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-                            <h3 class="text-lg font-semibold text-blue-800 mb-2">What happens when you submit a report?</h3>
-                            <ul class="text-blue-700 space-y-1">
-                                <li>• Your report will be sent directly to our technical team</li>
-                                <li>• We'll review the issue and get back to you if needed</li>
-                                <li>• Your feedback helps us improve the system</li>
-                            </ul>
-                        </div>
-
-                    </section>
-                </div>
-            `;
-        } else {
-            return `
-                ${breadcrumbHtml}
-                <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-                    <header class="mb-6 border-b pb-4 border-gray-200">
-                        <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
-                            ${entry.name || '[Item Name Placeholder]'}
-                        </h1>
-                    </header>
-                    <section class="mb-8">
-                        <p class="text-gray-700 leading-relaxed">
-                            ${entry.fullDescription || entry.description || '[Description not available]'}
-                        </p>
-                    </section>
-                </div>
-            `;
-        }
-    }
-
     // Special case for Permanent Equipment items
     if (entry.type === 'permanentEquipment') {
         return `
             ${breadcrumbHtml}
             <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-                ${entry.bannerImage ? `<div class="mb-6"><img src="${entry.bannerImage}" alt="Professional studio equipment" class="w-full rounded-lg shadow-lg"></div>` : ''}
                 <header class="mb-6 border-b pb-4 border-gray-200">
                     <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
                         ${entry.name || '[Item Name Placeholder]'}
@@ -3764,60 +3402,7 @@ function generateItemDetailHtml(entry) {
                         ${entry.fullDescription || '[Summary Placeholder]'}
                     </p>
                 </section>
-
-                <section class="mb-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <!-- Left Column: Item Details -->
-                        <div>
-                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Item Details</h2>
-                            <div class="space-y-3">
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Collection:</span> <span class="text-gray-700">${entry.category || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Accession No:</span> <span class="text-gray-700 font-mono">${entry.accessionNo || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Call No:</span> <span class="text-gray-700 font-mono">${entry.callNumber || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Item Acquired:</span> <span class="text-gray-700">${entry.itemAcquired || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Purchase Price:</span> <span class="text-gray-700">${entry.purchasePrice || 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Location:</span> <span class="text-gray-700">${entry.location || 'N/A'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Right Column -->
-                        <div>
-                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Links</h2>
-                            <div class="space-y-3">
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Catalogue Link:</span> <span class="text-gray-700">${entry.catalogueLink ? 'Available' : 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Instructions PDF:</span> <span class="text-gray-700">${entry.instructionLink ? 'Available' : 'N/A'}</span>
-                                </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <span class="font-semibold text-gray-800">Item Tag:</span> <span class="text-gray-700">${entry.category || 'N/A'}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                ${entry.specifications ? `
-                <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Specifications</h2>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        ${entry.specifications.map(spec => `<li>${spec}</li>`).join('')}
-                    </ul>
-                </section>
-                ` : ''}
+                ${entry.name === 'Microsoft Surface Studio PCs' ? `<div class="mb-8"><img src="images/microsoft-surface.JPG" alt="Microsoft Surface Studio PCs" class="rounded-lg shadow-lg" style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;" loading="lazy"></div>` : ''}
 
                 ${entry.includedSoftware ? `
                 <section class="mb-8">
@@ -3889,7 +3474,7 @@ function generateItemDetailHtml(entry) {
     return `
         ${breadcrumbHtml}
         <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
-            ${entry.bannerImage ? `<div class="mb-6"><img src="${entry.bannerImage}" alt="Media Lab interior showing professional studio equipment, lighting, and creative workspace" class="w-full rounded-lg shadow-lg"></div>` : ''}
+            ${entry.bannerImage ? `<div class="mb-6"><img src="${entry.bannerImage}" alt="Media Lab interior showing professional studio equipment, lighting, and creative workspace" class="rounded-lg shadow-lg" style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;" loading="lazy"></div>` : ''}
             <header class="mb-6 border-b pb-4 border-gray-200">
                 <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
                     ${entry.name || '[Item Name Placeholder]'}
