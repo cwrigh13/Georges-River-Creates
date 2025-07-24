@@ -2116,16 +2116,17 @@ const mockData = {
     inHouseItems: [
         {
             id: 'ih001',
-            name: 'Podcast Kit',
+            name: 'Podcast Pack #1',
             category: 'In-House Items',
             description: 'All-in-one kit for recording podcasts in the library.',
             fullDescription: 'The Rode Caster Pro is an integrated podcast production studio. The Rode Caster Pro makes professional podcasting easy. It features high-quality XLR microphone inputs and headphone outputs, and with intuitive controls, automatic level setting and one-touch recording to a microSD card or computer, you can literally be making a podcast within minutes of taking it out of the box. Customers must provide their own microSD card or plug the Rode Caster Pro into their computer to save their recordings.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih001',
-            accessionNo: 'ACC-IH-001',
-            callNumber: 'IH.POD.001',
-            itemAcquired: '2024-05-01',
-            purchasePrice: 'AUD 220.00',
-            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160863',
+            collection: 'Musical Instrument Collection',
+            accessionNo: 'Equipment for In-Library Use',
+            callNumber: 'CBK',
+            itemAcquired: '',
+            purchasePrice: '',
+            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27718282',
             canva: 'https://canva.com/templates/podcast-production',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/podcast-kit-manual',
             type: 'inHouseItem'
@@ -2307,6 +2308,7 @@ const mockData = {
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/surface-studio-manual',
             type: 'permanentEquipment',
             location: 'Media Lab, Hurstville Library',
+            bannerImage: 'images/media-lab-banner.jpg',
             specifications: [
                 '28-inch PixelSense Display',
                 'Intel Core i7 processor',
@@ -2358,6 +2360,7 @@ const mockData = {
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/cyclorama-wall-guide',
             type: 'permanentEquipment',
             location: 'Media Lab, Hurstville Library',
+            bannerImage: 'images/cyclorama-wall.PNG',
             specifications: [
                 'Curved white background',
                 'Seamless design',
@@ -2380,6 +2383,7 @@ const mockData = {
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/chroma-key-guide',
             type: 'permanentEquipment',
             location: 'Media Lab, Hurstville Library',
+            bannerImage: 'images/chroma-key.JPG',
             specifications: [
                 'Bright green chroma key material',
                 'Wrinkle-resistant fabric',
@@ -2390,10 +2394,10 @@ const mockData = {
         },
         {
             id: 'pe005',
-            name: 'LightPro Ultrasoft Round LED Panels',
+            name: 'LightPro UltraSoft LED Panels',
             category: 'Permanent Equipment',
-            description: 'Professional LED lighting panels for studio photography and video.',
-            fullDescription: 'The LightPro Ultrasoft Round LED Panels provide professional-quality lighting for photography and video production in the Media Lab. These high-quality LED panels offer adjustable brightness and color temperature, making them perfect for portrait photography, product shots, and video content creation. The soft, diffused light creates flattering illumination and reduces harsh shadows.',
+            description: 'Professional LED lighting panels for photography and video production.',
+            fullDescription: 'The LightPro UltraSoft LED panels provide high-quality, adjustable lighting for professional photography and video production. These round LED panels offer precise control over brightness and color temperature, making them perfect for portrait photography, product shots, and video content creation. The soft, diffused light output ensures flattering illumination for any subject.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/pe005',
             accessionNo: 'ACC-PE-005',
             callNumber: 'PE.LIGHT.001',
@@ -2402,6 +2406,7 @@ const mockData = {
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/lightpro-led-panels-guide',
             type: 'permanentEquipment',
             location: 'Media Lab, Hurstville Library',
+            bannerImage: 'images/lightpro-ultrasoft.JPG',
             specifications: [
                 'Round LED panel design',
                 'Adjustable brightness (0-100%)',
@@ -2426,6 +2431,7 @@ const mockData = {
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/tolifo-studio-lights-guide',
             type: 'permanentEquipment',
             location: 'Media Lab, Hurstville Library',
+            bannerImage: 'images/tolifo-studio-lights.JPG',
             specifications: [
                 'Multiple light head system',
                 'Adjustable light intensity',
@@ -2450,6 +2456,7 @@ const mockData = {
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/krk-monitors-guide',
             type: 'permanentEquipment',
             location: 'Media Lab, Hurstville Library',
+            bannerImage: 'images/krk-studio-monitors.JPG',
             specifications: [
                 'Bi-amped Class A/B amplifier',
                 '5-inch glass aramid composite woofer',
@@ -2474,6 +2481,7 @@ const mockData = {
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/behringer-mixer-guide',
             type: 'permanentEquipment',
             location: 'Media Lab, Hurstville Library',
+            bannerImage: 'images/behringer-mixer.JPG',
             specifications: [
                 '18 input channels (12 mic/line, 4 stereo)',
                 'Built-in digital effects processor',
@@ -2498,14 +2506,15 @@ const mockData = {
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/roland-piano-guide',
             type: 'permanentEquipment',
             location: 'Media Lab, Hurstville Library',
+            bannerImage: 'images/roland-piano.JPG',
             specifications: [
                 '88 weighted hammer-action keys',
-                'Multiple grand piano and instrument voices',
-                'Built-in speakers',
-                'MIDI and USB connectivity',
+                'Authentic piano sounds',
+                'MIDI/USB connectivity',
+                'Built-in metronome',
+                'Recording capabilities',
                 'Headphone output',
-                'Adjustable touch sensitivity',
-                'Compact upright cabinet design'
+                'Durable construction'
             ]
         }
     ],
@@ -3393,7 +3402,7 @@ function generateItemDetailHtml(entry) {
 
                 <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
                     ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event') ? '' : `
-                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
+                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-white text-gray-700 font-semibold rounded-lg shadow-lg border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
                         REPORT AN ISSUE
                     </button>
                     `}
@@ -3466,7 +3475,7 @@ function generateItemDetailHtml(entry) {
 
                 <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
                     ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event') ? '' : `
-                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
+                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-white text-gray-700 font-semibold rounded-lg shadow-lg border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
                         REPORT AN ISSUE
                     </button>
                     `}
@@ -3683,7 +3692,145 @@ function generateItemDetailHtml(entry) {
 
                 <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
                     ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event') ? '' : `
-                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
+                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-white text-gray-700 font-semibold rounded-lg shadow-lg border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
+                        REPORT AN ISSUE
+                    </button>
+                    `}
+                </footer>
+            </div>
+        `;
+    }
+
+    // Handle settings items
+    if (entry.type === 'settingsItem') {
+        if (entry.id === 'settings-report-issue') {
+            return `
+                ${breadcrumbHtml}
+                <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                    <header class="mb-6 border-b pb-4 border-gray-200">
+                        <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                            ${entry.name || 'Report an Issue'}
+                        </h1>
+                    </header>
+                    <section class="mb-8">
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Use this form to report any problems, bugs, or issues you encounter while using the Georges River Creates system. Your feedback helps us improve the service for everyone.
+                        </p>
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">What happens when you submit a report?</h3>
+                            <ul class="text-blue-700 space-y-1">
+                                <li>• Your report will be sent directly to our technical team</li>
+                                <li>• We'll review the issue and get back to you if needed</li>
+                                <li>• Your feedback helps us improve the system</li>
+                            </ul>
+                        </div>
+
+                    </section>
+                </div>
+            `;
+        } else {
+            return `
+                ${breadcrumbHtml}
+                <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                    <header class="mb-6 border-b pb-4 border-gray-200">
+                        <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                            ${entry.name || '[Item Name Placeholder]'}
+                        </h1>
+                    </header>
+                    <section class="mb-8">
+                        <p class="text-gray-700 leading-relaxed">
+                            ${entry.fullDescription || entry.description || '[Description not available]'}
+                        </p>
+                    </section>
+                </div>
+            `;
+        }
+    }
+
+    // Special case for Permanent Equipment items
+    if (entry.type === 'permanentEquipment') {
+        return `
+            ${breadcrumbHtml}
+            <div class="max-w-4xl w-full bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10 border border-gray-200">
+                ${entry.bannerImage ? `<div class="mb-6"><img src="${entry.bannerImage}" alt="Professional studio equipment" class="w-full rounded-lg shadow-lg"></div>` : ''}
+                <header class="mb-6 border-b pb-4 border-gray-200">
+                    <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">
+                        ${entry.name || '[Item Name Placeholder]'}
+                    </h1>
+                </header>
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        ${entry.fullDescription || '[Summary Placeholder]'}
+                    </p>
+                </section>
+
+                <section class="mb-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Left Column: Item Details -->
+                        <div>
+                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Item Details</h2>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <span class="font-semibold text-gray-800">Collection:</span> <span class="text-gray-700">${entry.category || 'N/A'}</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <span class="font-semibold text-gray-800">Accession No:</span> <span class="text-gray-700 font-mono">${entry.accessionNo || 'N/A'}</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <span class="font-semibold text-gray-800">Call No:</span> <span class="text-gray-700 font-mono">${entry.callNumber || 'N/A'}</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <span class="font-semibold text-gray-800">Item Acquired:</span> <span class="text-gray-700">${entry.itemAcquired || 'N/A'}</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <span class="font-semibold text-gray-800">Purchase Price:</span> <span class="text-gray-700">${entry.purchasePrice || 'N/A'}</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <span class="font-semibold text-gray-800">Location:</span> <span class="text-gray-700">${entry.location || 'N/A'}</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column -->
+                        <div>
+                            <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Links</h2>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <span class="font-semibold text-gray-800">Catalogue Link:</span> <span class="text-gray-700">${entry.catalogueLink ? 'Available' : 'N/A'}</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <span class="font-semibold text-gray-800">Instructions PDF:</span> <span class="text-gray-700">${entry.instructionLink ? 'Available' : 'N/A'}</span>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <span class="font-semibold text-gray-800">Item Tag:</span> <span class="text-gray-700">${entry.category || 'N/A'}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                ${entry.specifications ? `
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Specifications</h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        ${entry.specifications.map(spec => `<li>${spec}</li>`).join('')}
+                    </ul>
+                </section>
+                ` : ''}
+
+                ${entry.includedSoftware ? `
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Included Software</h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        ${entry.includedSoftware.map(software => `<li>${software}</li>`).join('')}
+                    </ul>
+                </section>
+                ` : ''}
+
+                <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
+                    ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event') ? '' : `
+                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-white text-gray-700 font-semibold rounded-lg shadow-lg border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
                         REPORT AN ISSUE
                     </button>
                     `}
@@ -3756,7 +3903,7 @@ function generateItemDetailHtml(entry) {
 
             <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
                 ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event') ? '' : `
-                <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
+                <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="w-full sm:w-auto px-8 py-3 bg-white text-gray-700 font-semibold rounded-lg shadow-lg border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition duration-200 ease-in-out text-lg text-center">
                     REPORT AN ISSUE
                 </button>
                 `}
