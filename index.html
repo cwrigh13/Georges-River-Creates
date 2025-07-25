@@ -335,13 +335,13 @@ const mockData = {
                     <li>All In-House Packs require a Georges River Libraries card to borrow and must be returned at the end of your booking.</li>
                     <li>No equipment or furniture is to be removed from the Media Lab and Sound Booth</li>
                 </ul>
-                <div class="flex flex-col sm:flex-row gap-4 mt-6">
-                    <a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/MEDIALAB" target="_blank"
-                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
-                        Media Lab Bookings
-                    </a>
+                <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
                     <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                         Download Media Lab T&Cs
+                    </button>
+                    <button onclick="reportIssue('gs-terms-media-lab', 'Media Lab Terms & Conditions')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
                     </button>
                 </div>
             `
@@ -368,9 +368,13 @@ const mockData = {
                     <li>All In-House Packs require a Georges River Libraries card to borrow and must be returned at the end of your booking.</li>
                     <li>No equipment or furniture is to be removed from the Media Lab and Sound Booth</li>
                 </ul>
-                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
                     <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                         Download Sound Booth T&Cs
+                    </button>
+                    <button onclick="reportIssue('gs-terms-sound-booth', 'Sound Booth Terms & Conditions')" 
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                        Report an issue
                     </button>
                 </div>
             `
@@ -380,30 +384,103 @@ const mockData = {
             name: 'Digital Tool Library FAQs',
             description: 'Frequently Asked Questions about the Digital Tool Library.',
             fullDescription: `
-                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li><a id="q1"></a><strong>Q: What is the Digital Tool Library?</strong> <br>A: The Digital Tool Library is a collection of digital content creation tools including Canon DSRL cameras, GoPro cameras and Oral History Kits.</li>
-                    <li><a id="q2"></a><strong>Q: Why have a Digital Tool Library?</strong> <br>A: Georges River Libraries strives to remove digital technology access barriers, fostering community skill development, and facilitating the creation of unique content for potential inclusion in library collections and programs. This new and evolving collection seeks to broaden the scope and appeal of library collections, enhancing community engagement and transitioning the library's role from solely content collectors to active content creators, all while complementing Media Lab facilities and cultivating a vibrant community of users.</li>
-                    <li><a id="q3"></a><strong>Q: How many items from the Digital Tool Library can a customer borrow?</strong> <br>A: A maximum of three (3) items per card can be borrowed at any one time from the Digital Tool Library.</li>
-                    <li><a id="q4"></a><strong>Q: How long can items from the Digital Tool Library be borrowed?</strong> <br>A: The borrowing period for items in the Digital Tool Library is three (3) weeks with a maximum of two (2) renewals.</li>
-                    <li><a id="q5"></a><strong>Q: How do I use this item? Can you show me how?</strong> <br>A: Library staff are not expected to provide training for Digital Tool Library or Musical Instrument Collections items and Media Lab or Sound Booth spaces. Instead direct the customer to use their library membership to gain free access to LinkedIn Learning.</li>
-                    <li><a id="q6"></a><strong>Q: How do I return items from the Digital Tool Library?</strong> <br>A: Digital Tool Library items can be returned to any Georges River Libraries branch during opening hours. Upon return carefully ensure that all items have been returned. If there is something missing from the item or if the item is damaged please follow the procedures outlined in ProMapp. Return all items to the blue cage.</li>
-                    <li><a id="q7"></a><strong>Q: Can customers submit purchase suggestions and feedback?</strong> <br>A: Yes. We welcome suggestions and feedback for all of our collections. Please encourage customers to submit suggestions via the library catalogue or email library@georgesriver.nsw.gov.au.</li>
-                    <li><a id="q8"></a><strong>Q: Can I reserve Digital Tool Library items?</strong> <br>A: Reservations are available for this collection.</li>
-                    <li><a id="q9"></a><strong>Q: Where are Digital Tool Library reservations kept?</strong> <br>A: Any items that are reserved that are normally displayed in the Digital Tool Library cage should be kept in the cage. Please print of the reservation slip and sticky tape it to the label (or somewhere very obvious).</li>
-                    <li><a id="q10"></a><strong>Q: Can I pickup Digital Tool Library reservations from branches other than Hurstville?</strong><br>A: Yes. High value items (i.e. cameras) should be kept in a secure location.</li>
-                    <li><a id="q11"></a><strong>Q: Can customers return Digital Tool Library reservations to branches other than Hurstville?</strong><br>A: Yes, customers are able to return Digital Tool Library items to any branch.</li>
-                    <li><a id="q12"></a><strong>Q: Do we have SD cards available for loan?</strong><br>A: No.</li>
-                    <li><a id="q13"></a><strong>Q: What items are available in Digital Tool Library collection?</strong><br>A: The Digital Tool Library includes over 100 items available for physical loan from the Georges River Libraries. For a complete list of items type "Digital Tool Library" into the search bar at the top of this page or search for "Digital Tool Library" in Spydus</li>
-                </ul>
-                <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
-                    <a href="#" onclick="handleDownloadFaqPdfClick(event)"
-                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
-                        Download FAQ
-                    </a>
-                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
-                            class="inline-flex items-center justify-center px-2 py-1 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
-                        Report an issue
-                    </button>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
+                    <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
+                        <li><a href="#q1" class="text-teal-600 hover:text-teal-800 underline">What is the Digital Tool Library?</a></li>
+                        <li><a href="#q2" class="text-teal-600 hover:text-teal-800 underline">Why have a Digital Tool Library?</a></li>
+                        <li><a href="#q3" class="text-teal-600 hover:text-teal-800 underline">How many items from the Digital Tool Library can a customer borrow?</a></li>
+                        <li><a href="#q4" class="text-teal-600 hover:text-teal-800 underline">How long can items from the Digital Tool Library be borrowed?</a></li>
+                        <li><a href="#q5" class="text-teal-600 hover:text-teal-800 underline">How do I use this item? Can you show me how?</a></li>
+                        <li><a href="#q6" class="text-teal-600 hover:text-teal-800 underline">How do I return items from the Digital Tool Library?</a></li>
+                        <li><a href="#q7" class="text-teal-600 hover:text-teal-800 underline">Can customers submit purchase suggestions and feedback?</a></li>
+                        <li><a href="#q8" class="text-teal-600 hover:text-teal-800 underline">Can I reserve Digital Tool Library items?</a></li>
+                        <li><a href="#q9" class="text-teal-600 hover:text-teal-800 underline">Where are Digital Tool Library reservations kept?</a></li>
+                        <li><a href="#q10" class="text-teal-600 hover:text-teal-800 underline">Can I pickup Digital Tool Library reservations from branches other than Hurstville?</a></li>
+                        <li><a href="#q11" class="text-teal-600 hover:text-teal-800 underline">Can customers return Digital Tool Library reservations to branches other than Hurstville?</a></li>
+                        <li><a href="#q12" class="text-teal-600 hover:text-teal-800 underline">Do we have SD cards available for loan?</a></li>
+                        <li><a href="#q13" class="text-teal-600 hover:text-teal-800 underline">What items are available in Digital Tool Library collection?</a></li>
+                    </ol>
+                </div>
+
+                <div class="space-y-8">
+                    <div id="q1" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What is the Digital Tool Library?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Digital Tool Library is a collection of digital content creation tools including Canon DSRL cameras, GoPro cameras and Oral History Kits.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q2" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Why have a Digital Tool Library?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Georges River Libraries strives to remove digital technology access barriers, fostering community skill development, and facilitating the creation of unique content for potential inclusion in library collections and programs. This new and evolving collection seeks to broaden the scope and appeal of library collections, enhancing community engagement and transitioning the library's role from solely content collectors to active content creators, all while complementing Media Lab facilities and cultivating a vibrant community of users.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q3" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: How many items from the Digital Tool Library can a customer borrow?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: A maximum of three (3) items per card can be borrowed at any one time from the Digital Tool Library.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q4" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: How long can items from the Digital Tool Library be borrowed?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The borrowing period for items in the Digital Tool Library is three (3) weeks with a maximum of two (2) renewals.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q5" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: How do I use this item? Can you show me how?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Library staff are not expected to provide training for Digital Tool Library or Musical Instrument Collections items and Media Lab or Sound Booth spaces. Instead direct the customer to use their library membership to gain free access to LinkedIn Learning.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q6" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: How do I return items from the Digital Tool Library?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Digital Tool Library items can be returned to any Georges River Libraries branch during opening hours. Upon return carefully ensure that all items have been returned. If there is something missing from the item or if the item is damaged please follow the procedures outlined in ProMapp. Return all items to the blue cage.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q7" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Can customers submit purchase suggestions and feedback?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Yes. We welcome suggestions and feedback for all of our collections. Please encourage customers to submit suggestions via the library catalogue or email library@georgesriver.nsw.gov.au.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q8" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Can I reserve Digital Tool Library items?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Reservations are available for this collection.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q9" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Where are Digital Tool Library reservations kept?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Any items that are reserved that are normally displayed in the Digital Tool Library cage should be kept in the cage. Please print of the reservation slip and sticky tape it to the label (or somewhere very obvious).</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q10" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Can I pickup Digital Tool Library reservations from branches other than Hurstville?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Yes. High value items (i.e. cameras) should be kept in a secure location.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q11" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Can customers return Digital Tool Library reservations to branches other than Hurstville?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Yes, customers are able to return Digital Tool Library items to any branch.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q12" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Do we have SD cards available for loan?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: No.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q13" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What items are available in Digital Tool Library collection?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Digital Tool Library includes over 100 items available for physical loan from the Georges River Libraries. For a complete list of items type "Digital Tool Library" into the search bar at the top of this page or search for "Digital Tool Library" in Spydus</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
                 </div>
             `
         },
@@ -412,16 +489,69 @@ const mockData = {
             name: 'Musical Instrument Collection FAQs',
             description: 'Frequently Asked Questions about the Musical Instrument Collection.',
             fullDescription: `
-                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li><a id="q1"></a><strong>Q: What is the Musical Instrument Collection?</strong> <br>A: The Musical Instrument Collection is a collection of musical instruments that are available for loan to library members. The collection includes guitars, keyboards, drums and percussion instruments.</li>
-                    <li><a id="q2"></a><strong>Q: What items are available in the Musical Instrument Collection?</strong> <br>A: <a href="#" class="text-teal-600 underline font-medium">CLICK HERE</a> to view a complete list in Spydus of all items in the the Musical Instrument Collection.</li>
-                    <li><a id="q3"></a><strong>Q: Why do we have a Musical Instrument Collection?</strong> <br>A: The Musical Instrument Collection was established to facilitate community content creation, increase the appeal of library membership by diversifying the collection offer, and activate the Sound Booth and Media Lab by enhancing the functionality of these spaces. It also aims to provide resources and programming opportunities for the community, while allowing people to try instruments before they buy.</li>
-                    <li><a id="q4"></a><strong>Q: How do reservations work?</strong> <br>A: Larger items reserved from the Musical Instrument Collection should be kept in the Media Lab storeroom. Smaller items may be kept on the reservations shelf.</li>
-                    <li><a id="q5"></a><strong>Q: How do I loan an item from the Musical Instrument Collection?</strong> <br>A: Check if the customers' selected item is available on the shelves or guitar rack to avoid taking a display item off the wall.<br>If there are no other items available, take the key from near the circulation desk key box and unlock the item.<br>If a display item is taken the corresponding bag can be found in the store room near the lift.<br>Combine the item and bag together for loan.<br>Check that all listed parts on the label are with the item.<br>If pieces are missing or the item is damaged, please do not loan the item. Try to find an alternative for the customer.<br>Staff then complete and attach a problem slip detailing the issue.<br>Staff then change the item status to (repairs) and send the item to the Content & Discovery team for further investigation.</li>
-                    <li><a id="q6"></a><strong>Q: What keys do I need to use?</strong> <br>A: The keys to unlock all Musical Instrument items are located next to the staff key cabinet.<br><br>The guitar racks are numbered so staff simply need to find the corresponding number key on the blue key rings.<br><br>Guitars displayed on the wall are all keyed alike and can be opened the key with the yellow Guitars on Display tag.<br><br>Most staff should be able to access storeroom next to the lifts using your staff swipe card. Please use the master key if you swipe doesn't work.<br>Please ensure the door locks when leaving.</li>
-                    <li><a id="q7"></a><strong>Q: What do I do with items that are damaged or have missing pieces?</strong> <br>A: Before returning staff to check that all the listed pieces on the label are included and there is no damage. If pieces are missing or the item is damaged please address this with the customer immediately. If a customer claims that the item was missing or damaged at time of loan, remind the customer that the item was confirmed to be complete at the time of borrowing by a staff member.<br>Add note to the customers account and advise them a staff member will be in touch to discuss further.<br>Staff member attaches problem slip to the item detailing the issue.<br>Change item status to repairs and send item to the Content & Discovery team for further investigation.</li>
-                    <li><a id="q8"></a><strong>Q: How do I shelve items from the Musical Instrument Collection?</strong> <br>A: Items catalogued in the Musical Instrument Collection will have a black label. Items in the Digital Tool Library are colour coded orange and the Library of Things are coded blue, yellow or red depending on the recommended customer age for the item.<br><br>Guitars are to be secured on the display wall or guitar racks. If you are unsure on how to do this please see Team Leader Content and Discovery.<br><br>Keyboards, drum kits and container items can be placed on the angled shelves.<br><br>Bongos and other large percussion items on the flat shelf opposite the guitars.</li>
-                </ul>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
+                    <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
+                        <li><a href="#q1" class="text-teal-600 hover:text-teal-800 underline">What is the Musical Instrument Collection?</a></li>
+                        <li><a href="#q2" class="text-teal-600 hover:text-teal-800 underline">What items are available in the Musical Instrument Collection?</a></li>
+                        <li><a href="#q3" class="text-teal-600 hover:text-teal-800 underline">Why do we have a Musical Instrument Collection?</a></li>
+                        <li><a href="#q4" class="text-teal-600 hover:text-teal-800 underline">How do reservations work?</a></li>
+                        <li><a href="#q5" class="text-teal-600 hover:text-teal-800 underline">How do I loan an item from the Musical Instrument Collection?</a></li>
+                        <li><a href="#q6" class="text-teal-600 hover:text-teal-800 underline">What keys do I need to use?</a></li>
+                        <li><a href="#q7" class="text-teal-600 hover:text-teal-800 underline">What do I do with items that are damaged or have missing pieces?</a></li>
+                        <li><a href="#q8" class="text-teal-600 hover:text-teal-800 underline">How do I shelve items from the Musical Instrument Collection?</a></li>
+                    </ol>
+                </div>
+
+                <div class="space-y-8">
+                    <div id="q1" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What is the Musical Instrument Collection?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Musical Instrument Collection is a collection of musical instruments that are available for loan to library members. The collection includes guitars, keyboards, drums and percussion instruments.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q2" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What items are available in the Musical Instrument Collection?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: <a href="#" class="text-teal-600 underline font-medium">CLICK HERE</a> to view a complete list in Spydus of all items in the the Musical Instrument Collection.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q3" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Why do we have a Musical Instrument Collection?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Musical Instrument Collection was established to facilitate community content creation, increase the appeal of library membership by diversifying the collection offer, and activate the Sound Booth and Media Lab by enhancing the functionality of these spaces. It also aims to provide resources and programming opportunities for the community, while allowing people to try instruments before they buy.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q4" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: How do reservations work?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Larger items reserved from the Musical Instrument Collection should be kept in the Media Lab storeroom. Smaller items may be kept on the reservations shelf.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q5" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: How do I loan an item from the Musical Instrument Collection?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Check if the customers' selected item is available on the shelves or guitar rack to avoid taking a display item off the wall.<br>If there are no other items available, take the key from near the circulation desk key box and unlock the item.<br>If a display item is taken the corresponding bag can be found in the store room near the lift.<br>Combine the item and bag together for loan.<br>Check that all listed parts on the label are with the item.<br>If pieces are missing or the item is damaged, please do not loan the item. Try to find an alternative for the customer.<br>Staff then complete and attach a problem slip detailing the issue.<br>Staff then change the item status to (repairs) and send the item to the Content & Discovery team for further investigation.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q6" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What keys do I need to use?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The keys to unlock all Musical Instrument items are located next to the staff key cabinet.<br><br>The guitar racks are numbered so staff simply need to find the corresponding number key on the blue key rings.<br><br>Guitars displayed on the wall are all keyed alike and can be opened the key with the yellow Guitars on Display tag.<br><br>Most staff should be able to access storeroom next to the lifts using your staff swipe card. Please use the master key if you swipe doesn't work.<br>Please ensure the door locks when leaving.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q7" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What do I do with items that are damaged or have missing pieces?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Before returning staff to check that all the listed pieces on the label are included and there is no damage. If pieces are missing or the item is damaged please address this with the customer immediately. If a customer claims that the item was missing or damaged at time of loan, remind the customer that the item was confirmed to be complete at the time of borrowing by a staff member.<br>Add note to the customers account and advise them a staff member will be in touch to discuss further.<br>Staff member attaches problem slip to the item detailing the issue.<br>Change item status to repairs and send item to the Content & Discovery team for further investigation.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q8" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: How do I shelve items from the Musical Instrument Collection?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Items catalogued in the Musical Instrument Collection will have a black label. Items in the Digital Tool Library are colour coded orange and the Library of Things are coded blue, yellow or red depending on the recommended customer age for the item.<br><br>Guitars are to be secured on the display wall or guitar racks. If you are unsure on how to do this please see Team Leader Content and Discovery.<br><br>Keyboards, drum kits and container items can be placed on the angled shelves.<br><br>Bongos and other large percussion items on the flat shelf opposite the guitars.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+                </div>
                 <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
                     <a href="#" onclick="handleDownloadFaqPdfClick(event)"
                        class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
@@ -439,20 +569,97 @@ const mockData = {
             name: 'Media Lab FAQs',
             description: 'Frequently Asked Questions about the Media Lab.',
             fullDescription: `
-                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li><a id="q1"></a><strong>Q: What is the Media Lab?</strong> <br>A: The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</li>
-                    <li><a id="q2"></a><strong>Q: When is the Media Lab available?</strong> <br>A: The Media Lab is available during standard operating hours. Customers using the Media Lab are required to bump out 15 minutes prior to the library closing.</li>
-                    <li><a id="q3"></a><strong>Q: Who can use the Media Lab?</strong> <br>A: The Media Lab is available for anyone to use. Priority for this space is given to customers who have booked and are intending to use it for creative purposes.</li>
-                    <li><a id="q4"></a><strong>Q: Can you help me set up the equipment in the Media Lab?</strong> <br>A: Library staff are not expected to provide technical assistance or training for Digital Tool Library or Musical Instrument Collection items or any equipment in the Media Lab or Sound Booth. Instead direct the customer to use their library membership to gain free access to LinkedIn Learning.</li>
-                    <li><a id="q5"></a><strong>Q: Where are the extension cords?</strong> <br>A: There is a box of extension cords in the Media Lab store room. If you take an extension cord please ensure it is returned.</li>
-                    <li><a id="q6"></a><strong>Q: Do users need to be inducted?</strong> <br>A: It is now no longer necessary for users to be inducted into the Media Lab. Please refer any questions regarding equipment setup or creative projects to the Team Leader Content & Discovery.</li>
-                    <li><a id="q7"></a><strong>Q: What happened to the 3D printer?</strong> <br>A: The 3D printer was removed from the Media Lab and is no longer available for individual use. It is intended to support library programming and will be moved around our various sites as required. If you receive enquiries from individuals wanting to use the printer, please refer them to local commercial 3D printing company, WYSIWYG 3D, who are based in Peakhurst.</li>
-                    <li><a id="q8"></a><strong>Q: Do customers who are in the library need to book and pay for the Media Lab?</strong> <br>A: Customers may use the Media Lab at any time as long as there is no booking. Booking and paying for the Media Lab provides guaranteed and exclusive access to the space. Customers who have booked and paid for the Media Lab are allowed to close the doors and curtains, and turn on the "on air" sign. If there is a customer in the Media Lab when there is a booking please ask the customer to vacate.</li>
-                    <li><a id="q9"></a><strong>Q: Do we have SD cards available for loan?</strong> <br>A: We are unable to provide customers with SD cards.</li>
-                    <li><a id="q10"></a><strong>Q: Where is the Media Lab Cabinet?</strong> <br>A: The Media Lab Cabinet is located inside the Media Lab. The key for this cabinet is in the key cabinet behind the front desk.</li>
-                    <li><a id="q11"></a><strong>Q: Is the Media Lab available on the weekend?</strong> <br>A: Yes the Media Lab is available for use on the weekend.</li>
-                    <li><a id="q12"></a><strong>Q: How do I book a Media Lab PC?</strong> <br>A: 1. Go to https://georgesriverapp.mymonitor.cloud/webadministrator<br><br>2. User ID: libstaff Password: GRClibstaff<br><br>3. Navigate to "Reservation" then "Management" then "Create Reservation".<br><br>4. Select "Block Reservation", then "Next".<br><br>5. Insert the customer's library card number, select the customer and press next.<br><br>6. Select Site = "Hurstville Library", Location = "Hurstville", Computer Type = "Media Lab PCs" and then "Select computers from list". Then click next.<br><br>7. Select the PCs from the list. Here we select all four. Click "use selected", then click next.<br><br>8. Then create the reservation by inputting the name of the reservation. This can be the name of an individual or group. For login option select "unauthenticated". Then the date and time, then click finish.<br><br>9. The reservation will be confirmed with a reference number – this is the number to key in to the PCs. As we have selected unauthenticated login option, the system won't ask the user to log in with the library card and pin, which makes the process easier. What you need to do is to provide this reference number (BXXXXXXXX) to the user or facilitator.<br><br>10. To confirm that the booking has been correctly made navigate to Reservation > Management. Then select "site", "location" and "date".</li>
-                </ul>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
+                    <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
+                        <li><a href="#q1" class="text-teal-600 hover:text-teal-800 underline">What is the Media Lab?</a></li>
+                        <li><a href="#q2" class="text-teal-600 hover:text-teal-800 underline">When is the Media Lab available?</a></li>
+                        <li><a href="#q3" class="text-teal-600 hover:text-teal-800 underline">Who can use the Media Lab?</a></li>
+                        <li><a href="#q4" class="text-teal-600 hover:text-teal-800 underline">Can you help me set up the equipment in the Media Lab?</a></li>
+                        <li><a href="#q5" class="text-teal-600 hover:text-teal-800 underline">Where are the extension cords?</a></li>
+                        <li><a href="#q6" class="text-teal-600 hover:text-teal-800 underline">Do users need to be inducted?</a></li>
+                        <li><a href="#q7" class="text-teal-600 hover:text-teal-800 underline">What happened to the 3D printer?</a></li>
+                        <li><a href="#q8" class="text-teal-600 hover:text-teal-800 underline">Do customers who are in the library need to book and pay for the Media Lab?</a></li>
+                        <li><a href="#q9" class="text-teal-600 hover:text-teal-800 underline">Do we have SD cards available for loan?</a></li>
+                        <li><a href="#q10" class="text-teal-600 hover:text-teal-800 underline">Where is the Media Lab Cabinet?</a></li>
+                        <li><a href="#q11" class="text-teal-600 hover:text-teal-800 underline">Is the Media Lab available on the weekend?</a></li>
+                        <li><a href="#q12" class="text-teal-600 hover:text-teal-800 underline">How do I book a Media Lab PC?</a></li>
+                    </ol>
+                </div>
+
+                <div class="space-y-8">
+                    <div id="q1" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What is the Media Lab?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q2" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: When is the Media Lab available?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Media Lab is available during standard operating hours. Customers using the Media Lab are required to bump out 15 minutes prior to the library closing.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q3" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Who can use the Media Lab?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Media Lab is available for anyone to use. Priority for this space is given to customers who have booked and are intending to use it for creative purposes.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q4" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Can you help me set up the equipment in the Media Lab?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Library staff are not expected to provide technical assistance or training for Digital Tool Library or Musical Instrument Collection items or any equipment in the Media Lab or Sound Booth. Instead direct the customer to use their library membership to gain free access to LinkedIn Learning.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q5" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Where are the extension cords?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: There is a box of extension cords in the Media Lab store room. If you take an extension cord please ensure it is returned.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q6" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Do users need to be inducted?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: It is now no longer necessary for users to be inducted into the Media Lab. Please refer any questions regarding equipment setup or creative projects to the Team Leader Content & Discovery.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q7" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What happened to the 3D printer?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The 3D printer was removed from the Media Lab and is no longer available for individual use. It is intended to support library programming and will be moved around our various sites as required. If you receive enquiries from individuals wanting to use the printer, please refer them to local commercial 3D printing company, WYSIWYG 3D, who are based in Peakhurst.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q8" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Do customers who are in the library need to book and pay for the Media Lab?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Customers may use the Media Lab at any time as long as there is no booking. Booking and paying for the Media Lab provides guaranteed and exclusive access to the space. Customers who have booked and paid for the Media Lab are allowed to close the doors and curtains, and turn on the "on air" sign. If there is a customer in the Media Lab when there is a booking please ask the customer to vacate.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q9" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Do we have SD cards available for loan?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: We are unable to provide customers with SD cards.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q10" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Where is the Media Lab Cabinet?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Media Lab Cabinet is located inside the Media Lab. The key for this cabinet is in the key cabinet behind the front desk.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q11" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Is the Media Lab available on the weekend?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Yes the Media Lab is available for use on the weekend.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q12" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: How do I book a Media Lab PC?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: 1. Go to https://georgesriverapp.mymonitor.cloud/webadministrator<br><br>2. User ID: libstaff Password: GRClibstaff<br><br>3. Navigate to "Reservation" then "Management" then "Create Reservation".<br><br>4. Select "Block Reservation", then "Next".<br><br>5. Insert the customer's library card number, select the customer and press next.<br><br>6. Select Site = "Hurstville Library", Location = "Hurstville", Computer Type = "Media Lab PCs" and then "Select computers from list". Then click next.<br><br>7. Select the PCs from the list. Here we select all four. Click "use selected", then click next.<br><br>8. Then create the reservation by inputting the name of the reservation. This can be the name of an individual or group. For login option select "unauthenticated". Then the date and time, then click finish.<br><br>9. The reservation will be confirmed with a reference number – this is the number to key in to the PCs. As we have selected unauthenticated login option, the system won't ask the user to log in with the library card and pin, which makes the process easier. What you need to do is to provide this reference number (BXXXXXXXX) to the user or facilitator.<br><br>10. To confirm that the booking has been correctly made navigate to Reservation > Management. Then select "site", "location" and "date".</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+                </div>
                 <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
                     <a href="#" onclick="handleDownloadFaqPdfClick(event)"
                        class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
@@ -470,16 +677,69 @@ const mockData = {
             name: 'Sound Booth FAQs',
             description: 'Frequently Asked Questions about the Sound Booth.',
             fullDescription: `
-                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li><a id="q1"></a><strong>Q: What is the Sound Booth?</strong> <br>A: The Sound Booth is a dedicated noise-proof space intended to be used for recording, practicing or performing with musical instruments and audio equipment.</li>
-                    <li><a id="q2"></a><strong>Q: Who can use the Sound Booth?</strong> <br>A: The Sound Booth is prioritised for customers who have booked and are intending to use it for creative purposes (i.e. recording vocals or podcasts, playing piano).</li>
-                    <li><a id="q3"></a><strong>Q: When is the Sound Booth available?</strong> <br>A: The Sound Booth is available during standard operating hours.</li>
-                    <li><a id="q4"></a><strong>Q: Who do I contact with a question about the Sound Booth?</strong> <br>A: Please refer any questions regarding equipment setup or creative projects to the Team Leader Content & Discovery.</li>
-                    <li><a id="q5"></a><strong>Q: Are customers who are in the library required to book and pay to use the Sound Booth?</strong> <br>A: Customers may use the Sound Booth at any time as long as there is no booking. Booking the Sound Booth provides guaranteed and exclusive access. Customers should close the door to the Sound Booth whether or not they have booked the space in order to reduce noise. If there is a customer in the Sound Booth when there is a booking please ask the customer to vacate.</li>
-                    <li><a id="q6"></a><strong>Q: Am I expected to help customers setup and use equipment in the Sound Booth?</strong> <br>A: In general you are not expected to provide setup or training for any equipment in the Sound Booth. For any other queries refer customers to our online learning platform LinkedIn Learning. Refer any questions regarding equipment setup or creative projects to the Coordinator Library Resources.</li>
-                    <li><a id="q7"></a><strong>Q: Where are the extension cords?</strong> <br>A: There is a box of extension cords in the Media Lab store room.</li>
-                    <li><a id="q8"></a><strong>Q: Is the Sound Booth available on the weekend?</strong> <br>A: Yes the Sound Booth is available for use on the weekend.</li>
-                </ul>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
+                    <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
+                        <li><a href="#q1" class="text-teal-600 hover:text-teal-800 underline">What is the Sound Booth?</a></li>
+                        <li><a href="#q2" class="text-teal-600 hover:text-teal-800 underline">Who can use the Sound Booth?</a></li>
+                        <li><a href="#q3" class="text-teal-600 hover:text-teal-800 underline">When is the Sound Booth available?</a></li>
+                        <li><a href="#q4" class="text-teal-600 hover:text-teal-800 underline">Who do I contact with a question about the Sound Booth?</a></li>
+                        <li><a href="#q5" class="text-teal-600 hover:text-teal-800 underline">Are customers who are in the library required to book and pay to use the Sound Booth?</a></li>
+                        <li><a href="#q6" class="text-teal-600 hover:text-teal-800 underline">Am I expected to help customers setup and use equipment in the Sound Booth?</a></li>
+                        <li><a href="#q7" class="text-teal-600 hover:text-teal-800 underline">Where are the extension cords?</a></li>
+                        <li><a href="#q8" class="text-teal-600 hover:text-teal-800 underline">Is the Sound Booth available on the weekend?</a></li>
+                    </ol>
+                </div>
+
+                <div class="space-y-8">
+                    <div id="q1" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What is the Sound Booth?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Sound Booth is a dedicated noise-proof space intended to be used for recording, practicing or performing with musical instruments and audio equipment.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q2" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Who can use the Sound Booth?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Sound Booth is prioritised for customers who have booked and are intending to use it for creative purposes (i.e. recording vocals or podcasts, playing piano).</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q3" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: When is the Sound Booth available?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Sound Booth is available during standard operating hours.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q4" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Who do I contact with a question about the Sound Booth?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Please refer any questions regarding equipment setup or creative projects to the Team Leader Content & Discovery.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q5" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Are customers who are in the library required to book and pay to use the Sound Booth?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Customers may use the Sound Booth at any time as long as there is no booking. Booking the Sound Booth provides guaranteed and exclusive access. Customers should close the door to the Sound Booth whether or not they have booked the space in order to reduce noise. If there is a customer in the Sound Booth when there is a booking please ask the customer to vacate.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q6" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Am I expected to help customers setup and use equipment in the Sound Booth?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: In general you are not expected to provide setup or training for any equipment in the Sound Booth. For any other queries refer customers to our online learning platform LinkedIn Learning. Refer any questions regarding equipment setup or creative projects to the Coordinator Library Resources.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q7" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Where are the extension cords?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: There is a box of extension cords in the Media Lab store room.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q8" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Is the Sound Booth available on the weekend?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Yes the Sound Booth is available for use on the weekend.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+                </div>
                 <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
                     <a href="#" onclick="handleDownloadFaqPdfClick(event)"
                        class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
@@ -497,21 +757,68 @@ const mockData = {
             name: 'In-House Packs FAQs',
             description: 'Frequently Asked Questions about In-House Packs.',
             fullDescription: `
-                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                    <li><a id="q1"></a><strong>Q: What are In-House Packs?</strong> <br>A: In-House Packs are kits of equipment and resources that can be used within the library for creative projects, such as podcasting, photography, and music recording. They are not for loan outside the library.</li>
-                    <li><a id="q2"></a><strong>Q: Who can use In-House Packs?</strong> <br>A: Any library member who has booked the Media Lab or Sound Booth can use In-House Packs during their session.</li>
-                    <li><a id="q3"></a><strong>Q: How do I book an In-House Pack?</strong> <br>A: In-House Packs are reserved in conjunction with a Media Lab or Sound Booth booking. Please speak to staff at the service desk to request a pack for your session.</li>
-                    <li><a id="q4"></a><strong>Q: What do I do when I finish using an In-House Pack?</strong> <br>A: Please return all items in the pack to staff at the end of your session. Staff will check that all components are present and in good condition.</li>
-                    <li><a id="q5"></a><strong>Q: Am I expected to help customers setup and use equipment in the in-house packs?</strong> <br>A: In general you are not expected to provide setup or training for in-house packs. For any queries on the use of equipment refer customers to our online learning platform LinkedIn Learning.</li>
-                    <li><a id="q6"></a><strong>Q: Where are the in-house packs located?</strong> <br>A: In-house packs are located in the storeroom near the lift. They are clearly labelled.</li>
-                    <li><a id="q7"></a><strong>Q: Who do I contact with a question about in-house packs?</strong> <br>A: If you have any questions please contact the Coordinator Library Resources.</li>
-                    <li><a id="q8"></a><strong>Q: What is included in the Record a Song Pack?</strong> <br>A: The Record a Song Pack includes all the equipment you need to record audio, songs and other vocals, in-house at the library. This pack includes a quick-start guide to get you started.</li>
-                </ul>
-                <div class="flex flex-col sm:flex-row gap-4 mt-6">
-                    <button onclick="navigateToSection('settings-report-issue','settingsBtn')" 
-                            class="inline-flex items-center justify-center px-2 py-1 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
-                        Report an issue
-                    </button>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
+                    <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
+                        <li><a href="#q1" class="text-teal-600 hover:text-teal-800 underline">What are In-House Packs?</a></li>
+                        <li><a href="#q2" class="text-teal-600 hover:text-teal-800 underline">Who can use In-House Packs?</a></li>
+                        <li><a href="#q3" class="text-teal-600 hover:text-teal-800 underline">How do I book an In-House Pack?</a></li>
+                        <li><a href="#q4" class="text-teal-600 hover:text-teal-800 underline">What do I do when I finish using an In-House Pack?</a></li>
+                        <li><a href="#q5" class="text-teal-600 hover:text-teal-800 underline">Am I expected to help customers setup and use equipment in the in-house packs?</a></li>
+                        <li><a href="#q6" class="text-teal-600 hover:text-teal-800 underline">Where are the in-house packs located?</a></li>
+                        <li><a href="#q7" class="text-teal-600 hover:text-teal-800 underline">Who do I contact with a question about in-house packs?</a></li>
+                        <li><a href="#q8" class="text-teal-600 hover:text-teal-800 underline">What is included in the Record a Song Pack?</a></li>
+                    </ol>
+                </div>
+
+                <div class="space-y-8">
+                    <div id="q1" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What are In-House Packs?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: In-House Packs are kits of equipment and resources that can be used within the library for creative projects, such as podcasting, photography, and music recording. They are not for loan outside the library.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q2" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Who can use In-House Packs?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Any library member who has booked the Media Lab or Sound Booth can use In-House Packs during their session.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q3" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: How do I book an In-House Pack?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: In-House Packs are reserved in conjunction with a Media Lab or Sound Booth booking. Please speak to staff at the service desk to request a pack for your session.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q4" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What do I do when I finish using an In-House Pack?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: Please return all items in the pack to staff at the end of your session. Staff will check that all components are present and in good condition.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q5" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Am I expected to help customers setup and use equipment in the in-house packs?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: In general you are not expected to provide setup or training for in-house packs. For any queries on the use of equipment refer customers to our online learning platform LinkedIn Learning.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q6" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Where are the in-house packs located?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: In-house packs are located in the storeroom near the lift. They are clearly labelled.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q7" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: Who do I contact with a question about in-house packs?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: If you have any questions please contact the Coordinator Library Resources.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
+
+                    <div id="q8" class="border-b border-gray-200 pb-6">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Q: What is included in the Record a Song Pack?</h4>
+                        <p class="text-gray-700 leading-relaxed mb-3">A: The Record a Song Pack includes all the equipment you need to record audio, songs and other vocals, in-house at the library. This pack includes a quick-start guide to get you started.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-800 underline text-sm">Return to Top</a>
+                    </div>
                 </div>
             `
         }
@@ -3352,6 +3659,11 @@ function generateBreadcrumbHtmlForDetail(entry) {
     } else if (isGlobalSearchActive) {
         mainSectionText = 'Search Results';
         mainSectionRouteId = '';
+    } else if (entry.id && entry.id.startsWith('faqs-')) {
+        mainSectionText = 'FAQs';
+        mainSectionRouteId = 'gs-faqs';
+        categoryText = entry.name;
+        categoryRouteId = entry.id;
     }
     if (mainSectionText && mainSectionRouteId !== '') {
         breadcrumbHtml += ` <span class="mx-1">/</span> <span class="cursor-pointer hover:text-teal-600" onclick="navigateToSection('${mainSectionRouteId}')">${mainSectionText}</span>`;
@@ -3414,7 +3726,7 @@ function generateItemDetailHtml(entry) {
                 ` : ''}
 
                 <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
-                    ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event' || entry.id.startsWith('faqs-') || entry.id === 'gs-faqs') ? '' : `
+                    ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event' || entry.id.startsWith('faqs-') || entry.id === 'gs-faqs' || entry.id === 'gs-terms' || entry.id === 'gs-terms-media-lab' || entry.id === 'gs-terms-sound-booth') ? '' : `
                     <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="inline-flex items-center justify-center px-2 py-1 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                         Report an issue
                     </button>
@@ -3487,7 +3799,7 @@ function generateItemDetailHtml(entry) {
             </section>
 
             <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
-                ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event' || entry.id === 'gs-ask-me-anything' || entry.id === 'gs-faqs' || entry.id.startsWith('faqs-')) ? '' : `
+                ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event' || entry.id === 'gs-ask-me-anything' || entry.id === 'gs-faqs' || entry.id.startsWith('faqs-') || entry.id === 'gs-terms' || entry.id === 'gs-terms-media-lab' || entry.id === 'gs-terms-sound-booth') ? '' : `
                 <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="inline-flex items-center justify-center px-2 py-1 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                     Report an issue
                 </button>
