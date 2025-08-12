@@ -32,8 +32,8 @@
         }
         /* Hanging indent for bullet points: second line aligns with first line's text after bullet */
         ul.list-disc li {
-            padding-left: 1em;
-            text-indent: -1em;
+            padding-left: 1.5em;
+            text-indent: -1.5em;
         }
         ul.list-disc li::marker {
             font-size: 1em;
@@ -145,7 +145,12 @@
     
     <!-- Header -->
     <header class="bg-teal-700 text-white p-4 shadow-md flex items-center justify-between">
-        <h1 class="text-3xl font-semibold text-center w-full">Georges River Creates</h1>
+        <div class="flex items-center space-x-4 w-full">
+            <img src="https://georgesriver.spydus.com/api/maintenance/1.0/imagebrowser/image?blobName=a31cf63f-7e24-41d5-b1f8-c206bde45ce6.png" 
+                 alt="Georges River Creates Logo" 
+                 class="h-12 w-auto object-contain">
+            <h1 class="text-3xl font-semibold text-center flex-1">Georges River Creates</h1>
+        </div>
     </header>
     <!-- Global Search Bar -->
     <div class="p-4 bg-white shadow-md z-10">
@@ -210,7 +215,7 @@
         <div id="detailView" class="flex-1 p-4 bg-gray-50 shadow-inner rounded-tl-lg overflow-y-auto custom-scrollbar">
             <div class="p-6 bg-white rounded-xl shadow-md h-full flex flex-col items-start text-left">
                 <h2 class="text-2xl font-bold mb-2 text-teal-700">Welcome to Georges River Creates</h2>
-                <p class="mb-2 text-gray-700">This internal tool helps librarians quickly access information about library resources, loanable items, in-house items, and creative spaces.</p>
+                <p class="mb-2 text-gray-700">This internal tool helps librarians quickly access information about library resources, loanable items, Canva items, and creative spaces.</p>
                 <p class="text-gray-600">Use the navigation on the left or the search bar above to get started.</p>
             </div>
         </div>
@@ -227,7 +232,7 @@ const mockData = {
             description: 'Ask our AI Assistant questions about the site and policies.',
             fullDescription: `
                 <div class="bg-gray-100 p-4 rounded-lg shadow-inner mb-6">
-                    <p class="text-sm text-gray-600 mb-3">Ask me anything about the Digital Tool Library, Musical Instrument Collection, In-House Packs, Media Lab, Sound Booth, booking procedures or related policies. Just type your question below and (fingers crossed) get a helpful response right away.</p>
+                    <p class="text-sm text-gray-600 mb-3">Ask me anything about the Digital Tool Library, Musical Instrument Collection, Canva Packs, Media Lab, Sound Booth, booking procedures or related policies. Just type your question below and (fingers crossed) get a helpful response right away.</p>
                     <div class="flex flex-col sm:flex-row gap-2 mb-3">
                         <input type="text" id="aiQuestionInput" placeholder="Type your question here..."
                                class="flex-1 p-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-teal-500 focus:border-transparent text-sm">
@@ -236,15 +241,16 @@ const mockData = {
                             Ask
                         </button>
                     </div>
-                    <div id="aiResponse" class="bg-white p-3 rounded-lg border border-gray-200 min-h-[50px] text-gray-700 text-sm overflow-auto max-h-[200px] custom-scrollbar relative">
-                        <div id="aiLoadingIndicator" class="hidden absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center rounded-lg">
-                            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-teal-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                            Loading...
-                        </div>
-                    </div>
+                               <div id="aiResponse" class="bg-white p-3 rounded-lg border border-gray-200 min-h-[50px] text-gray-700 text-sm overflow-auto max-h-[200px] custom-scrollbar relative">
+               <div id="aiLoadingIndicator" class="hidden absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center rounded-lg">
+                   <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-teal-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                       <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                   </svg>
+                   Loading...
+               </div>
+           </div>
+           <p class="text-xs text-gray-500 mt-2 italic">This AMA can make the occasional mistake, so please verify any information you think may be incorrect.</p>
                 </div>
             `
         },
@@ -262,8 +268,8 @@ const mockData = {
                 <p class="mb-4">The Digital Tool Library provides a range of digital content creation tools, including Canon DSLR cameras, GoPro cameras, and Oral History Kits.</p>
                 <h3 class="text-xl font-semibold mb-3 text-gray-800">Musical Instrument Collection</h3>
                 <p class="mb-4">Georges River Libraries boasts one of Australia's largest musical instrument collections available for loan. With over 100 items, including acoustic and electric guitars, percussion, amplifiers, keyboards and recording equipment, you'll find everything you need to inspire learning and creativity.</p>
-                <h3 class="text-xl font-semibold mb-3 text-gray-800">In-House Items</h3>
-                <p class="mb-4">Beyond our Digital Tool Library and Musical Instrument Collection, we offer a range of specialised in-house packs. These packs cover diverse uses, including podcasting, professional photography, and advanced audio recording.</p>
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">Canva</h3>
+                <p class="mb-4">Beyond our Digital Tool Library and Musical Instrument Collection, we offer a range of specialised Canva packs. These packs cover diverse uses, including podcasting, professional photography, and advanced audio recording.</p>
                 <p class="mb-4">Please note, these packs are for in-house use only and must be reserved in conjunction with a booking for the Media Lab or Sound Booth.</p>
                 <p class="mb-4">For more details on this collection, please contact the Content and Discovery team.</p>
             `
@@ -384,7 +390,7 @@ const mockData = {
             name: 'Digital Tool Library FAQs',
             description: 'Frequently Asked Questions about the Digital Tool Library.',
             fullDescription: `
-                <div class="mb-8">
+                <div class="mb-8 bg-gray-100 p-4 rounded-lg">
                     <h3 class="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
                     <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
                         <li><a href="#q1" class="text-teal-600 hover:text-teal-800 underline">What is the Digital Tool Library?</a></li>
@@ -499,7 +505,7 @@ const mockData = {
             name: 'Musical Instrument Collection FAQs',
             description: 'Frequently Asked Questions about the Musical Instrument Collection.',
             fullDescription: `
-                <div class="mb-8">
+                <div class="mb-8 bg-gray-100 p-4 rounded-lg">
                     <h3 class="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
                     <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
                         <li><a href="#q1" class="text-teal-600 hover:text-teal-800 underline">What is the Musical Instrument Collection?</a></li>
@@ -579,7 +585,7 @@ const mockData = {
             name: 'Media Lab FAQs',
             description: 'Frequently Asked Questions about the Media Lab.',
             fullDescription: `
-                <div class="mb-8">
+                <div class="mb-8 bg-gray-100 p-4 rounded-lg">
                     <h3 class="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
                     <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
                         <li><a href="#q1" class="text-teal-600 hover:text-teal-800 underline">What is the Media Lab?</a></li>
@@ -687,7 +693,7 @@ const mockData = {
             name: 'Sound Booth FAQs',
             description: 'Frequently Asked Questions about the Sound Booth.',
             fullDescription: `
-                <div class="mb-8">
+                <div class="mb-8 bg-gray-100 p-4 rounded-lg">
                     <h3 class="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
                     <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
                         <li><a href="#q1" class="text-teal-600 hover:text-teal-800 underline">What is the Sound Booth?</a></li>
@@ -767,7 +773,7 @@ const mockData = {
             name: 'In-House Packs FAQs',
             description: 'Frequently Asked Questions about In-House Packs.',
             fullDescription: `
-                <div class="mb-8">
+                <div class="mb-8 bg-gray-100 p-4 rounded-lg">
                     <h3 class="text-xl font-semibold mb-4 text-gray-800">Frequently Asked Questions</h3>
                     <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
                         <li><a href="#q1" class="text-teal-600 hover:text-teal-800 underline">What are In-House Packs?</a></li>
@@ -862,7 +868,17 @@ const mockData = {
             instructionLink: 'https://instructions.georgesriver.nsw.gov.au/canon-eos-1500d-manual',
             firstAvailable: '2-Aug-24',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160863',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Canon EOS 1500D DSLR Camera Body',
+                '1 x 18-55mm f/3.5-5.6 DC III Lens',
+                '1 x Camera Strap',
+                '1 x Battery Pack',
+                '1 x Battery Charger',
+                '1 x USB Cable',
+                '1 x Instruction Manual',
+                '1 x Camera Bag'
+            ]
         },
         {
             id: 'dtl002',
@@ -882,7 +898,17 @@ const mockData = {
             instructionLink: 'https://instructions.georgesriver.nsw.gov.au/save-power-kit-manual',
             firstAvailable: '10-Sep-24',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28163883',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Energy Monitor Device',
+                '1 x Power Meter',
+                '1 x Temperature Sensor',
+                '1 x Energy Usage Guide',
+                '1 x Efficiency Tips Booklet',
+                '1 x Measurement Tools Set',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl003',
@@ -902,7 +928,17 @@ const mockData = {
             instructionLink: 'https://instructions.georgesriver.nsw.gov.au/gopro-hero11-manual',
             firstAvailable: '1-Aug-24',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160121',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x GoPro Hero 11 Camera',
+                '1 x Protective Housing',
+                '1 x Mounting Frame',
+                '1 x Curved Adhesive Mount',
+                '1 x Flat Adhesive Mount',
+                '1 x USB-C Cable',
+                '1 x Quick Start Guide',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl004',
@@ -922,7 +958,17 @@ const mockData = {
             instructionLink: 'https://instructions.georgesriver.nsw.gov.au/energy-efficiency-kit-manual',
             firstAvailable: '13-Feb-24',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27725258',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Protech QC1950 IR Camera',
+                '1 x Energy Efficiency Guide',
+                '1 x Thermal Imaging Manual',
+                '1 x Measurement Tools',
+                '1 x Assessment Checklist',
+                '1 x USB Cable',
+                '1 x Instruction Manual',
+                '1 x Protective Case'
+            ]
         },
         {
             id: 'dtl005',
@@ -937,7 +983,17 @@ const mockData = {
             accessionNo: '154275630',
             firstAvailable: '18-Oct-23',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28159957',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '2 x PreSonus Eris E3.5 Studio Monitors',
+                '2 x Monitor Stands',
+                '2 x Power Cables',
+                '2 x Audio Cables',
+                '1 x Setup Guide',
+                '1 x Frequency Tuning Manual',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl006',
@@ -952,7 +1008,20 @@ const mockData = {
             accessionNo: '154414528',
             firstAvailable: '5-May-23',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27726875',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Raspberry Pi 4 Model B',
+                '1 x 16GB MicroSD Card',
+                '1 x Power Supply',
+                '1 x HDMI Cable',
+                '1 x Breadboard',
+                '1 x Jumper Wires Set',
+                '1 x LED Kit',
+                '1 x Resistor Kit',
+                '1 x Programming Guide',
+                '1 x Project Book',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl007',
@@ -967,7 +1036,18 @@ const mockData = {
             accessionNo: '154046155',
             firstAvailable: '1-Jul-23',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Zoom H5 Handy Recorder',
+                '1 x XYH-6 X/Y Stereo Microphone',
+                '1 x SGH-6 Shotgun Microphone',
+                '1 x Windscreen',
+                '1 x 2GB SD Card',
+                '1 x USB Cable',
+                '1 x Power Adapter',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl008',
@@ -982,7 +1062,16 @@ const mockData = {
             accessionNo: '154414114',
             firstAvailable: '15-Apr-23',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27726025',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Samson USB Condenser Microphone',
+                '1 x Microphone Stand',
+                '1 x USB Cable',
+                '1 x Pop Filter',
+                '1 x Windscreen',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl009',
@@ -997,7 +1086,16 @@ const mockData = {
             accessionNo: '154271837',
             firstAvailable: '17-Feb-23',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27718822',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Cassette to MP3 Converter',
+                '1 x USB Cable',
+                '1 x Audio Cables',
+                '1 x Power Adapter',
+                '1 x Software CD',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl010',
@@ -1012,7 +1110,16 @@ const mockData = {
             accessionNo: '154367510',
             firstAvailable: '26-Oct-21',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27724296',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Brinno TLC200 Time Lapse Camera',
+                '1 x 8GB SD Card',
+                '1 x USB Cable',
+                '1 x Mounting Bracket',
+                '1 x Weatherproof Case',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl011',
@@ -1027,7 +1134,15 @@ const mockData = {
             accessionNo: '154367619',
             firstAvailable: '18-Mar-21',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27717451',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x GoPro Dual Battery Charger',
+                '2 x GoPro Batteries',
+                '1 x USB Cable',
+                '1 x Power Adapter',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl012',
@@ -1042,7 +1157,18 @@ const mockData = {
             accessionNo: '',
             firstAvailable: '',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27718259',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Rode NT1 Condenser Microphone',
+                '1 x Rode AI-1 Audio Interface',
+                '1 x Microphone Stand',
+                '1 x XLR Cable',
+                '1 x USB Cable',
+                '1 x Power Adapter',
+                '1 x Pop Filter',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl013',
@@ -1057,7 +1183,14 @@ const mockData = {
             accessionNo: '154414411',
             firstAvailable: '26-May-22',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27718245',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Rode Video Micro Compact Microphone',
+                '1 x Microphone Mount',
+                '1 x Windscreen',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl014',
@@ -1072,7 +1205,17 @@ const mockData = {
             accessionNo: '154414239',
             firstAvailable: '',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x GoPro Accessories Kit',
+                '1 x Chest Mount',
+                '1 x Head Mount',
+                '1 x Suction Cup Mount',
+                '1 x Tripod Mount',
+                '1 x Handle Mount',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl015',
@@ -1087,7 +1230,15 @@ const mockData = {
             accessionNo: '154362735',
             firstAvailable: '21-Dec-20',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27717860',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x After The Fact Musketeer Tripod',
+                '1 x Tripod Head',
+                '1 x Camera Mount Plate',
+                '1 x Carrying Bag',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl016',
@@ -1102,7 +1253,15 @@ const mockData = {
             accessionNo: '154362685',
             firstAvailable: '18-Dec-20',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27717434',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Zhiyun Smooth 4 Gimbal',
+                '1 x Phone Mount',
+                '1 x USB Cable',
+                '1 x Power Adapter',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl017',
@@ -1117,7 +1276,14 @@ const mockData = {
             accessionNo: '154362479',
             firstAvailable: '10-Dec-20',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x GoPro Media Mod',
+                '1 x Microphone Adapter',
+                '1 x USB-C Cable',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl018',
@@ -1132,7 +1298,15 @@ const mockData = {
             accessionNo: '154362370',
             firstAvailable: '7-Dec-20',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27719019',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x GoPro Light Mod',
+                '1 x LED Light Panel',
+                '1 x USB-C Cable',
+                '1 x Power Adapter',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl019',
@@ -1147,7 +1321,17 @@ const mockData = {
             accessionNo: '154361877',
             firstAvailable: '1-Dec-20',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27717425',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x GoPro Hero 8 Camera',
+                '1 x Protective Housing',
+                '1 x Mounting Frame',
+                '1 x Curved Adhesive Mount',
+                '1 x Flat Adhesive Mount',
+                '1 x USB-C Cable',
+                '1 x Quick Start Guide',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl020',
@@ -1162,7 +1346,18 @@ const mockData = {
             accessionNo: '154362172',
             firstAvailable: '3-Dec-20',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27717153',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Audio Recorder',
+                '1 x Professional Microphone',
+                '1 x Microphone Stand',
+                '1 x Headphones',
+                '1 x USB Cable',
+                '1 x Power Adapter',
+                '1 x Interview Guide',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl021',
@@ -1177,7 +1372,13 @@ const mockData = {
             accessionNo: '154270136',
             firstAvailable: '2-Nov-21',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27719135',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Insta360 Nano Camera',
+                '1 x Micro USB Cable',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl022',
@@ -1192,7 +1393,14 @@ const mockData = {
             accessionNo: '154277628',
             firstAvailable: '15-Oct-24',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28161155',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Joby GorillaPod Action Tripod',
+                '1 x Ball Head',
+                '1 x Camera Mount',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'dtl023',
@@ -1207,7 +1415,14 @@ const mockData = {
             accessionNo: '154436596',
             firstAvailable: '15-Oct-24',
             bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28161155',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Joby GorillaPod 5K Kit Tripod',
+                '1 x Ball Head',
+                '1 x Camera Mount',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi001',
@@ -1227,7 +1442,14 @@ const mockData = {
             instructionLink: 'https://instructions.georgesriver.nsw.gov.au/fender-esc80-manual',
             firstAvailable: '10-Feb-25',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Fender ESC-80 3/4 Size Classical Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         },
         {
             id: 'mi002',
@@ -1247,7 +1469,14 @@ const mockData = {
             instructionLink: 'https://instructions.georgesriver.nsw.gov.au/katoh-mcg20-manual',
             firstAvailable: '5-Feb-25',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Katoh MCG20 3/4 Size Classical Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         },
         {
             id: 'mi003',
@@ -1262,7 +1491,13 @@ const mockData = {
             accessionNo: '154436422',
             firstAvailable: '29-Oct-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Lyre Harp (16 string)',
+                '1 x Tuning Key',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi004',
@@ -1277,7 +1512,13 @@ const mockData = {
             accessionNo: '154436471',
             firstAvailable: '29-Oct-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Tibetan Singing Bowl',
+                '1 x Wooden Striker',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi005',
@@ -1292,7 +1533,13 @@ const mockData = {
             accessionNo: '154436505',
             firstAvailable: '29-Oct-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Tongue Drum (15-note D major)',
+                '1 x Mallet',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi006',
@@ -1307,7 +1554,13 @@ const mockData = {
             accessionNo: '154436489',
             firstAvailable: '29-Oct-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Tongue Drum (11-note C Major)',
+                '1 x Mallet',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi007',
@@ -1322,7 +1575,13 @@ const mockData = {
             accessionNo: '154436414',
             firstAvailable: '29-Oct-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Kalimba (17 Key)',
+                '1 x Tuning Hammer',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi008',
@@ -1337,7 +1596,13 @@ const mockData = {
             accessionNo: '154436497',
             firstAvailable: '29-Oct-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Kalimba (Chromatic 36 Key)',
+                '1 x Tuning Hammer',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi009',
@@ -1352,7 +1617,15 @@ const mockData = {
             accessionNo: '154436430',
             firstAvailable: '2-Oct-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Roland GO:PIANO88 Digital Piano',
+                '1 x Piano Stand',
+                '1 x Power Adapter',
+                '1 x Sustain Pedal',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi010',
@@ -1367,7 +1640,14 @@ const mockData = {
             accessionNo: '154436240',
             firstAvailable: '24-Sep-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Casio Casiotone CT-S400 Keyboard',
+                '1 x Keyboard Stand',
+                '1 x Power Adapter',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi011',
@@ -1382,7 +1662,14 @@ const mockData = {
             accessionNo: '154436232',
             firstAvailable: '24-Sep-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Casio Casiotone CT-S500 Keyboard',
+                '1 x Keyboard Stand',
+                '1 x Power Adapter',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi012',
@@ -1397,7 +1684,15 @@ const mockData = {
             accessionNo: '154277313',
             firstAvailable: '16-Jul-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist SVN12 1/2 Size Violin',
+                '1 x Violin Bow',
+                '1 x Rosin',
+                '1 x Shoulder Rest',
+                '1 x Instruction Manual',
+                '1 x Violin Case'
+            ]
         },
         {
             id: 'mi013',
@@ -1412,7 +1707,14 @@ const mockData = {
             accessionNo: '154417869',
             firstAvailable: '18-Dec-23',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist AS1 Vintage Burst Electric Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         },
         {
             id: 'mi014',
@@ -1427,7 +1729,14 @@ const mockData = {
             accessionNo: '154417851',
             firstAvailable: '18-Dec-23',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist APB34 Black 3/4 Size Bass Guitar',
+                '1 x Bass Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Bass Guitar Bag'
+            ]
         },
         {
             id: 'mi015',
@@ -1442,7 +1751,14 @@ const mockData = {
             accessionNo: '154417901',
             firstAvailable: '27-Dec-23',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist MiniG Black 3/4 Size Electric Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         },
         {
             id: 'mi016',
@@ -1457,7 +1773,14 @@ const mockData = {
             accessionNo: '154417919',
             firstAvailable: '8-Jan-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist TC59 Natural Electric Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         },
         {
             id: 'mi017',
@@ -1472,7 +1795,14 @@ const mockData = {
             accessionNo: '154417885',
             firstAvailable: '18-Dec-23',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist Cherry58 Semi-Hollow Electric Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         },
         {
             id: 'mi018',
@@ -1487,7 +1817,14 @@ const mockData = {
             accessionNo: '154417893',
             firstAvailable: '19-Jan-24',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist EB2 Black Electric Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         },
         {
             id: 'mi019',
@@ -1502,7 +1839,14 @@ const mockData = {
             accessionNo: '154417208',
             firstAvailable: '17-Oct-23',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Ibanez Troubadour T1511 Acoustic Guitar Amplifier',
+                '1 x Power Cable',
+                '1 x Audio Cable',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi020',
@@ -2267,7 +2611,13 @@ const mockData = {
             accessionNo: '154271589',
             firstAvailable: '16-Aug-22',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Triangle (18cm)',
+                '1 x Triangle Striker',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi072',
@@ -2282,7 +2632,12 @@ const mockData = {
             accessionNo: '154270839',
             firstAvailable: '20-Feb-19',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Thunder Maker Tube',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi073',
@@ -2297,7 +2652,14 @@ const mockData = {
             accessionNo: '154272470',
             firstAvailable: '24-Oct-17',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Kala Mahogany Soprano Ukulele',
+                '1 x Ukulele Strap',
+                '1 x Ukulele Pick',
+                '1 x Instruction Manual',
+                '1 x Ukulele Bag'
+            ]
         },
         {
             id: 'mi074',
@@ -2312,7 +2674,14 @@ const mockData = {
             accessionNo: '154272074',
             firstAvailable: '16-Feb-16',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist UKC200 Ukulele',
+                '1 x Ukulele Strap',
+                '1 x Ukulele Pick',
+                '1 x Instruction Manual',
+                '1 x Ukulele Bag'
+            ]
         },
         {
             id: 'mi075',
@@ -2327,7 +2696,14 @@ const mockData = {
             accessionNo: '154271415',
             firstAvailable: '15-Sep-15',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist CL44AML Full Size Left Hand Classical Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         },
         {
             id: 'mi076',
@@ -2342,7 +2718,14 @@ const mockData = {
             accessionNo: '154275135',
             firstAvailable: '7-Mar-23',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Drum Pack',
+                '1 x Drum Sticks',
+                '1 x Practice Pad',
+                '1 x Instruction Manual',
+                '1 x Storage Case'
+            ]
         },
         {
             id: 'mi079',
@@ -2357,7 +2740,14 @@ const mockData = {
             accessionNo: '154271720',
             firstAvailable: '15-Sep-15',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist CL34AML 3/4 Size Left Hand Classical Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         },
         {
             id: 'mi080',
@@ -2372,7 +2762,14 @@ const mockData = {
             accessionNo: '154270557',
             firstAvailable: '20-Jul-15',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist CL34AM 3/4 Size Classical Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         },
         {
             id: 'mi081',
@@ -2387,7 +2784,14 @@ const mockData = {
             accessionNo: '154271613',
             firstAvailable: '26-Apr-15',
             bookmarkLink: '',
-            type: 'loanableItem'
+            type: 'loanableItem',
+            contents: [
+                '1 x Artist CS75 Solid Top Classical Guitar',
+                '1 x Guitar Strap',
+                '1 x Guitar Pick',
+                '1 x Instruction Manual',
+                '1 x Guitar Bag'
+            ]
         }
         // ... existing code ...
     ],
@@ -2395,19 +2799,20 @@ const mockData = {
         {
             id: 'ih001',
             name: 'Podcast Pack #1',
-            category: 'In-House Items',
+            category: 'Canva',
             description: 'All-in-one kit for recording podcasts in the library.',
             fullDescription: 'The Rode Caster Pro is an integrated podcast production studio. The Rode Caster Pro makes professional podcasting easy. It features high-quality XLR microphone inputs and headphone outputs, and with intuitive controls, automatic level setting and one-touch recording to a microSD card or computer, you can literally be making a podcast within minutes of taking it out of the box. Customers must provide their own microSD card or plug the Rode Caster Pro into their computer to save their recordings.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih001',
             collection: 'Musical Instrument Collection',
             accessionNo: 'Equipment for In-Library Use',
-            callNumber: 'CBK',
             itemAcquired: '',
             purchasePrice: '',
             spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27718282',
             canva: 'https://canva.com/templates/podcast-production',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/podcast-kit-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '1 x Rode Caster Pro Integrated Podcast Studio',
                 '1 x Professional XLR Microphone',
@@ -2420,18 +2825,19 @@ const mockData = {
         {
             id: 'ih002',
             name: 'Professional Photography Pack',
-            category: 'In-House Items',
+            category: 'Canva',
             description: 'Complete photography kit for professional-quality photos in the library.',
             fullDescription: 'This in-house pack includes a tripod with fluid head and geared center column compatible with compacts, camcorders, mirrorless and DSLR cameras. Also included in are yellow, red, and blue colour gels, honeycomb grids for focusing light, barndoors and a snoot for focusing light to a small point. For use in conjunction with the studio lighting equipment in the Media Lab at Hurstville Library',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih002',
             accessionNo: 'ACC-IH-002',
-            callNumber: 'IH.PHOTO.001',
             itemAcquired: '2024-06-15',
             purchasePrice: 'AUD 850.00',
             spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160863',
             canva: 'https://canva.com/templates/professional-photography',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/photography-pack-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '1 x Professional Tripod with Fluid Head',
                 '1 x Geared Center Column',
@@ -2446,16 +2852,17 @@ const mockData = {
         {
             id: 'ih003',
             name: 'PreSonus Studio Monitors',
-            category: 'In-House Items',
+            category: 'Canva',
             description: 'Professional studio monitors for high-quality audio monitoring and mixing.',
             fullDescription: 'PreSonus® Eris Series studio monitors are compact enough to fit almost anywhere. Front-panel 1/8-inch stereo, unbalanced line input for mobile audio devices; and a convenient front-panel volume control. Fine tune speaker response with low and high frequency tuning controls.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih003',
             accessionNo: 'ACC-IH-003',
-            callNumber: 'IH.AUDIO.001',
             itemAcquired: '2024-07-01',
             purchasePrice: 'AUD 450.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/presonus-monitors-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '2 x PreSonus Eris Studio Monitors',
                 '2 x Monitor Stands',
@@ -2468,16 +2875,17 @@ const mockData = {
         {
             id: 'ih004',
             name: 'Meta Oculus Quest 2 VR Headset',
-            category: 'In-House Items',
+            category: 'Canva',
             description: 'Virtual reality headset for immersive VR experiences and content creation.',
             fullDescription: 'The Meta Oculus Quest 2 VR Gaming Headset has a blazing-fast processor and next-generation graphics. Create play explore Conquer leaderboards, crush workouts, create with friends and more. Enjoy the incredible resolution of 1832 × 1920 pixels per eye. With enhanced clarity, you can stay focused whether you\'re on the move or standing still.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih004',
             accessionNo: 'ACC-IH-004',
-            callNumber: 'IH.VR.001',
             itemAcquired: '2024-07-15',
             purchasePrice: 'AUD 550.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/oculus-quest2-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '1 x Meta Oculus Quest 2 VR Headset',
                 '2 x Touch Controllers',
@@ -2492,16 +2900,17 @@ const mockData = {
         {
             id: 'ih005',
             name: 'Zoom VR Audio Recorder',
-            category: 'In-House Items',
+            category: 'Canva',
             description: 'Professional VR audio recorder for capturing spatial audio in virtual reality projects.',
             fullDescription: 'ZOOM H3-VR Handy Audio Recorder offers great features. It offers 4 built-in mics arranged in an Ambisonic array and Full-sphere surround sound recording. It is the perfect solution for capturing and processing spatial audio for VR, AR, and mixed-reality content.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih005',
             accessionNo: 'ACC-IH-005',
-            callNumber: 'IH.VR.002',
             itemAcquired: '2024-08-01',
             purchasePrice: 'AUD 380.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/zoom-vr-recorder-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '1 x Zoom H3-VR Handy Audio Recorder',
                 '1 x 32GB SD Card',
@@ -2515,16 +2924,17 @@ const mockData = {
         {
             id: 'ih006',
             name: 'Ricoh Theta 4K 360 Camera',
-            category: 'In-House Items',
+            category: 'Canva',
             description: '360-degree camera for capturing immersive panoramic photos and videos.',
             fullDescription: 'The Ricoh Theta 4K captures stunning 360-degree photos and videos in 4K resolution. Perfect for creating virtual tours, immersive content, and panoramic photography. Features include live streaming capability, smartphone app control, and automatic stitching of 360-degree content. Great for real estate, tourism, event documentation, and creative projects.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih006',
             accessionNo: 'ACC-IH-006',
-            callNumber: 'IH.360.001',
             itemAcquired: '2024-08-15',
             purchasePrice: 'AUD 420.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/ricoh-theta-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '1 x Ricoh Theta 4K 360 Camera',
                 '1 x USB Charging Cable',
@@ -2538,16 +2948,17 @@ const mockData = {
         {
             id: 'ih007',
             name: 'Zoom Q2N Handy Video Recorder',
-            category: 'In-House Items',
+            category: 'Canva',
             description: 'Portable video recorder with high-quality audio for music and event recording.',
             fullDescription: 'Compact handheld video recorder that combines high-quality video with professional audio recording capabilities. Features include 1080p video recording, built-in stereo microphones with excellent audio quality, and various recording modes. Perfect for recording live music performances, interviews, events, and creating content for social media. Includes tripod mount and external microphone input.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih007',
             accessionNo: 'ACC-IH-007',
-            callNumber: 'IH.VIDEO.001',
             itemAcquired: '2024-09-01',
             purchasePrice: 'AUD 320.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/zoom-q2n-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '1 x Zoom Q2N Handy Video Recorder',
                 '1 x 32GB SD Card',
@@ -2562,16 +2973,17 @@ const mockData = {
         {
             id: 'ih008',
             name: 'Record a Song Pack',
-            category: 'In-House Items',
+            category: 'Canva',
             description: 'Complete kit for recording original songs in the library.',
             fullDescription: 'This pack includes all the equipment you need to record audio, songs and other vocals, in-house at the library. This pack includes a quick-start guide to get you started.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih008',
             accessionNo: 'ACC-IH-008',
-            callNumber: 'IH.MUSIC.001',
             itemAcquired: '2024-10-01',
             purchasePrice: 'AUD 280.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/record-song-pack-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '1 x Professional USB Microphone',
                 '1 x Microphone Stand',
@@ -2586,16 +2998,17 @@ const mockData = {
         {
             id: 'ih009',
             name: 'Electric Guitar Pack',
-            category: 'In-House Items',
+            category: 'Canva',
             description: 'Complete electric guitar setup for recording and practice.',
             fullDescription: 'The Electric Guitar Pack includes a quality electric guitar, amplifier, cables, tuner, and picks. Perfect for electric guitar recording sessions, practice, or learning electric guitar techniques. The pack is designed for use in conjunction with the Sound Booth or Media Lab for optimal recording conditions. Available for in-library use only.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih009',
             accessionNo: 'ACC-IH-009',
-            callNumber: 'IH.MUSIC.002',
             itemAcquired: '2024-10-15',
             purchasePrice: 'AUD 650.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/electric-guitar-pack-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '1 x Fender Squier Starcaster',
                 '1 x NUX MG-300 Guitar Pedal',
@@ -2608,16 +3021,17 @@ const mockData = {
         {
             id: 'ih010',
             name: 'Percussion Pack',
-            category: 'In-House Items',
+            category: 'Canva',
             description: 'Collection of percussion instruments for rhythm and music education.',
             fullDescription: 'The Percussion Pack includes a variety of percussion instruments perfect for rhythm workshops, music education, and group performances. This pack is designed for use in conjunction with the Sound Booth or Media Lab for optimal recording conditions. Available for in-library use only.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih010',
             accessionNo: 'ACC-IH-010',
-            callNumber: 'IH.MUSIC.003',
             itemAcquired: '2024-11-01',
             purchasePrice: 'AUD 180.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/percussion-pack-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '2 x Tambourines',
                 '2 x Triangles',
@@ -2628,16 +3042,17 @@ const mockData = {
         {
             id: 'ih011',
             name: 'DJ Pack',
-            category: 'In-House Items',
+            category: 'Canva',
             description: 'Complete DJ setup for music mixing and performance.',
             fullDescription: 'The DJ Pack includes professional DJ equipment for music mixing, beat matching, and performance. Perfect for DJ workshops, music production, and learning DJ techniques. This pack is designed for use in conjunction with the Sound Booth or Media Lab for optimal recording conditions. Available for in-library use only.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih011',
             accessionNo: 'ACC-IH-011',
-            callNumber: 'IH.MUSIC.004',
             itemAcquired: '2024-11-15',
             purchasePrice: 'AUD 420.00',
             instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/dj-pack-manual',
             type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
             contents: [
                 '1 x Pioneer DDJ-SB3 DJ Controller',
                 '1 x Behringer HC 200 Headphones'
@@ -3384,12 +3799,292 @@ async function handleAiAsk() {
         aiResponse.innerHTML = `<p class="text-red-500">Please enter a question.</p>`;
         return;
     }
+    
     aiLoadingIndicator.classList.remove('hidden');
     aiResponse.innerHTML = '';
+    
+    // Simulate AI processing time
     setTimeout(() => {
         aiLoadingIndicator.classList.add('hidden');
-        aiResponse.innerHTML = `<p class='text-gray-700'>[Mock AI Response] You asked: <span class='font-semibold'>${question}</span></p>`;
+        const response = generateAiResponse(question);
+        aiResponse.innerHTML = response;
     }, 1200);
+}
+
+function generateAiResponse(question) {
+    const lowerQuestion = question.toLowerCase();
+    
+    // Knowledge base for common questions
+    const knowledgeBase = {
+        'booking': {
+            keywords: ['book', 'booking', 'reserve', 'reservation', 'how to book'],
+            response: `<p class="text-gray-700 mb-4"><strong>📅 Booking Information - Complete Guide</strong></p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>How to Book:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Media Lab bookings:</strong> <a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/MEDIALAB" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Click here to book the Media Lab</a></p>
+                     <p class="text-gray-700 mb-2">• <strong>Sound Booth bookings:</strong> <a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/MSGTRNGEN/OPAC/ROOMSOUNDBOOTH" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Click here to book the Sound Booth</a></p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>Booking Requirements:</strong></p>
+                     <p class="text-gray-700 mb-2">• Bookings are <strong>required for guaranteed access</strong> to Media Lab or Sound Booth</p>
+                     <p class="text-gray-700 mb-2">• Customers can use spaces <strong>without booking</strong> if no one has reserved them</p>
+                     <p class="text-gray-700 mb-2">• <strong>Library membership</strong> is required for bookings</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>Important Notes:</strong></p>
+                     <p class="text-gray-700 mb-2">• If customers are playing or recording audio in the Sound Booth, please close the door to reduce noise</p>
+                     <p class="text-gray-700 mb-2">• If there's a customer in the Sound Booth when there's a booking, please ask them to leave</p>
+                     <p class="text-gray-700">• All bookings are subject to our Terms and Conditions and Library Use and Membership Policy</p>`
+        },
+        'media lab': {
+            keywords: ['media lab', 'medialab', 'what is media lab'],
+            response: `<p class="text-gray-700 mb-4"><strong>🎬 Media Lab - Complete Overview</strong></p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>What is the Media Lab?</strong></p>
+                     <p class="text-gray-700 mb-2">The Media Lab is a <strong>digital-creation space</strong> located within Hurstville Library. It's available for community use and hosts regular workshops and events. This professional-grade facility is designed to support creative digital projects and multimedia content creation.</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🏢 Location & Access:</strong></p>
+                     <p class="text-gray-700 mb-2">• Located within <strong>Hurstville Library</strong></p>
+                     <p class="text-gray-700 mb-2">• Available for <strong>community use</strong></p>
+                     <p class="text-gray-700 mb-2">• Hosts <strong>regular workshops and events</strong></p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📹 Professional Equipment Available:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Canon DSLR cameras</strong> - High-quality photography and video recording</p>
+                     <p class="text-gray-700 mb-2">• <strong>GoPro cameras</strong> - Action and adventure filming</p>
+                     <p class="text-gray-700 mb-2">• <strong>Professional lighting equipment</strong> - Studio-quality lighting for photos and videos</p>
+                     <p class="text-gray-700 mb-2">• <strong>Audio recording equipment</strong> - High-quality microphones and audio interfaces</p>
+                     <p class="text-gray-700 mb-2">• <strong>Microsoft Surface tablets</strong> - Digital content creation and editing</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🎯 Perfect For:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Photography projects</strong> - Portrait, product, and event photography</p>
+                     <p class="text-gray-700 mb-2">• <strong>Video production</strong> - Short films, documentaries, and content creation</p>
+                     <p class="text-gray-700 mb-2">• <strong>Digital art and design</strong> - Graphic design and digital illustration</p>
+                     <p class="text-gray-700 mb-2">• <strong>Podcast recording</strong> - Professional audio recording and editing</p>
+                     <p class="text-gray-700">• <strong>Workshops and training</strong> - Learning new digital skills</p>`
+        },
+        'sound booth': {
+            keywords: ['sound booth', 'soundbooth', 'recording', 'audio'],
+            response: `<p class="text-gray-700 mb-4"><strong>🎤 Sound Booth - Complete Guide</strong></p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>What is the Sound Booth?</strong></p>
+                     <p class="text-gray-700 mb-2">The Sound Booth is a <strong>dedicated, soundproof space</strong> perfect for recording, practicing, or performing with musical instruments and audio equipment. This professional-grade acoustic environment provides optimal conditions for high-quality audio production.</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🔇 Acoustic Features:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Soundproof design</strong> - Minimizes external noise interference</p>
+                     <p class="text-gray-700 mb-2">• <strong>Acoustic treatment</strong> - Optimized for clear, clean audio recording</p>
+                     <p class="text-gray-700 mb-2">• <strong>Isolated environment</strong> - Perfect for sensitive recording work</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🎵 Ideal For:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Vocal recording</strong> - Singing, voice-overs, and vocal performances</p>
+                     <p class="text-gray-700 mb-2">• <strong>Podcast production</strong> - Professional podcast recording and editing</p>
+                     <p class="text-gray-700 mb-2">• <strong>Piano practice</strong> - Acoustic and digital piano performance</p>
+                     <p class="text-gray-700 mb-2">• <strong>Musical instrument practice</strong> - Guitar, drums, and other instruments</p>
+                     <p class="text-gray-700 mb-2">• <strong>Audio equipment testing</strong> - Testing microphones, amplifiers, and audio interfaces</p>
+                     <p class="text-gray-700 mb-2">• <strong>Music production</strong> - Recording and mixing music</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📋 Usage Guidelines:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Close the door</strong> when recording to reduce noise for other library users</p>
+                     <p class="text-gray-700 mb-2">• <strong>Respect booking times</strong> - Leave if someone has a booking</p>
+                     <p class="text-gray-700 mb-2">• <strong>Bring your own instruments</strong> or borrow from our Musical Instrument Collection</p>
+                     <p class="text-gray-700">• <strong>Equipment available</strong> - Professional microphones and audio interfaces provided</p>`
+        },
+        'digital tool library': {
+            keywords: ['digital tool library', 'dtl', 'camera', 'gopro', 'canon'],
+            response: `<p class="text-gray-700 mb-4"><strong>📸 Digital Tool Library - Complete Collection</strong></p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>What is the Digital Tool Library?</strong></p>
+                     <p class="text-gray-700 mb-2">The Digital Tool Library provides a comprehensive range of <strong>digital content creation tools</strong> available for loan. These professional-grade devices can be borrowed and taken home for extended use, perfect for creative projects and learning new digital skills.</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📹 Photography & Video Equipment:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Canon DSLR cameras</strong> - Professional photography with interchangeable lenses</p>
+                     <p class="text-gray-700 mb-2">• <strong>GoPro cameras</strong> - Action cameras for adventure and sports filming</p>
+                     <p class="text-gray-700 mb-2">• <strong>Camera accessories</strong> - Tripods, lenses, and mounting equipment</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🎙️ Audio Recording Equipment:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Oral History Kits</strong> - Complete kits for recording personal stories and interviews</p>
+                     <p class="text-gray-700 mb-2">• <strong>Professional microphones</strong> - High-quality audio recording</p>
+                     <p class="text-gray-700 mb-2">• <strong>Audio interfaces</strong> - For connecting instruments and microphones to computers</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>💻 Digital Content Creation:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Tablets and devices</strong> - For digital art and content creation</p>
+                     <p class="text-gray-700 mb-2">• <strong>Lighting equipment</strong> - Professional lighting for photos and videos</p>
+                     <p class="text-gray-700 mb-2">• <strong>Stabilization equipment</strong> - Gimbals and stabilizers for smooth video</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📋 Borrowing Information:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Library membership required</strong> - Must be a Georges River Libraries member</p>
+                     <p class="text-gray-700 mb-2">• <strong>Standard loan periods</strong> - Same as all other library collections</p>
+                     <p class="text-gray-700 mb-2">• <strong>Free for members</strong> - No additional fees for borrowing</p>
+                     <p class="text-gray-700">• <strong>Take home use</strong> - Equipment can be used outside the library</p>`
+        },
+        'musical instruments': {
+            keywords: ['musical instrument', 'guitar', 'piano', 'keyboard', 'percussion', 'amplifier'],
+            response: `<p class="text-gray-700 mb-4"><strong>🎸 Musical Instrument Collection - One of Australia's Largest</strong></p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>About Our Collection:</strong></p>
+                     <p class="text-gray-700 mb-2">Georges River Libraries boasts <strong>one of Australia's largest musical instrument collections</strong> available for loan, with over 100 items. This extensive collection is designed to inspire learning, creativity, and musical exploration for all skill levels.</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🎸 String Instruments:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Acoustic guitars</strong> - Various sizes and styles for different playing levels</p>
+                     <p class="text-gray-700 mb-2">• <strong>Electric guitars</strong> - Professional electric guitars with amplifiers</p>
+                     <p class="text-gray-700 mb-2">• <strong>Bass guitars</strong> - Electric and acoustic bass guitars</p>
+                     <p class="text-gray-700 mb-2">• <strong>Ukuleles</strong> - Perfect for beginners and casual playing</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🎹 Keyboard Instruments:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Digital pianos</strong> - Full-size keyboards with weighted keys</p>
+                     <p class="text-gray-700 mb-2">• <strong>Electronic keyboards</strong> - Various sizes and features</p>
+                     <p class="text-gray-700 mb-2">• <strong>MIDI controllers</strong> - For digital music production</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🥁 Percussion Instruments:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Drum kits</strong> - Complete drum sets for practice</p>
+                     <p class="text-gray-700 mb-2">• <strong>Hand percussion</strong> - Bongos, congas, and other hand drums</p>
+                     <p class="text-gray-700 mb-2">• <strong>Practice pads</strong> - For quiet drum practice</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🔊 Amplification & Recording:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Guitar amplifiers</strong> - Various sizes and power levels</p>
+                     <p class="text-gray-700 mb-2">• <strong>Bass amplifiers</strong> - Specialized bass amps</p>
+                     <p class="text-gray-700 mb-2">• <strong>Recording equipment</strong> - Microphones and audio interfaces</p>
+                     <p class="text-gray-700 mb-2">• <strong>Effects pedals</strong> - Guitar effects and processors</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📋 Borrowing Information:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Library membership required</strong> - Must be a Georges River Libraries member</p>
+                     <p class="text-gray-700 mb-2">• <strong>Standard loan periods</strong> - Same as all other library collections</p>
+                     <p class="text-gray-700 mb-2">• <strong>Free for members</strong> - No additional fees</p>
+                     <p class="text-gray-700">• <strong>All skill levels welcome</strong> - From beginners to advanced players</p>`
+        },
+        'in-house': {
+            keywords: ['in-house', 'inhouse', 'pack', 'packs'],
+            response: `<p class="text-gray-700 mb-4"><strong>📦 Canva - Specialized Equipment Packs</strong></p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>What are Canva Items?</strong></p>
+                     <p class="text-gray-700 mb-2">We offer specialized <strong>in-house packs</strong> for various creative activities. These comprehensive equipment packages are designed for specific creative projects and are available for use within the library only. These packs are usually reserved in conjunction with a Media Lab or Sound Booth booking.</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🎙️ Podcasting Packs:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Professional microphones</strong> - High-quality condenser and dynamic mics</p>
+                     <p class="text-gray-700 mb-2">• <strong>Audio interfaces</strong> - USB interfaces for computer connection</p>
+                     <p class="text-gray-700 mb-2">• <strong>Headphones</strong> - Professional monitoring headphones</p>
+                     <p class="text-gray-700 mb-2">• <strong>Pop filters and windshields</strong> - For clear audio recording</p>
+                     <p class="text-gray-700 mb-2">• <strong>Recording software</strong> - Digital audio workstation access</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📸 Professional Photography Packs:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>DSLR cameras</strong> - Professional Canon cameras with multiple lenses</p>
+                     <p class="text-gray-700 mb-2">• <strong>Professional lighting</strong> - Studio lights, reflectors, and diffusers</p>
+                     <p class="text-gray-700 mb-2">• <strong>Tripods and stabilizers</strong> - For steady shots and video</p>
+                     <p class="text-gray-700 mb-2">• <strong>Backdrop systems</strong> - Professional backgrounds for portraits</p>
+                     <p class="text-gray-700 mb-2">• <strong>Editing software</strong> - Photo editing and retouching tools</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🎵 Advanced Audio Recording Packs:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Multi-track recording</strong> - Professional recording equipment</p>
+                     <p class="text-gray-700 mb-2">• <strong>Studio monitors</strong> - High-fidelity audio monitoring</p>
+                     <p class="text-gray-700 mb-2">• <strong>MIDI controllers</strong> - For digital music production</p>
+                     <p class="text-gray-700 mb-2">• <strong>Effects processors</strong> - Audio effects and processing units</p>
+                     <p class="text-gray-700 mb-2">• <strong>Mixing consoles</strong> - Professional audio mixing equipment</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📋 Usage Requirements:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>In-house use only</strong> - Cannot be taken home</p>
+                     <p class="text-gray-700 mb-2">• <strong>Booking required</strong> - Must reserve Media Lab or Sound Booth</p>
+                     <p class="text-gray-700 mb-2">• <strong>Library membership required</strong> - Must be a Georges River Libraries member</p>
+                     <p class="text-gray-700 mb-2">• <strong>Free to use</strong> - No additional fees with booking</p>
+                     <p class="text-gray-700">• <strong>Staff assistance available</strong> - Help with setup and operation</p>`
+        },
+        'fees': {
+            keywords: ['fee', 'cost', 'price', 'charge', 'payment'],
+            response: `<p class="text-gray-700 mb-4"><strong>💰 Fees and Costs - Complete Information</strong></p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📚 Library Membership:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Free membership</strong> - Georges River Libraries membership is free for residents</p>
+                     <p class="text-gray-700 mb-2">• <strong>Required for all services</strong> - Membership needed for bookings and borrowing</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🎬 Media Lab & Sound Booth Bookings:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>May have associated fees</strong> - Some bookings may require payment</p>
+                     <p class="text-gray-700 mb-2">• <strong>Varies by booking type</strong> - Different rates for different services</p>
+                     <p class="text-gray-700 mb-2">• <strong>Check with staff</strong> - Current fee schedules available at the library</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📦 Loanable Items (Free for Members):</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Digital Tool Library</strong> - Cameras, GoPros, and equipment free to borrow</p>
+                     <p class="text-gray-700 mb-2">• <strong>Musical Instruments</strong> - All instruments free for library members</p>
+                     <p class="text-gray-700 mb-2">• <strong>No additional fees</strong> - Standard library borrowing applies</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📦 Canva Items (Free with Booking):</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Specialized packs</strong> - Podcasting, photography, and audio packs</p>
+                     <p class="text-gray-700 mb-2">• <strong>Free to use</strong> - No additional cost with Media Lab or Sound Booth booking</p>
+                     <p class="text-gray-700 mb-2">• <strong>Professional equipment</strong> - High-quality gear at no extra charge</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>💡 Important Notes:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Membership required</strong> - All services require library membership</p>
+                     <p class="text-gray-700 mb-2">• <strong>Check current rates</strong> - Fees may change, verify with staff</p>
+                     <p class="text-gray-700 mb-2">• <strong>Payment methods</strong> - Cash, card, and online payment accepted</p>
+                     <p class="text-gray-700">• <strong>Concession rates</strong> - Discounts may be available for eligible users</p>`
+        },
+        'terms': {
+            keywords: ['terms', 'conditions', 'policy', 'rules'],
+            response: `<p class="text-gray-700 mb-4"><strong>📋 Terms and Conditions - Complete Guidelines</strong></p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📄 General Policies:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>All room hire</strong> is subject to Terms and Conditions and Library Use and Membership Policy</p>
+                     <p class="text-gray-700 mb-2">• <strong>Library membership required</strong> for all bookings and borrowing</p>
+                     <p class="text-gray-700 mb-2">• <strong>Valid ID required</strong> for equipment borrowing and room bookings</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🎬 Media Lab & Sound Booth Rules:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Bookings required</strong> for guaranteed access to spaces</p>
+                     <p class="text-gray-700 mb-2">• <strong>Close Sound Booth doors</strong> when recording to reduce noise</p>
+                     <p class="text-gray-700 mb-2">• <strong>Leave spaces</strong> when someone has a booking</p>
+                     <p class="text-gray-700 mb-2">• <strong>Respect other users</strong> and maintain quiet environment</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📦 Equipment Borrowing Rules:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Return on time</strong> - Late returns may attract fees</p>
+                     <p class="text-gray-700 mb-2">• <strong>Handle with care</strong> - Equipment must be returned in good condition</p>
+                     <p class="text-gray-700 mb-2">• <strong>Report damage</strong> - Notify staff of any issues immediately</p>
+                     <p class="text-gray-700 mb-2">• <strong>No modifications</strong> - Equipment cannot be altered or modified</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>🚫 Prohibited Activities:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>Commercial use</strong> - Equipment not for commercial use</p>
+                     <p class="text-gray-700 mb-2">• <strong>Dangerous activities</strong> - No hazardous or unsafe use</p>
+                     <p class="text-gray-700 mb-2">• <strong>Unauthorised access</strong> - No sharing of library cards or equipment</p>
+                     <p class="text-gray-700 mb-2">• <strong>Inappropriate content</strong> - No creation of harmful or illegal content</p>
+                     
+                     <p class="text-gray-700 mb-3"><strong>📞 Contact Information:</strong></p>
+                     <p class="text-gray-700 mb-2">• <strong>For detailed policies:</strong> Check the Terms & Conditions section in the Getting Started menu</p>
+                     <p class="text-gray-700 mb-2">• <strong>Questions:</strong> Contact library staff for clarification</p>
+                     <p class="text-gray-700">• <strong>Disputes:</strong> Library management deals with policy disputes</p>`
+        }
+    };
+    
+    // Check for matching topics
+    for (const [topic, data] of Object.entries(knowledgeBase)) {
+        if (data.keywords.some(keyword => lowerQuestion.includes(keyword))) {
+            return data.response;
+        }
+    }
+    
+    // Default response for unrecognized questions
+    return `<p class="text-gray-700 mb-4"><strong>🤖 AI Assistant - How Can I Help?</strong></p>
+            
+            <p class="text-gray-700 mb-3">I'm here to provide detailed information about Georges River Creates services and facilities. Here are the main topics I can help you with:</p>
+            
+            <p class="text-gray-700 mb-3"><strong>📅 Booking & Access:</strong></p>
+            <p class="text-gray-700 mb-2">• <strong>How to book</strong> Media Lab or Sound Booth spaces</p>
+            <p class="text-gray-700 mb-2">• <strong>Booking requirements</strong> and procedures</p>
+            <p class="text-gray-700 mb-2">• <strong>Access policies</strong> and usage guidelines</p>
+            
+            <p class="text-gray-700 mb-3"><strong>🎬 Creative Spaces:</strong></p>
+            <p class="text-gray-700 mb-2">• <strong>Media Lab</strong> - Digital creation space with professional equipment</p>
+            <p class="text-gray-700 mb-2">• <strong>Sound Booth</strong> - Soundproof recording and practice facility</p>
+            <p class="text-gray-700 mb-2">• <strong>Available equipment</strong> and how to use it</p>
+            
+            <p class="text-gray-700 mb-3"><strong>📦 Equipment Collections:</strong></p>
+            <p class="text-gray-700 mb-2">• <strong>Digital Tool Library</strong> - Cameras, GoPros, and recording equipment</p>
+            <p class="text-gray-700 mb-2">• <strong>Musical Instruments</strong> - Australia's largest instrument collection (100+ items)</p>
+            <p class="text-gray-700 mb-2">• <strong>In-House Packs</strong> - Specialized equipment for specific projects</p>
+            
+            <p class="text-gray-700 mb-3"><strong>💰 Costs & Policies:</strong></p>
+            <p class="text-gray-700 mb-2">• <strong>Fees and costs</strong> for different services</p>
+            <p class="text-gray-700 mb-2">• <strong>Terms and conditions</strong> for equipment and space usage</p>
+            <p class="text-gray-700 mb-2">• <strong>Library membership</strong> requirements</p>
+            
+            <p class="text-gray-700 mb-3"><strong>💡 Try asking questions like:</strong></p>
+            <p class="text-gray-700 mb-2">• "How do I book the Media Lab?"</p>
+            <p class="text-gray-700 mb-2">• "What cameras can I borrow?"</p>
+            <p class="text-gray-700 mb-2">• "What's available in the Sound Booth?"</p>
+            <p class="text-gray-700 mb-2">• "How much does it cost to book a space?"</p>
+            <p class="text-gray-700">• "What musical instruments do you have?"</p>`;
 }
 
 // --- UI State Management Functions ---
@@ -3664,7 +4359,7 @@ function generateBreadcrumbHtmlForDetail(entry) {
         if (entry.category === 'Library of Things') categoryRouteId = 'loanable-dtl';
         else if (entry.category === 'Digital Tool Library') categoryRouteId = 'loanable-dtl';
         else if (entry.category === 'Musical Instrument Collection') categoryRouteId = 'loanable-mi';
-    } else if (entry.category && entry.category === 'In-House Items') {
+    } else if (entry.category && entry.category === 'Canva') {
         mainSectionText = 'In-House Items';
         mainSectionRouteId = 'inHouseItems';
     } else if (entry.category && entry.category === 'Permanent Equipment') {
@@ -3729,11 +4424,26 @@ function generateItemDetailHtml(entry) {
                     </h1>
                 </header>
                 <section class="mb-8">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-100">Summary</h2>
-                    <p class="text-gray-700 leading-relaxed">
-                        ${entry.fullDescription || '[Summary Placeholder]'}
-                    </p>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-gray-700 leading-relaxed">
+                            ${entry.fullDescription || '[Summary Placeholder]'}
+                        </p>
+                    </div>
                 </section>
+                ${entry.type === 'inHouseItem' ? `
+                <section class="mb-8">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-3">Contents</h2>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Professional recording equipment</li>
+                            <li>High-quality microphones and accessories</li>
+                            <li>Audio interface and mixing capabilities</li>
+                            <li>Complete setup for podcast production</li>
+                            <li>User manual and quick start guide</li>
+                        </ul>
+                    </div>
+                </section>
+                ` : ''}
                 ${entry.name === 'Microsoft Surface Studio PCs' ? `<div class="mb-8"><img src="images/microsoft-surface.JPG" alt="Microsoft Surface Studio PCs" class="rounded-lg shadow-lg" style="max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto;" loading="lazy"></div>` : ''}
 
                 ${entry.includedSoftware ? `
@@ -3813,20 +4523,50 @@ function generateItemDetailHtml(entry) {
                 </h1>
             </header>
             <section class="mb-8">
-                <p class="text-gray-700 leading-relaxed">
-                    ${entry.fullDescription || '[Summary Placeholder]'}
-                </p>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-gray-700 leading-relaxed">
+                        ${entry.fullDescription || '[Summary Placeholder]'}
+                    </p>
+                </div>
             </section>
+            ${entry.type === 'inHouseItem' ? `
+            <section class="mb-8">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">Contents</h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        ${entry.contents ? entry.contents.map(item => `<li>${item}</li>`).join('') : `
+                        <li>Professional recording equipment</li>
+                        <li>High-quality microphones and accessories</li>
+                        <li>Audio interface and mixing capabilities</li>
+                        <li>Complete setup for podcast production</li>
+                        <li>User manual and quick start guide</li>
+                        `}
+                    </ul>
+                </div>
+            </section>
+            ` : ''}
+            ${entry.type === 'loanableItem' && entry.contents ? `
+            <section class="mb-8">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">Contents</h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        ${entry.contents.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+            </section>
+            ` : ''}
 
-            ${(entry.type === 'loanableItem' || entry.category === 'In-House Items') ? `
+            ${(entry.type === 'loanableItem' || entry.category === 'Canva') ? `
             <section class="mb-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Details</h3>
                         <ul class="space-y-2 text-sm text-gray-700">
+                            <li><strong>Location:</strong> ${entry.location || 'N/A'}</li>
                             <li><strong>Collection:</strong> ${entry.collection || 'N/A'}</li>
                             <li><strong>Accession No:</strong> ${entry.accessionNo || 'N/A'}</li>
-                            <li><strong>Call No:</strong> ${entry.callNumber || 'N/A'}</li>
+                            ${entry.type === 'inHouseItem' ? '' : `<li><strong>Call No:</strong> ${entry.callNumber || 'N/A'}</li>`}
+                            <li><strong>Return to:</strong> ${entry.returnTo || 'N/A'}</li>
                             <li><strong>Item Acquired:</strong> ${entry.itemAcquired || 'N/A'}</li>
                             <li><strong>Purchase Price:</strong> ${entry.purchasePrice || 'N/A'}</li>
                         </ul>
@@ -3834,7 +4574,7 @@ function generateItemDetailHtml(entry) {
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Links</h3>
                         <ul class="space-y-2 text-sm text-gray-700">
-                            <li><strong>Spydus:</strong> ${entry.spydus ? `<a href="${entry.spydus}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">View in Spydus</a>` : 'N/A'}</li>
+                            <li><strong>OPAC:</strong> ${entry.id === 'ih001' ? `<a href="${entry.spydus}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Spydus</a>` : `<a href="#" class="text-teal-600 hover:text-teal-800 underline">Spydus</a>${entry.spydus ? ` - <a href="${entry.spydus}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">View in OPAC</a>` : ''}`}</li>
                             <li><strong>View Availability:</strong> ${entry.bookmarkLink ? `<a href="${entry.bookmarkLink}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Check Availability</a>` : 'N/A'}</li>
                             <li><strong>Instructions PDF:</strong> ${entry.instructionLink ? `<a href="${entry.instructionLink}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Download Instructions</a>` : 'N/A'}</li>
                             <li><strong>Item Tag:</strong> ${entry.category || 'N/A'}</li>
@@ -3982,8 +4722,8 @@ function generateListHtml(items, title) {
                 tags.push('<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Digital Tool Library</span>');
             } else if (item.category === 'Musical Instrument Collection') {
                 tags.push('<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Musical Instrument Collection</span>');
-            } else if (item.category === 'In-House Items') {
-                tags.push('<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">In-House Items</span>');
+            } else if (item.category === 'Canva') {
+                tags.push('<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Canva</span>');
             } else if (item.category === 'Permanent Equipment') {
                 tags.push('<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Permanent Equipment</span>');
             }
