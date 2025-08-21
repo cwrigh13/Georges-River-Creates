@@ -2,7 +2,7 @@
 
 Georges River Creates is a single-page web application designed as an internal resource for librarians at the Georges River Library. Its primary function is to serve as a centralised hub for accessing key information about various library resources, including loanable items, in-house kits and creative spaces. The application also includes an integrated global search bar to quickly find specific items and an AI assistant to answer questions based on pre-fed library policies and general information.
 
-**Features**
+## **Features**
 
 * **Single-Page Application (SPA):** The entire application is self-contained within a single HTML file for simplicity and quick deployment.
 * **Intuitive Navigation:** A responsive, left-hand navigation menu with collapsible sub-menus allows for easy browsing of different categories.
@@ -12,7 +12,7 @@ Georges River Creates is a single-page web application designed as an internal r
 * **Responsive Design:** The layout is built with Tailwind CSS and adapts seamlessly to various screen sizes, from mobile phones to desktop monitors.
 * **Simplified Data:** The application is designed to function with a mock data structure, making it easy to integrate with a real backend service like Firestore in the future.
 
-**Technologies Used**
+## **Technologies Used**
 
 * **HTML5:** For the core application structure.
 * **Tailwind CSS:** A utility-first CSS framework for rapid and consistent styling.
