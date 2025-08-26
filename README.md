@@ -1,6 +1,6 @@
 # Georges River Creates
 
-Georges River Creates is a single-page web application designed as an internal resource for librarians at the Georges River Library. Its primary function is to serve as a centralised hub for accessing key information about various library resources, including loanable items, in-house kits and creative spaces. The application also includes an integrated global search bar to quickly find specific items and an AI assistant to answer questions based on pre-fed library policies and general information.
+Georges River Creates is a single-page web application designed as an internal resource for staff at the Georges River Libraries. Its primary function is to serve as a centralised hub for accessing key information about items in the Digital Tool Library, Musical Instrument Collection, in-house kits and creative spaces. The application also includes an integrated global search bar to quickly find specific items and an AI assistant to answer questions based on pre-fed library policies and general information.
 
 ## **Features**
 
