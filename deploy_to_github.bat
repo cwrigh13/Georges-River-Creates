@@ -1,8 +1,11 @@
 @echo off
-echo Starting deployment to GitHub repository and GitHub Pages...
+echo Starting deployment to GitHub repository...
 
 REM Navigate to the project directory
 cd /d "C:\Users\cwrig\OneDrive\Documents\IRL.URL\Georges-River-Creates"
+
+REM Check if we're in the right directory
+echo Current directory: %CD%
 
 REM Initialize git repository if not already initialized
 if not exist ".git" (
@@ -23,7 +26,11 @@ git add .
 
 REM Commit the changes
 echo Committing changes...
-git commit -m "Update Georges River Creates website - $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+for /f "tokens=2 delims==" %%a in ('wmic OS Get localdatetime /value') do set "dt=%%a"
+set "YY=%dt:~2,2%" & set "YYYY=%dt:~0,4%" & set "MM=%dt:~4,2%" & set "DD=%dt:~6,2%"
+set "HH=%dt:~8,2%" & set "Min=%dt:~10,2%" & set "Sec=%dt:~12,2%"
+set "timestamp=%YYYY%-%MM%-%DD% %HH%:%Min%:%Sec%"
+git commit -m "Update Georges River Creates website - %timestamp%"
 
 REM Push to main branch
 echo Pushing to GitHub...
@@ -41,7 +48,5 @@ echo 4. Click "Save"
 echo.
 echo Once GitHub Pages is enabled, your website will be available at:
 echo https://cwrigh13.github.io/Georges-River-Creates/
-echo.
-echo Note: It may take a few minutes for GitHub Pages to build and deploy your site.
 echo.
 pause
