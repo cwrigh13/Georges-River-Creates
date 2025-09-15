@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Georges River Creates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .photo-card {
+            transition: all 0.3s ease;
+        }
+        
+        .photo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .photo-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                Photo Gallery
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Capturing the creative spirit and community moments at Georges River Libraries
+            </p>
+        </header>
+
+        <!-- Photo Gallery Section -->
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg mb-8">
+            <h2 class="font-semibold text-gray-800 mb-6 text-2xl text-center">
+                Event Highlights & Community Moments
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Photo 1 -->
+                <div class="photo-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Musical instruments and recording equipment in the Media Lab"
+                            class="w-full h-64 object-cover"
+                        >
+                        <div class="absolute inset-0 photo-overlay opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Media Lab Recording Session</h3>
+                        <p class="text-sm text-gray-600">Professional recording setup showcasing the Media Lab's state-of-the-art equipment for music production and podcasting.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="photo-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Sound booth interior with microphones and headphones"
+                            class="w-full h-64 object-cover"
+                        >
+                        <div class="absolute inset-0 photo-overlay opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Sound Booth Performance</h3>
+                        <p class="text-sm text-gray-600">Dedicated soundproof space perfect for vocal recording, podcast production, and musical instrument practice.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="photo-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Digital cameras and photography equipment"
+                            class="w-full h-64 object-cover"
+                        >
+                        <div class="absolute inset-0 photo-overlay opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Digital Tool Library</h3>
+                        <p class="text-sm text-gray-600">Professional photography equipment including Canon DSLR cameras, GoPro cameras, and lighting kits available for loan.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="photo-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Musical instruments collection including guitars and keyboards"
+                            class="w-full h-64 object-cover"
+                        >
+                        <div class="absolute inset-0 photo-overlay opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Musical Instrument Collection</h3>
+                        <p class="text-sm text-gray-600">One of Australia's largest musical instrument collections with over 100 items including guitars, keyboards, and percussion.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="photo-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Community workshop participants learning new skills"
+                            class="w-full h-64 object-cover"
+                        >
+                        <div class="absolute inset-0 photo-overlay opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Community Workshops</h3>
+                        <p class="text-sm text-gray-600">Regular workshops and events bringing together community members to learn new creative skills and techniques.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="photo-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Creative workspace with digital tools and equipment"
+                            class="w-full h-64 object-cover"
+                        >
+                        <div class="absolute inset-0 photo-overlay opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Creative Spaces</h3>
+                        <p class="text-sm text-gray-600">Dedicated spaces designed to inspire creativity and provide access to professional-grade equipment and resources.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-sm text-gray-600 italic">
+                    Experience the vibrant creative community and professional facilities at Georges River Libraries
+                </p>
+            </div>
+        </div>
+
+        <!-- Additional Sections -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            
+            <!-- Equipment Showcase -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Featured Equipment</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                        <span class="text-gray-700">Canon EOS 1500D DSLR Camera</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <span class="text-gray-700">GoPro Hero 11 Action Camera</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                        <span class="text-gray-700">Zoom H5 Audio Recorder</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+                        <span class="text-gray-700">Professional Lighting Kits</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Highlights -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Recent Events</h3>
+                <div class="space-y-3">
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h4 class="font-medium text-gray-800">Sounds Inside #1</h4>
+                        <p class="text-sm text-gray-600">Experimental music performance launch</p>
+                    </div>
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h4 class="font-medium text-gray-800">Digital Photography Workshop</h4>
+                        <p class="text-sm text-gray-600">Professional camera techniques</p>
+                    </div>
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h4 class="font-medium text-gray-800">Podcast Production</h4>
+                        <p class="text-sm text-gray-600">Audio recording and editing skills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Ready to Get Creative?</h3>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Book our spaces, borrow equipment, and join our community of creators. 
+                Everything you need to bring your creative vision to life is available at Georges River Libraries.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                    Book a Space
+                </a>
+                <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                    Browse Equipment
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-gray-600">
+            <p>&copy; 2024 Georges River Libraries. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html> 
