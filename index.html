@@ -2926,21 +2926,25 @@ const mockData = {
             description: '360-degree camera for capturing immersive panoramic photos and videos.',
             fullDescription: 'The Ricoh Theta 4K captures stunning 360-degree photos and videos in 4K resolution. Perfect for creating virtual tours, immersive content, and panoramic photography. Features include live streaming capability, smartphone app control, and automatic stitching of 360-degree content. Great for real estate, tourism, event documentation, and creative projects.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih006',
-            accessionNo: 'ACC-IH-006',
+            accessionNo: '154414775',
             itemAcquired: '2024-08-15',
             purchasePrice: 'AUD 420.00',
-            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/ricoh-theta-manual',
+            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27723634',
+            liveAvailability: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/XHLD/OPAC/BIBENQ/82238262/25194912?RECDISP=REC',
+            instructionLink: 'https://web.archive.org/web/20230802023243/https://www.ricoh-imaging.co.jp/english/support/pdf/theta_easy.pdf',
+            collection: 'In-House',
             type: 'inHouseItem',
             location: 'Hurstville Library',
             returnTo: 'Media Lab Store Room',
             contents: [
-                '1 x Ricoh Theta 4K 360 Camera',
-                '1 x USB Charging Cable',
-                '1 x Protective Case',
-                '1 x Tripod Mount',
-                '1 x 64GB SD Card',
-                '1 x Quick Start Guide',
-                '1 x 360° Photography Manual'
+                '1 x Ricoh 4k 360 Camera',
+                '1 x Attachable Mount (Grey)',
+                '1 x Camera Bag',
+                '1 x USB Micro B cable',
+                '2 x Instructions',
+                '1 x Tripod',
+                '1 x Tripod Bag (Black)',
+                '1 x Plastic Container with Lid'
             ]
         },
         {
@@ -2971,23 +2975,30 @@ const mockData = {
             category: 'Canva',
             description: 'Complete kit for recording original songs in the library.',
             fullDescription: 'This pack includes all the equipment you need to record audio, songs and other vocals, in-house at the library. This pack includes a quick-start guide to get you started.',
-            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih008',
-            accessionNo: 'ACC-IH-008',
+            catalogueLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27719662',
+            accessionNo: '154274401',
             itemAcquired: '2024-10-01',
             purchasePrice: 'AUD 280.00',
-            instructionLink: 'https://mockinstructions.georgesriver.nsw.gov.au/record-song-pack-manual',
+            instructionLink: 'https://web.archive.org/web/20250916235001/https://edge.rode.com//pdf/products/2/AI-1_User_Guide_v2.pdf',
+            bookmarkLink: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/XHLD/OPAC/BIBENQ/82236570/21868154?RECDISP=REC',
             type: 'inHouseItem',
+            collection: 'In-House',
             location: 'Hurstville Library',
             returnTo: 'Media Lab Store Room',
             contents: [
-                '1 x Professional USB Microphone',
-                '1 x Microphone Stand',
-                '1 x Pop Filter',
-                '1 x Headphone Set',
-                '1 x USB Cable',
-                '1 x Quick Start Guide',
-                '1 x Recording Tips Sheet',
-                '1 x Equipment Case'
+                'Total no. of pieces: 8',
+                '1 x Rode NT-1 Condensor microphone + bag',
+                '1 x Rode AI-1 Audio interface',
+                '1x pop shield',
+                '1 x Rode SM6 Shock mount',
+                '1 x XLR cable',
+                '1x USB-C cable',
+                '1 x NT1 & AI1 quickstart guide',
+                '1 x plastic container with lid'
+            ],
+            requiredEquipment: [
+                'DAW - Ableton, Logic, Audacity, Garage Band or Similar',
+                'Headphones'
             ]
         },
         {
@@ -3142,6 +3153,101 @@ const mockData = {
                 '2 x USB Mini B Cables',
                 '2 x Instruction Booklet (English and Chinese)',
                 '1 x Plastic Container with Lid'
+            ]
+        },
+        {
+            id: 'ih015',
+            name: 'Teleprompter Pack',
+            category: 'Canva',
+            collection: 'In-House',
+            description: 'Professional teleprompter setup for video recording and live streaming with smartphone compatibility.',
+            fullDescription: 'The Teleprompter Pack includes everything needed for professional video recording with script reading capabilities. Perfect for creating educational content, news-style videos, presentations, and live streaming. The pack features a smartphone-compatible teleprompter with adjustable height, remote control functionality, and professional lighting setup. Ideal for content creators, educators, and anyone producing video content in the Media Lab.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih015',
+            accessionNo: '154277446',
+            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=28160026',
+            liveAvailability: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/XHLD/OPAC/BIBENQ/82240772/26968101?RECDISP=REC',
+            itemAcquired: '2024-12-01',
+            purchasePrice: 'AUD 350.00',
+            instructionLink: 'TBC',
+            type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
+            contents: [
+                '1 x Travel Case',
+                '1 x Base',
+                '1 x Glare Cover',
+                '2 x Beamsplitter Glass in Protective Sleeve',
+                '1 x Cleaning Kit',
+                '1 x User Manual and Information Guide'
+            ],
+            requiredEquipment: [
+                'Smartphone (iOS or Android)',
+                'Teleprompter App (recommended: PromptSmart or Teleprompter Pro)',
+                'Tripod or stable surface for camera'
+            ]
+        },
+        {
+            id: 'ih016',
+            name: 'Roland VR50-HD',
+            category: 'Canva',
+            collection: 'In-House',
+            description: 'Professional multi-format AV mixer with video switching, audio mixing, and USB streaming capabilities.',
+            fullDescription: 'The Roland VR-50HD is a versatile multi-format AV mixer that combines video switching, audio mixing, and USB streaming into a single device. It features a built-in 7-inch LCD touchscreen for intuitive control and monitoring. The unit supports various video resolutions including 480i, 480p, 576i, 576p, 720p, 1080i, and 1080p, and offers multiple input options such as HDMI, VGA, and composite video. Additionally, it includes XLR inputs for professional audio integration. Perfect for live streaming, video production, and multimedia presentations in the Media Lab.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih016',
+            accessionNo: 'TBC',
+            spydus: 'TBC',
+            liveAvailability: 'TBC',
+            itemAcquired: '2024-12-15',
+            purchasePrice: 'AUD 1,200.00',
+            instructionLink: 'https://web.archive.org/web/20250917012817/https://static.roland.com/assets/media/pdf/vr50hd_manual_e05_W.pdf',
+            type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
+            contents: [
+                '1 x Roland VR-50HD Video Mixing Console',
+                '4 x Cameras',
+                '2 x HDMI cables',
+                '1 x Power Supply'
+            ],
+            requiredEquipment: [
+                'Computer or USB device to stream output'
+            ]
+        },
+        {
+            id: 'ih017',
+            name: 'Canon EOS 5D Mark IV',
+            category: 'Canva',
+            collection: 'In-House',
+            description: 'Professional full-frame DSLR camera for high-quality photography and videography.',
+            fullDescription: 'The Canon EOS 5D Mark IV is a professional full-frame DSLR camera featuring a 30.4MP CMOS sensor, 4K video recording, and advanced autofocus system. Perfect for professional photography, videography, and content creation. The camera offers exceptional image quality, low-light performance, and robust build quality. Ideal for portrait photography, event documentation, product photography, and creative projects in the Media Lab.',
+            catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih017',
+            accessionNo: 'n/a',
+            spydus: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/WRKENQ?SETLVL=&IRN=27750000',
+            liveAvailability: 'https://georgesriver.spydus.com/cgi-bin/spydus.exe/XHLD/OPAC/BIBENQ/82250000/25195000?RECDISP=REC',
+            itemAcquired: '2024-12-20',
+            purchasePrice: 'AUD 3,500.00',
+            type: 'inHouseItem',
+            location: 'Hurstville Library',
+            returnTo: 'Media Lab Store Room',
+            contents: [
+                '1 x Canon 5D Mark IV camera body',
+                '1 x Canon 24-70 lens',
+                '1 x orange USB tether cable',
+                '1 x tripod',
+                '1 x Rode NTG5 camera mounted mic',
+                '1 x Rode videomicro camera mounted mic',
+                '1 x Tascam portable PCM audio recorder two channels DR-60DmkII',
+                '1 x Rode Recorder mic and transmitter',
+                '1 x mini flex spider tripod',
+                '1 x F7 Pocketlite diffuser grid',
+                '1 x camera care kit',
+                '1 x Rode RX (missing 1 TX)',
+                '1 x Sennheiser headphones'
+            ],
+            requiredEquipment: [
+                'Memory Card',
+                'Computer with photo editing software (Adobe Lightroom, Photoshop)',
+                'Tripod (recommended for video work)'
             ]
         },
         // ... mock in-house items ...
@@ -4630,6 +4736,16 @@ function generateItemDetailHtml(entry) {
                     </ul>
                 </div>
             </section>
+            ${entry.requiredEquipment ? `
+            <section class="mb-8">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">Required Equipment</h2>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        ${entry.requiredEquipment.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+            </section>
+            ` : ''}
             ` : ''}
             ${entry.type === 'loanableItem' && entry.contents ? `
             <section class="mb-8">
@@ -4655,42 +4771,6 @@ function generateItemDetailHtml(entry) {
                             <li><strong>Return to:</strong> ${entry.returnTo || 'N/A'}</li>
                         </ul>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Links</h3>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li><strong>OPAC:</strong> ${entry.spydus ? `<a href="${entry.spydus}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Spydus</a>` : (entry.id === 'ih001' || entry.id === 'ih003' || entry.id === 'ih004' || entry.id === 'ih005' || entry.id === 'ih012' || entry.id === 'ih013' || entry.id === 'ih014' ? `<a href="${entry.catalogueLink}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Spydus</a>` : `<a href="#" class="text-teal-600 hover:text-teal-800 underline">Spydus</a>`)}</li>
-                            ${entry.bookmarkLink && (entry.type !== 'inHouseItem' || entry.id === 'ih014') ? `<li><strong>View Availability:</strong> <a href="${entry.bookmarkLink}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Check Availability</a></li>` : (entry.id === 'ih003' ? `<li><strong>View Availability:</strong> <a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/XHLD/OPAC/BIBENQ/82175618/25195860?RECDISP=REC" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Check Availability</a></li>` : (entry.id === 'ih004' ? `<li><strong>View Availability:</strong> <a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/XHLD/OPAC/BIBENQ/82173940/25194187?RECDISP=REC" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Check Availability</a></li>` : ''))}
-                            ${entry.instructionLink ? `<li><strong>Instructions:</strong> ${entry.instructionLink === 'Website' ? `<a href="https://www.meta.com/en-gb/help/quest/198156932031556/" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Website</a>` : (entry.id === 'ih003' || entry.id === 'ih007' ? `<a href="${entry.instructionLink}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Link</a>` : `${entry.instructionLink}`)}</li>` : ''}
-                            <li><strong>Item Tag:</strong> ${entry.category || 'N/A'}</li>
-                        </ul>
-                    </div>
-                    ${entry.type === 'inHouseItem' ? `
-                    <div class="bg-gray-50 p-4 rounded-lg mt-4">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Live Availability</h3>
-                        <div class="bg-white p-4 rounded-lg border border-gray-300">
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-sm">
-                                    <thead>
-                                        <tr class="border-b border-gray-200">
-                                            <th class="text-left py-2 font-semibold">Location</th>
-                                            <th class="text-left py-2 font-semibold">Collection</th>
-                                            <th class="text-left py-2 font-semibold">Call<br>number</th>
-                                            <th class="text-left py-2 font-semibold">Status/Desc</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="py-2"><a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/GENENQ/82170713?QRY=IRN%2813314116%29&QRYTEXT=Hurstville%20Library" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Hurstville Library</a></td>
-                                            <td class="py-2"><a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/ENQ/OPAC/BIBENQ/82170713?BIBCOLX=EQUIPINLIB%2AEquipment%20for%20In-Library%20Use" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Equipment for In-Library Use</a></td>
-                                            <td class="py-2"><a href="https://georgesriver.spydus.com/cgi-bin/spydus.exe/WBT/OPAC/BIBENQ/82170713?CNO=EQUIPINH&CNO%5FTYPE=B" target="_blank" class="text-blue-600 hover:text-blue-800 underline">EQUIPINH</a></td>
-                                            <td class="py-2">Available</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    ` : ''}
                 </div>
             </section>
             ` : ''}
