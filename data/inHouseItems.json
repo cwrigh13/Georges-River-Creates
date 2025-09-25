@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ih001",
+    "name": "Podcast Pack #1",
+    "category": "Canva",
+    "description": "All-in-one kit for recording podcasts in the library.",
+    "fullDescription": "The Rode Caster Pro is an integrated podcast production studio. The Rode Caster Pro makes professional podcasting easy. It features high-quality XLR microphone inputs and headphone outputs, and with intuitive controls, automatic level setting and one-touch recording to a microSD card or computer, you can literally be making a podcast within minutes of taking it out of the box. Customers must provide their own microSD card or plug the Rode Caster Pro into their computer to save their recordings.",
+    "catalogueLink": "https://mockcatalogue.georgesriver.nsw.gov.au/ih001",
+    "collection": "Musical Instrument Collection",
+    "accessionNo": "Equipment for In-Library Use",
+    "itemAcquired": "",
+    "requiredEquipment": ["Media Lab Booking", "Sound Booth Booking"],
+    "contents": [
+      "Rode Caster Pro",
+      "2x Rode PodMic Microphones",
+      "2x Headphones",
+      "2x XLR Cables",
+      "USB Cable",
+      "Power Adapter",
+      "Quick Start Guide"
+    ],
+    "keywords": ["podcast", "recording", "audio", "microphone", "rode"]
+  }
+]

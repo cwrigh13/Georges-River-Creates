@@ -345,10 +345,10 @@ const mockData = {
                     <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                         Download Media Lab T&Cs
                     </button>
-                    <button onclick="reportIssue('gs-terms-media-lab', 'Media Lab Terms & Conditions')" 
+                    <a href="issues.html" 
                             class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                         Report an issue
-                    </button>
+                    </a>
                 </div>
             `
         },
@@ -378,10 +378,10 @@ const mockData = {
                     <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                         Download Sound Booth T&Cs
                     </button>
-                    <button onclick="reportIssue('gs-terms-sound-booth', 'Sound Booth Terms & Conditions')" 
+                    <a href="issues.html" 
                             class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                         Report an issue
-                    </button>
+                    </a>
                 </div>
             `
         },
@@ -2951,7 +2951,7 @@ const mockData = {
             id: 'ih007',
             name: 'Zoom Q2N Handy Video Recorder',
             category: 'Canva',
-            description: 'High-quality 150° wide-angle lens (f2.8/15.2 mm) - Built-in X/Y stereo microphones capable of handling sound levels up to 120 dB SPL - Can be used as standalone audio recorder with data saved in WAV format up to 24-bit/96 kHz - 5 field of view (FOV) settings - Records directly to microSD, microSDHC and microSDXC cards up to 256 GB for extended recording times.',
+            description: 'A compact and portable camera featuring high-quality built-in X/Y microphones to capture high-impact audio alongside HD video.',
             fullDescription: 'High-quality 150° wide-angle lens (f2.8/15.2 mm) - Built-in X/Y stereo microphones capable of handling sound levels up to 120 dB SPL - Can be used as standalone audio recorder with data saved in WAV format up to 24-bit/96 kHz - 5 field of view (FOV) settings - Records directly to microSD, microSDHC and microSDXC cards up to 256 GB for extended recording times.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih007',
             accessionNo: '154414619 154414668',
@@ -3103,7 +3103,7 @@ const mockData = {
             name: 'Filmmaker Lapel Microphone Pack',
             category: 'Canva',
             collection: 'In-House',
-            description: 'RØDELink represents the next generation of digital wireless systems. It uses 128-bit encrypted Series II 2.4GHz digital transmission that is capable of constant monitoring and frequency hopping to maintain the strongest signal levels over a range of 100 meters* (100+ yards).The RØDELink Filmmaker kit provides everything you need to start shooting video wirelessly, including a receiver, transmitter, and broadcast-grade lavalier microphone.',
+            description: 'Wireless audio system with lavalier microphone, bodypack transmitter, and camera-mountable receiver.',
             fullDescription: 'RØDELink represents the next generation of digital wireless systems. It uses 128-bit encrypted Series II 2.4GHz digital transmission that is capable of constant monitoring and frequency hopping to maintain the strongest signal levels over a range of 100 meters* (100+ yards).The RØDELink Filmmaker kit provides everything you need to start shooting video wirelessly, including a receiver, transmitter, and broadcast-grade lavalier microphone.',
             catalogueLink: 'https://mockcatalogue.georgesriver.nsw.gov.au/ih005',
             accessionNo: '154414783',
@@ -4649,9 +4649,9 @@ function generateItemDetailHtml(entry) {
 
                 <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
                     ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event' || entry.id.startsWith('faqs-') || entry.id === 'gs-faqs' || entry.id === 'gs-terms' || entry.id === 'gs-terms-media-lab' || entry.id === 'gs-terms-sound-booth') ? '' : `
-                    <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="inline-flex items-center justify-center px-2 py-1 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                    <a href="issues.html" class="inline-flex items-center justify-center px-2 py-1 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                         Report an issue
-                    </button>
+                    </a>
                     `}
                 </footer>
             </div>
@@ -4746,6 +4746,45 @@ function generateItemDetailHtml(entry) {
                 </div>
             </section>
             ` : ''}
+            ${entry.spydus || entry.instructionLink ? `
+            <section class="mb-8">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">Links</h2>
+                    <div class="space-y-2">
+                        ${entry.spydus ? `<div><strong>OPAC:</strong> <a href="${entry.spydus}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">Spydus</a></div>` : ''}
+                        ${entry.instructionLink ? `<div><strong>Instructions:</strong> <a href="${entry.instructionLink}" target="_blank" class="text-teal-600 hover:text-teal-800 underline">${entry.instructionLink}</a></div>` : ''}
+                        ${entry.category ? `<div><strong>Item Tag:</strong> ${entry.category}</div>` : ''}
+                    </div>
+                </div>
+            </section>
+            ` : ''}
+            ${entry.liveAvailability ? `
+            <section class="mb-8">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-3">Live Availability</h2>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-700 border-b">Location</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-700 border-b">Collection</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-700 border-b">Call number</th>
+                                    <th class="px-4 py-2 text-left text-sm font-medium text-gray-700 border-b">Status/Desc</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-4 py-2 text-sm text-blue-600 underline border-b"><a href="${entry.liveAvailability}" target="_blank">Hurstville Library</a></td>
+                                    <td class="px-4 py-2 text-sm text-blue-600 underline border-b"><a href="${entry.liveAvailability}" target="_blank">Equipment for In-Library Use</a></td>
+                                    <td class="px-4 py-2 text-sm text-blue-600 underline border-b"><a href="${entry.liveAvailability}" target="_blank">EQUIPINH</a></td>
+                                    <td class="px-4 py-2 text-sm text-gray-700 border-b">Available</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            ` : ''}
             ` : ''}
             ${entry.type === 'loanableItem' && entry.contents ? `
             <section class="mb-8">
@@ -4777,9 +4816,9 @@ function generateItemDetailHtml(entry) {
 
             <footer class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-6 border-t border-gray-200">
                 ${(entry.name === 'Media Lab' || entry.name === 'Sound Booth' || entry.type === 'event' || entry.id === 'gs-ask-me-anything' || entry.id === 'gs-faqs' || entry.id.startsWith('faqs-') || entry.id === 'gs-terms' || entry.id === 'gs-terms-media-lab' || entry.id === 'gs-terms-sound-booth') ? '' : `
-                <button onclick="reportIssue('${entry.id}', '${entry.name}')" class="inline-flex items-center justify-center px-2 py-1 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
+                <a href="issues.html" class="inline-flex items-center justify-center px-2 py-1 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-colors duration-200">
                     Report an issue
-                </button>
+                </a>
                 `}
             </footer>
         </div>
@@ -4914,7 +4953,7 @@ function generateListHtml(items, title) {
             } else if (item.category === 'Musical Instrument Collection') {
                 tags.push('<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Musical Instrument Collection</span>');
             } else if (item.category === 'Canva') {
-                tags.push('<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">In-House Item</span>');
+                tags.push('<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full whitespace-nowrap">In-House Item</span>');
             } else if (item.category === 'Permanent Equipment') {
                 tags.push('<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Permanent Equipment</span>');
             }
@@ -4935,7 +4974,7 @@ function generateListHtml(items, title) {
                 <div class="p-6 flex justify-between items-start">
                     <div class="flex-1">
                         <h3 class="text-lg font-semibold text-gray-800 mb-2">${item.name}</h3>
-                        <p class="text-gray-600 text-sm mb-3">${item.description}</p>
+                        <p class="text-gray-600 text-sm mb-3 whitespace-nowrap overflow-hidden text-ellipsis">${item.description}</p>
                     </div>
                     <div class="flex flex-col gap-1 ml-4">
                         ${tags.join('')}

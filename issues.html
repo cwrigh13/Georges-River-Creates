@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issues - Georges River Creates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .markdown-editor {
+            min-height: 200px;
+        }
+        .toolbar-btn {
+            @apply px-2 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors;
+        }
+        .toolbar-btn.active {
+            @apply bg-blue-100 border-blue-300;
+        }
+        .issue-card {
+            @apply border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow;
+        }
+        .issue-card:hover {
+            @apply border-gray-300;
+        }
+        .status-badge {
+            @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+        }
+        .status-open {
+            @apply bg-green-100 text-green-800;
+        }
+        .status-closed {
+            @apply bg-red-100 text-red-800;
+        }
+        .label-badge {
+            @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium mr-1 mb-1;
+        }
+        .label-bug {
+            @apply bg-red-100 text-red-800;
+        }
+        .label-enhancement {
+            @apply bg-blue-100 text-blue-800;
+        }
+        .label-question {
+            @apply bg-yellow-100 text-yellow-800;
+        }
+        .label-other {
+            @apply bg-gray-100 text-gray-800;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-2xl font-bold text-teal-700 hover:text-teal-800 transition-colors">
+                        Georges River Creates
+                    </a>
+                    <span class="text-gray-300">/</span>
+                    <h1 class="text-xl font-semibold text-gray-900">Issues</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-600 hover:text-gray-900 transition-colors">
+                        <i class="fas fa-arrow-left mr-1"></i>
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Issues Header -->
+        <div class="mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center space-x-4">
+                    <button id="newIssueBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                        <i class="fas fa-plus mr-2"></i>
+                        New Issue
+                    </button>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600">
+                        <button id="filterOpen" class="px-3 py-1 rounded-md hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-exclamation-circle mr-1"></i>
+                            <span id="openCount">0</span> Open
+                        </button>
+                        <button id="filterClosed" class="px-3 py-1 rounded-md hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-check-circle mr-1"></i>
+                            <span id="closedCount">0</span> Closed
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <select id="labelFilter" class="px-3 py-1 border border-gray-300 rounded-md text-sm">
+                        <option value="">All Labels</option>
+                        <option value="bug">Bug</option>
+                        <option value="enhancement">Enhancement</option>
+                        <option value="question">Question</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Issues List -->
+        <div id="issuesList" class="space-y-4">
+            <!-- Issues will be dynamically loaded here -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="text-center py-12 hidden">
+            <i class="fas fa-inbox text-6xl text-gray-300 mb-4"></i>
+            <h3 class="text-xl font-medium text-gray-900 mb-2">No issues found</h3>
+            <p class="text-gray-600 mb-4">Get started by creating a new issue.</p>
+            <button id="emptyStateNewIssue" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                <i class="fas fa-plus mr-2"></i>
+                New Issue
+            </button>
+        </div>
+    </main>
+
+    <!-- New Issue Modal -->
+    <div id="newIssueModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-900">Create new issue</h2>
+                    <button id="closeModal" class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
+                    <form id="issueForm" class="space-y-6">
+                        <!-- Title -->
+                        <div>
+                            <label for="issueTitle" class="block text-sm font-medium text-gray-700 mb-2">
+                                Add a title <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="issueTitle" name="title" required
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                   placeholder="Title">
+                        </div>
+
+                        <!-- Labels -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Labels</label>
+                            <div class="flex flex-wrap gap-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="labels" value="bug" class="mr-2">
+                                    <span class="label-badge label-bug">Bug</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="labels" value="enhancement" class="mr-2">
+                                    <span class="label-badge label-enhancement">Enhancement</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="labels" value="question" class="mr-2">
+                                    <span class="label-badge label-question">Question</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="labels" value="other" class="mr-2">
+                                    <span class="label-badge label-other">Other</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Add a description</label>
+                            
+                            <!-- Toolbar -->
+                            <div class="border border-gray-300 rounded-t-md bg-gray-50 px-3 py-2 flex items-center space-x-2">
+                                <div class="flex items-center space-x-1">
+                                    <button type="button" class="toolbar-btn" data-command="bold" title="Bold">
+                                        <i class="fas fa-bold"></i>
+                                    </button>
+                                    <button type="button" class="toolbar-btn" data-command="italic" title="Italic">
+                                        <i class="fas fa-italic"></i>
+                                    </button>
+                                    <button type="button" class="toolbar-btn" data-command="insertUnorderedList" title="Bullet List">
+                                        <i class="fas fa-list-ul"></i>
+                                    </button>
+                                    <button type="button" class="toolbar-btn" data-command="insertOrderedList" title="Numbered List">
+                                        <i class="fas fa-list-ol"></i>
+                                    </button>
+                                    <button type="button" class="toolbar-btn" data-command="insertCode" title="Code Block">
+                                        <i class="fas fa-code"></i>
+                                    </button>
+                                    <button type="button" class="toolbar-btn" data-command="createLink" title="Link">
+                                        <i class="fas fa-link"></i>
+                                    </button>
+                                </div>
+                                <div class="flex-1"></div>
+                                <div class="text-sm text-gray-500">
+                                    <span id="charCount">0</span> characters
+                                </div>
+                            </div>
+
+                            <!-- Textarea -->
+                            <textarea id="issueDescription" name="description" rows="8" required
+                                      class="w-full px-3 py-2 border border-gray-300 border-t-0 rounded-b-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none markdown-editor"
+                                      placeholder="Type your description here..."></textarea>
+
+                            <!-- File Upload -->
+                            <div class="mt-2 flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center">
+                                    <i class="fas fa-paperclip mr-1"></i>
+                                    <span>Paste, drop, or click to add files</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-robot mr-1"></i>
+                                    <span>Write with Copilot</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reporter Info -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="reporterName" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Your Name <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" id="reporterName" name="reporterName" required
+                                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="reporterEmail" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Your Email <span class="text-red-500">*</span>
+                                </label>
+                                <input type="email" id="reporterEmail" name="reporterEmail" required
+                                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="flex items-center justify-between p-6 border-t border-gray-200 bg-gray-50">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="createMore" class="mr-2">
+                        <label for="createMore" class="text-sm text-gray-700">Create more</label>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button type="button" id="cancelBtn" class="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
+                            Cancel
+                        </button>
+                        <button type="submit" form="issueForm" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
+                            <i class="fas fa-check mr-1"></i>
+                            Create
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Issue Detail Modal -->
+    <div id="issueDetailModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <div class="flex items-center space-x-3">
+                        <h2 id="detailTitle" class="text-xl font-semibold text-gray-900"></h2>
+                        <span id="detailNumber" class="text-gray-500">#0</span>
+                        <span id="detailStatus" class="status-badge status-open"></span>
+                    </div>
+                    <button id="closeDetailModal" class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
+                    <div id="detailContent" class="prose max-w-none">
+                        <!-- Issue content will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="flex items-center justify-between p-6 border-t border-gray-200 bg-gray-50">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm text-gray-600">Reported by</span>
+                        <span id="detailReporter" class="font-medium text-gray-900"></span>
+                        <span id="detailDate" class="text-sm text-gray-500"></span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button id="closeIssueBtn" class="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
+                            <i class="fas fa-check mr-1"></i>
+                            Close Issue
+                        </button>
+                        <button id="reopenIssueBtn" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors hidden">
+                            <i class="fas fa-undo mr-1"></i>
+                            Reopen Issue
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Issue Management
+        class IssueManager {
+            constructor() {
+                this.issues = this.loadIssues();
+                this.currentFilter = 'all';
+                this.currentLabelFilter = '';
+                this.init();
+            }
+
+            init() {
+                this.bindEvents();
+                this.renderIssues();
+                this.updateCounts();
+            }
+
+            bindEvents() {
+                // New issue button
+                document.getElementById('newIssueBtn').addEventListener('click', () => this.showNewIssueModal());
+                document.getElementById('emptyStateNewIssue').addEventListener('click', () => this.showNewIssueModal());
+                
+                // Modal controls
+                document.getElementById('closeModal').addEventListener('click', () => this.hideNewIssueModal());
+                document.getElementById('closeDetailModal').addEventListener('click', () => this.hideIssueDetailModal());
+                document.getElementById('cancelBtn').addEventListener('click', () => this.hideNewIssueModal());
+                
+                // Form submission
+                document.getElementById('issueForm').addEventListener('submit', (e) => this.handleSubmit(e));
+                
+                // Filters
+                document.getElementById('filterOpen').addEventListener('click', () => this.setFilter('open'));
+                document.getElementById('filterClosed').addEventListener('click', () => this.setFilter('closed'));
+                document.getElementById('labelFilter').addEventListener('change', (e) => this.setLabelFilter(e.target.value));
+                
+                // Issue actions
+                document.getElementById('closeIssueBtn').addEventListener('click', () => this.closeCurrentIssue());
+                document.getElementById('reopenIssueBtn').addEventListener('click', () => this.reopenCurrentIssue());
+                
+                // Rich text editor
+                this.initRichTextEditor();
+                
+                // Character count
+                document.getElementById('issueDescription').addEventListener('input', () => this.updateCharCount());
+            }
+
+            initRichTextEditor() {
+                const textarea = document.getElementById('issueDescription');
+                const toolbar = document.querySelector('.toolbar-btn');
+                
+                document.querySelectorAll('.toolbar-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const command = btn.dataset.command;
+                        this.execCommand(command);
+                    });
+                });
+            }
+
+            execCommand(command) {
+                const textarea = document.getElementById('issueDescription');
+                const start = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                const selectedText = textarea.value.substring(start, end);
+                let newText = '';
+
+                switch(command) {
+                    case 'bold':
+                        newText = `**${selectedText}**`;
+                        break;
+                    case 'italic':
+                        newText = `*${selectedText}*`;
+                        break;
+                    case 'insertUnorderedList':
+                        newText = `- ${selectedText}`;
+                        break;
+                    case 'insertOrderedList':
+                        newText = `1. ${selectedText}`;
+                        break;
+                    case 'insertCode':
+                        newText = `\`${selectedText}\``;
+                        break;
+                    case 'createLink':
+                        const url = prompt('Enter URL:');
+                        if (url) {
+                            newText = `[${selectedText}](${url})`;
+                        } else {
+                            return;
+                        }
+                        break;
+                }
+
+                if (newText) {
+                    textarea.value = textarea.value.substring(0, start) + newText + textarea.value.substring(end);
+                    textarea.focus();
+                    textarea.setSelectionRange(start + newText.length, start + newText.length);
+                }
+            }
+
+            updateCharCount() {
+                const textarea = document.getElementById('issueDescription');
+                const count = textarea.value.length;
+                document.getElementById('charCount').textContent = count;
+            }
+
+            showNewIssueModal() {
+                document.getElementById('newIssueModal').classList.remove('hidden');
+                document.getElementById('issueTitle').focus();
+            }
+
+            hideNewIssueModal() {
+                document.getElementById('newIssueModal').classList.add('hidden');
+                document.getElementById('issueForm').reset();
+                this.updateCharCount();
+            }
+
+            showIssueDetailModal(issue) {
+                document.getElementById('detailTitle').textContent = issue.title;
+                document.getElementById('detailNumber').textContent = `#${issue.id}`;
+                document.getElementById('detailContent').innerHTML = this.formatDescription(issue.description);
+                document.getElementById('detailReporter').textContent = issue.reporterName;
+                document.getElementById('detailDate').textContent = new Date(issue.createdAt).toLocaleDateString();
+                
+                const statusBadge = document.getElementById('detailStatus');
+                statusBadge.textContent = issue.status === 'open' ? 'Open' : 'Closed';
+                statusBadge.className = `status-badge ${issue.status === 'open' ? 'status-open' : 'status-closed'}`;
+                
+                document.getElementById('closeIssueBtn').classList.toggle('hidden', issue.status === 'closed');
+                document.getElementById('reopenIssueBtn').classList.toggle('hidden', issue.status === 'open');
+                
+                this.currentDetailIssue = issue;
+                document.getElementById('issueDetailModal').classList.remove('hidden');
+            }
+
+            hideIssueDetailModal() {
+                document.getElementById('issueDetailModal').classList.add('hidden');
+                this.currentDetailIssue = null;
+            }
+
+            handleSubmit(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(e.target);
+                const labels = Array.from(document.querySelectorAll('input[name="labels"]:checked')).map(cb => cb.value);
+                
+                const issue = {
+                    id: Date.now(),
+                    title: formData.get('title'),
+                    description: formData.get('description'),
+                    labels: labels,
+                    reporterName: formData.get('reporterName'),
+                    reporterEmail: formData.get('reporterEmail'),
+                    status: 'open',
+                    createdAt: new Date().toISOString()
+                };
+
+                this.addIssue(issue);
+                this.hideNewIssueModal();
+                
+                // Send email
+                this.sendEmail(issue);
+                
+                // Show success message
+                alert('Issue created successfully! An email has been sent to the support team.');
+            }
+
+            addIssue(issue) {
+                this.issues.unshift(issue);
+                this.saveIssues();
+                this.renderIssues();
+                this.updateCounts();
+            }
+
+            closeCurrentIssue() {
+                if (this.currentDetailIssue) {
+                    this.currentDetailIssue.status = 'closed';
+                    this.saveIssues();
+                    this.renderIssues();
+                    this.updateCounts();
+                    this.hideIssueDetailModal();
+                }
+            }
+
+            reopenCurrentIssue() {
+                if (this.currentDetailIssue) {
+                    this.currentDetailIssue.status = 'open';
+                    this.saveIssues();
+                    this.renderIssues();
+                    this.updateCounts();
+                    this.hideIssueDetailModal();
+                }
+            }
+
+            setFilter(filter) {
+                this.currentFilter = filter;
+                this.renderIssues();
+                
+                // Update filter buttons
+                document.querySelectorAll('[id^="filter"]').forEach(btn => {
+                    btn.classList.remove('bg-blue-100', 'text-blue-800');
+                });
+                document.getElementById(`filter${filter.charAt(0).toUpperCase() + filter.slice(1)}`).classList.add('bg-blue-100', 'text-blue-800');
+            }
+
+            setLabelFilter(label) {
+                this.currentLabelFilter = label;
+                this.renderIssues();
+            }
+
+            renderIssues() {
+                const container = document.getElementById('issuesList');
+                const emptyState = document.getElementById('emptyState');
+                
+                let filteredIssues = this.issues;
+                
+                // Apply status filter
+                if (this.currentFilter === 'open') {
+                    filteredIssues = filteredIssues.filter(issue => issue.status === 'open');
+                } else if (this.currentFilter === 'closed') {
+                    filteredIssues = filteredIssues.filter(issue => issue.status === 'closed');
+                }
+                
+                // Apply label filter
+                if (this.currentLabelFilter) {
+                    filteredIssues = filteredIssues.filter(issue => issue.labels.includes(this.currentLabelFilter));
+                }
+                
+                if (filteredIssues.length === 0) {
+                    container.innerHTML = '';
+                    emptyState.classList.remove('hidden');
+                    return;
+                }
+                
+                emptyState.classList.add('hidden');
+                
+                container.innerHTML = filteredIssues.map(issue => this.renderIssueCard(issue)).join('');
+                
+                // Bind click events for issue cards
+                container.querySelectorAll('.issue-card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        const issueId = parseInt(card.dataset.issueId);
+                        const issue = this.issues.find(i => i.id === issueId);
+                        this.showIssueDetailModal(issue);
+                    });
+                });
+            }
+
+            renderIssueCard(issue) {
+                const labelsHtml = issue.labels.map(label => 
+                    `<span class="label-badge label-${label}">${label.charAt(0).toUpperCase() + label.slice(1)}</span>`
+                ).join('');
+                
+                return `
+                    <div class="issue-card cursor-pointer" data-issue-id="${issue.id}">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <i class="fas fa-exclamation-circle text-green-600"></i>
+                                    <h3 class="text-lg font-medium text-gray-900 hover:text-blue-600">${issue.title}</h3>
+                                    <span class="status-badge ${issue.status === 'open' ? 'status-open' : 'status-closed'}">
+                                        ${issue.status === 'open' ? 'Open' : 'Closed'}
+                                    </span>
+                                </div>
+                                <div class="flex items-center space-x-4 text-sm text-gray-500 mb-2">
+                                    <span>#${issue.id}</span>
+                                    <span>opened by ${issue.reporterName}</span>
+                                    <span>${new Date(issue.createdAt).toLocaleDateString()}</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    ${labelsHtml}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            formatDescription(description) {
+                // Simple markdown-like formatting
+                return description
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                    .replace(/`(.*?)`/g, '<code class="bg-gray-100 px-1 py-0.5 rounded text-sm">$1</code>')
+                    .replace(/\n/g, '<br>');
+            }
+
+            updateCounts() {
+                const openCount = this.issues.filter(issue => issue.status === 'open').length;
+                const closedCount = this.issues.filter(issue => issue.status === 'closed').length;
+                
+                document.getElementById('openCount').textContent = openCount;
+                document.getElementById('closedCount').textContent = closedCount;
+            }
+
+            sendEmail(issue) {
+                const emailSubject = `Georges River Creates - New Issue #${issue.id}: ${issue.title}`;
+                const emailBody = `
+New Issue Report from Georges River Creates
+
+Issue Details:
+- ID: #${issue.id}
+- Title: ${issue.title}
+- Status: ${issue.status}
+- Labels: ${issue.labels.join(', ') || 'None'}
+
+Reporter Information:
+- Name: ${issue.reporterName}
+- Email: ${issue.reporterEmail}
+
+Description:
+${issue.description}
+
+Reported on: ${new Date(issue.createdAt).toLocaleString()}
+
+---
+This issue was automatically generated from the Georges River Creates website.
+                `.trim();
+                
+                const mailtoLink = `mailto:cwright@georgesriver.nsw.gov.au?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+                window.open(mailtoLink);
+            }
+
+            loadIssues() {
+                const stored = localStorage.getItem('georges-river-issues');
+                return stored ? JSON.parse(stored) : [];
+            }
+
+            saveIssues() {
+                localStorage.setItem('georges-river-issues', JSON.stringify(this.issues));
+            }
+        }
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', () => {
+            new IssueManager();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "pe001",
+    "name": "iMac Pro",
+    "category": "Computer",
+    "description": "High-performance desktop computer for creative work.",
+    "fullDescription": "Professional-grade iMac Pro with powerful processing capabilities for video editing, graphic design, and audio production.",
+    "location": "Media Lab",
+    "specifications": [
+      "27-inch Retina 5K display",
+      "Intel Xeon processor",
+      "32GB RAM",
+      "1TB SSD storage"
+    ],
+    "includedSoftware": [
+      "Adobe Creative Cloud",
+      "Final Cut Pro",
+      "Logic Pro",
+      "GarageBand"
+    ],
+    "keywords": ["computer", "imac", "creative", "editing", "design"]
+  }
+]

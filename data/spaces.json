@@ -1,0 +1,28 @@
+[
+  {
+    "id": "space001",
+    "name": "Media Lab",
+    "category": "Creative Space",
+    "description": "Digital creation space with professional equipment.",
+    "fullDescription": "The Media Lab is a digital-creation space located within Hurstville Library. It is available for community use and hosts regular workshops and events. It is equipped for a range of uses, with technology available for in-house use and also for loan.",
+    "location": "Hurstville Library",
+    "capacity": "8 participants",
+    "equipmentList": ["iMacs", "Adobe Creative Cloud", "Audio Interface", "Green Screen", "Microphones"],
+    "bookingRequired": true,
+    "cost": "Free for library members",
+    "keywords": ["media", "lab", "creative", "digital", "editing"]
+  },
+  {
+    "id": "space002",
+    "name": "Sound Booth",
+    "category": "Creative Space",
+    "description": "Soundproof space for recording and audio work.",
+    "fullDescription": "The Sound Booth is a dedicated, soundproof space perfect for recording, practicing or performing with musical instruments and audio equipment. We prioritise bookings for creative uses like vocal recording, podcast production and piano practice.",
+    "location": "Hurstville Library",
+    "capacity": "4 participants",
+    "equipmentList": ["Microphones", "Headphones", "Audio Interface", "Soundproofing"],
+    "bookingRequired": true,
+    "cost": "Free for library members",
+    "keywords": ["sound", "booth", "recording", "audio", "music"]
+  }
+]

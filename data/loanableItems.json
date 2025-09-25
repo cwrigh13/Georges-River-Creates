@@ -1,0 +1,29 @@
+[
+  {
+    "id": "dtl001",
+    "name": "Canon Digital Camera EOS 1500D",
+    "category": "Digital Tool Library",
+    "description": "Professional DSLR camera for photography and video content creation.",
+    "fullDescription": "The Canon Digital Camera EOS 1500D is perfect for photographers of all skill levels. Features easy-to-use controls, high-quality imaging sensor, and Full HD video recording capabilities. Ideal for learning photography techniques, creating social media content, and documenting events.",
+    "location": "Hurstville Library",
+    "returnTo": "Blue Cage",
+    "collection": "Digital Tool Library",
+    "callNumber": "EQUIP",
+    "accessionNo": "DTL001",
+    "itemAcquired": "2023",
+    "loanPeriod": "3 weeks",
+    "renewals": "2",
+    "maxItems": "3",
+    "catalogueLink": "https://mockcatalogue.georgesriver.nsw.gov.au/dtl001",
+    "contents": [
+      "Canon EOS 1500D Camera Body",
+      "18-55mm f/3.5-5.6 IS II Lens",
+      "Camera Strap",
+      "Battery Pack LP-E10",
+      "Battery Charger LC-E10",
+      "USB Cable",
+      "Instruction Manual"
+    ],
+    "keywords": ["camera", "photography", "dslr", "canon", "video", "recording"]
+  }
+]

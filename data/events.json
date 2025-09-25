@@ -1,0 +1,17 @@
+[
+  {
+    "id": "event001",
+    "name": "Digital Photography Workshop",
+    "category": "Workshop",
+    "description": "Learn the basics of digital photography with our Canon cameras.",
+    "fullDescription": "Join us for a hands-on workshop covering camera basics, composition techniques, and photo editing. Perfect for beginners and those looking to improve their photography skills.",
+    "date": "2024-02-15",
+    "time": "10:00 AM - 12:00 PM",
+    "location": "Media Lab",
+    "instructor": "Professional Photographer",
+    "capacity": "8 participants",
+    "equipmentList": ["Canon DSLR Cameras", "Tripods", "Lighting Equipment"],
+    "type": "event",
+    "keywords": ["photography", "workshop", "camera", "digital", "learning"]
+  }
+]
